@@ -72,7 +72,7 @@ function CryptoInfoSection({ direction = "row" as any }) {
           </Flex>
         </Flex>
       </Stack>
-      <div
+      {/* <div
         style={{
           position: "absolute",
           borderRadius: "658px",
@@ -86,7 +86,7 @@ function CryptoInfoSection({ direction = "row" as any }) {
             "var(--Gradient---90deg, linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%))",
           filter: "blur(100px)",
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

@@ -174,7 +174,7 @@ function Dashboard() {
         </Stack>
         <Stack gap={4}>
           <CryptoInfoSection direction="rowReverse" />
-          <CryptoInfoSection />
+          <CryptoInfoSection direction="rowReverse" />
           <CryptoInfoSection direction="rowReverse" />
         </Stack>
         <Flex

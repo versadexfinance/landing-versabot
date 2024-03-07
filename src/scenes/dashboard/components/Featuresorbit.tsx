@@ -165,7 +165,7 @@ const OrbitingFeatures = () => {
 
   const featureItems = [
     {
-      imgSrc: "/img/2.png",
+      imgSrc: "/img/1.png",
       title: "DeFi wallet connection",
       description: "Connect a DeFi wallet with a single click",
       style: { top: "10%", left: "10%" },
@@ -179,7 +179,7 @@ const OrbitingFeatures = () => {
       isComingSoon: false,
     },
     {
-      imgSrc: "/img/2.png",
+      imgSrc: "/img/6.png",
       title: "Buy crypto with FIAT",
       description: "Buy crypto with FIAT with credit card, or bank transfer",
       style: { bottom: "-0", left: "60%", transform: "translate(50%,50%)" },
@@ -187,7 +187,7 @@ const OrbitingFeatures = () => {
     },
 
     {
-      imgSrc: "/img/1.png",
+      imgSrc: "/img/3.png",
       title: "DeFi Bridge",
       // description
       description: "Coming Soon",
@@ -195,14 +195,14 @@ const OrbitingFeatures = () => {
       style: { top: "50%", left: "12%", transform: "translate(50%,50%)" },
     },
     {
-      imgSrc: "/img/1.png",
+      imgSrc: "/img/4.png",
       title: "DeFi Strategies",
       description: "Coming Soon",
       isComingSoon: true,
       style: { top: "50%", right: "10%", transform: "translate(50%,50%)" },
     },
     {
-      imgSrc: "/img/1.png",
+      imgSrc: "/img/5.png",
       title: "Perps",
       description: "Coming Soon",
       isComingSoon: true,

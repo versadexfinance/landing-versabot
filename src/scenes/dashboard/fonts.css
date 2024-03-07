@@ -5,9 +5,12 @@
     font-style: normal;
   }
    */
-
-
    @font-face {
+    font-family: 'Mabry Pro';
+    src: url('/mabp.ttf') format('truetype');
+  }
+
+   /* @font-face {
     font-family: 'Mabry Pro';
     src: url('/MabryPro-Bold.eot');
     src: local('Mabry Pro Bold'), local('MabryPro-Bold'),
@@ -257,4 +260,4 @@
       color-scheme: dark;
     }
   }
-  
+   

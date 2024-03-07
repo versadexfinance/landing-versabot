@@ -154,6 +154,7 @@ const Header = () => {
               // mt: 8,
               background: "linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%)",
               boxShadow: "0px 2px 8px 0px rgba(235, 254, 100, 0.4)",
+              fontWeight: "700 !important",
               "&:hover": {
                 scale: 1.05,
                 background: "linear-gradient(180deg, #8CEA69 0%, #EBFE64 100%)",

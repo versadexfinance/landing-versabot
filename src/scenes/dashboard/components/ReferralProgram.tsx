@@ -16,7 +16,7 @@ function ReferralProgram() {
         mt: "20px",
         alignItems: "center",
         padding: "40px",
-        backgroundImage: "url(img/heado.png)",
+        backgroundImage: "url(img/Heado.png)",
         backgroundPosition: "center",
       }}
     >

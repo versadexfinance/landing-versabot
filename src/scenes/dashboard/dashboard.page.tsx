@@ -53,7 +53,7 @@ function Dashboard() {
               padding: "120px 0",
               backgroundSize: "cover",
               margin: "0 auto",
-              backgroundImage: "url(img/heado.png)",
+              backgroundImage: "url(img/Heado.png)",
               backgroundPosition: "center",
             }}
           >

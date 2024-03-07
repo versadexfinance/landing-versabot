@@ -1,8 +1,10 @@
 // Import the necessary libraries
 import { Flex, Stack } from "@/components/box";
 import Typography from "@/components/typography";
+import media from "@/styled/media";
 import { styled } from "@stitches/react";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
 
 const Container = styled("div", {
   position: "relative",
@@ -27,20 +29,31 @@ const OrbitingFeaturesContainer = styled("div", {
 
 const CentralLogo = styled("div", {
   position: "relative",
+  zIndex: "1 !important",
   // Add additional styling for your logo
 });
 
 const FeatureItem = styled(motion.div, {
   position: "absolute",
-  width: "240px",
-
-  // borderRadius: "20px",
+  maxWidth: "300px",
+  padding: "10px",
   background: "rgba(255, 255, 255, 0.08)",
   borderRadius: "16px",
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   backdropFilter: "blur(7.6px)",
   "-webkit-backdrop-filter": "blur(7.6px)",
   border: " 1px solid rgba(255, 255, 255, 0.2)",
+  zIndex: 10,
+  variants: {
+    isMobile: {
+      true: {
+        width: "100%",
+        position: "relative",
+        maxWidth: "100%",
+        padding: "15px",
+      },
+    },
+  },
 });
 
 const FeatureText = styled("div", {
@@ -77,7 +90,15 @@ const orbitAnimation = (radius, duration) => ({
   },
 });
 
-export const FeatureItemComponent = ({ imgSrc, title, description, style }) => {
+export const FeatureItemComponent = ({
+  imgSrc,
+  title,
+  description,
+  style,
+  isComingSoon,
+}) => {
+  const isGtThanMobile = useMediaQuery(media.tablet);
+
   const randomScale = 1 + Math.random() * 0.05; // Scales between 1 and 1.05
   const randomRotation = Math.random() * 10 - 5; // Rotates between -5 and 5 degrees
 
@@ -93,8 +114,12 @@ export const FeatureItemComponent = ({ imgSrc, title, description, style }) => {
   };
 
   return (
-    <FeatureItem style={style} animate={animation as any}>
-      <Stack alignItems={"center"} gap={1}>
+    <FeatureItem
+      style={isGtThanMobile && style}
+      isMobile={!isGtThanMobile}
+      animate={isGtThanMobile ? (animation as any) : {}}
+    >
+      <Flex alignItems={"center"} gap={1}>
         <div
           style={{
             // borderBottom: "1px solid gray",
@@ -102,15 +127,18 @@ export const FeatureItemComponent = ({ imgSrc, title, description, style }) => {
             display: "flex",
             justifyContent: "center",
             // padding: "20px",
+            zIndex: "1 !important",
+            flex: "1",
           }}
         >
           <img src={imgSrc} width="50" alt="" />
         </div>
         <Stack
           css={{
-            padding: "20px",
+            flex: "3",
+            // padding: "20px",
             paddingTop: "10px",
-            alignItems: "center",
+            // alignItems: "center",
             gap: 1,
           }}
         >
@@ -123,33 +151,62 @@ export const FeatureItemComponent = ({ imgSrc, title, description, style }) => {
           >
             {title}
           </Typography>
-          <Typography textAlign={"center"}>{description}</Typography>
+
+          <Typography textAlign={"left"}>{description}</Typography>
         </Stack>
-      </Stack>
+      </Flex>
     </FeatureItem>
   );
 };
 
 // Define your React component
 const OrbitingFeatures = () => {
+  const isGtThanMobile = useMediaQuery(media.tablet);
+
   const featureItems = [
     {
-      imgSrc: "/img/1.png",
+      imgSrc: "/img/2.png",
       title: "DeFi wallet connection",
       description: "Connect a DeFi wallet with a single click",
       style: { top: "10%", left: "10%" },
+      isComingSoon: false,
     },
     {
       imgSrc: "/img/2.png",
       title: "AI Swap",
       description: "Swap tokens with support of AI",
       style: { top: "10%", right: "10%" },
+      isComingSoon: false,
+    },
+    {
+      imgSrc: "/img/2.png",
+      title: "Buy crypto with FIAT",
+      description: "Buy crypto with FIAT with credit card, or bank transfer",
+      style: { bottom: "-0", left: "60%", transform: "translate(50%,50%)" },
+      isComingSoon: false,
+    },
+
+    {
+      imgSrc: "/img/1.png",
+      title: "DeFi Bridge",
+      // description
+      description: "Coming Soon",
+      isComingSoon: true,
+      style: { top: "50%", left: "12%", transform: "translate(50%,50%)" },
     },
     {
       imgSrc: "/img/1.png",
-      title: "Buy crypto with FIAT",
-      description: "Buy crypto with FIAT with credit card, or bank transfer",
-      style: { bottom: "-15%", left: "42%", transform: "translate(50%,50%)" },
+      title: "DeFi Strategies",
+      description: "Coming Soon",
+      isComingSoon: true,
+      style: { top: "50%", right: "10%", transform: "translate(50%,50%)" },
+    },
+    {
+      imgSrc: "/img/1.png",
+      title: "Perps",
+      description: "Coming Soon",
+      isComingSoon: true,
+      style: { bottom: "0%", left: "25%", transform: "translate(50%,50%)" },
     },
     // ... Add more items as needed
   ];
@@ -166,13 +223,37 @@ const OrbitingFeatures = () => {
     };
   };
   return (
-    <Container>
-      <CentralLogo>
-        <img src="/img/glow-logo.svg" alt="" />
-      </CentralLogo>
-      {featureItems.map((item, index) => (
-        <FeatureItemComponent key={index} {...item} />
-      ))}
+    <Container
+      css={{
+        height: isGtThanMobile ? "500px" : "auto",
+      }}
+    >
+      {isGtThanMobile && (
+        <CentralLogo>
+          <img src="/img/glow-logo.svg" style={{}} alt="" />
+        </CentralLogo>
+      )}
+      {isGtThanMobile ? (
+        featureItems.map((item, index) => (
+          <FeatureItemComponent key={index} {...item} />
+        ))
+      ) : (
+        <Stack
+          css={{
+            gap: 2,
+            width: "100%",
+            backgroundImage: "url(/img/glow-logo.svg)",
+            backgroundSize: "fit",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            // back,
+          }}
+        >
+          {featureItems.map((item, index) => (
+            <FeatureItemComponent key={index} {...item} />
+          ))}
+        </Stack>
+      )}
 
       {/* Repeat for other feature items */}
     </Container>

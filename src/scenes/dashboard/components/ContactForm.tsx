@@ -51,12 +51,19 @@ const ContactForm = () => {
         mt: 20,
       }}
     >
-      <Stack alignItems={"center"} justifyContent={"center"}>
+      <Stack
+        alignItems={"center"}
+        justifyContent={"center"}
+        css={{
+          mb: 8,
+        }}
+      >
         <Typography
           textAlign={"center"}
           css={{
             fontSize: "32px",
             color: "#f5ffab",
+            fontWeight: "bold",
           }}
         >
           Contact us now!!{" "}
@@ -64,9 +71,10 @@ const ContactForm = () => {
         <Typography
           css={{
             color: "$primary",
+            textAlign: "center",
           }}
         >
-          f you have any questions, please don't hesitate to get in touch.
+          If you have any questions, please don't hesitate to get in touch.
         </Typography>
       </Stack>
       <Form
@@ -127,6 +135,7 @@ const ContactForm = () => {
                 background: "linear-gradient(180deg, #8CEA69 0%, #EBFE64 100%)",
               },
             }}
+            id="contact"
           >
             Send Message
           </Button>

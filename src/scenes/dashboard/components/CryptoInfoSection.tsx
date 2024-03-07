@@ -1,6 +1,8 @@
 import { Stack, Flex } from "@/components/box";
 import Typography from "@/components/typography";
 import VideoComponent from "./VideoComponent";
+import media from "@/styled/media";
+import { useMediaQuery } from "usehooks-ts";
 
 function CryptoInfoSection({
   direction = "row" as any,
@@ -9,6 +11,8 @@ function CryptoInfoSection({
   reversed = false,
   video = "img/trust-wallet-canva.mp4",
 }) {
+  const isGtThanMobile = useMediaQuery(media.tablet);
+
   return (
     <div
       style={{
@@ -18,10 +22,10 @@ function CryptoInfoSection({
       <Stack
         css={{
           position: "relative",
-          height: "400px",
+          height: isGtThanMobile ? "400px" : "auto",
           padding: "24px",
           borderRadius: "32px",
-          mb: "220px",
+          mb: isGtThanMobile ? "220px" : "50px",
 
           // background: "black",
           backgroundImage: "url(img/testnet_section.svg)",
@@ -33,8 +37,13 @@ function CryptoInfoSection({
           // boxShadow: "0px 10px 120px 0px #chbcea69 ",
         }}
       >
-        <Flex direction={!reversed ? direction : "row"} css={{}}>
-          {reversed && (
+        <Flex
+          direction={
+            isGtThanMobile ? (!reversed ? direction : "row") : "columnReverse"
+          }
+          css={{}}
+        >
+          {reversed && isGtThanMobile && (
             <div
               style={{
                 width: "400px",
@@ -53,7 +62,7 @@ function CryptoInfoSection({
           >
             <div
               style={{
-                width: reversed ? "85%" : "50%",
+                width: isGtThanMobile ? (reversed ? "85%" : "50%") : "100%",
               }}
             >
               <Typography
@@ -80,12 +89,12 @@ function CryptoInfoSection({
               flex: "1",
             }}
             css={{
-              position: "absolute",
+              position: isGtThanMobile ? "absolute" : "relative",
               bottom: 0,
               justifyContent: "center",
             }}
           >
-            <VideoComponent src="img/trust-wallet-canva.mp4" />
+            <VideoComponent src={video} />
           </Flex>
         </Flex>
       </Stack>

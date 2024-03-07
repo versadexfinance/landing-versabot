@@ -13,6 +13,7 @@ function ReferralProgram() {
         borderRadius: "16px",
         justifyContent: "center",
         gap: "20px",
+        mt: "20px",
         alignItems: "center",
         padding: "40px",
         backgroundImage: "url(img/heado.png)",
@@ -20,7 +21,14 @@ function ReferralProgram() {
       }}
     >
       <Stack alignItems={"center"}>
-        <Typography css={{ fontSize: "32px", color: "#f5ffab" }}>
+        <Typography
+          css={{
+            fontSize: "32px",
+            color: "#f5ffab",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
           Versabot - the referral program
         </Typography>
         <Typography

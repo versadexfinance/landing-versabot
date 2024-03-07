@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import media from "@/styled/media";
 import Typography from "../typography";
+import Button from "../button";
 
 // Common components
 
@@ -61,7 +62,7 @@ const ResponsiveNavLinksContainer = styled(Flex, {
 const NavigationLinks = ({ pathname }: { pathname: string | null }) => (
   <ResponsiveNavLinksContainer>
     <Flex gap={2}>
-      <NextLink href="/hi">Home</NextLink>
+      <NextLink href="#home">Home</NextLink>
       <NextLink href="#contact">Contact us</NextLink>
       <NextLink href="https://xdex.gitbook.io/versabot/" target="_blank">
         Docs
@@ -111,7 +112,7 @@ const Header = () => {
   // }, [router.isReady, router.events])
 
   return (
-    <ContainerHeader transparent="true">
+    <ContainerHeader>
       <ContainerHeaderNavbar alignItems="center" justifyContent="spaceBetween">
         <Flex
           css={{
@@ -131,41 +132,39 @@ const Header = () => {
               display: "flex",
               alignItems: "center",
               gap: 2,
-              fontSize: "32px",
+              fontSize: "30px",
               cursor: "pointer",
             }}
           >
             <img src="/img/logo.svg" alt="logo" height={32} />
-            <Typography>VersaBot AI</Typography>
+            <Typography
+              css={{
+                fontWeight: "bold",
+              }}
+            >
+              VersaBotAI
+            </Typography>
           </NextLink>
           <HiddenOnMobile>
             <NavigationLinks pathname={pathname} />
           </HiddenOnMobile>
 
-          <Flex gap={4}>
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                // boxShadow: "0px 0px 30px #21ead6",
-                transition: { duration: 0.3 },
-              }}
-            >
-              <NextLink target="_blank" href="">
-                <FaTelegramPlane color="white" size="30" />
-              </NextLink>
-            </motion.div>
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                // boxShadow: "0px 0px 30px #21ead6",
-                transition: { duration: 0.3 },
-              }}
-            >
-              <NextLink target="_blank" href="">
-                <BsTwitterX color="white" size="30" />
-              </NextLink>
-            </motion.div>
-          </Flex>
+          <Button
+            css={{
+              // mt: 8,
+              background: "linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%)",
+              boxShadow: "0px 2px 8px 0px rgba(235, 254, 100, 0.4)",
+              "&:hover": {
+                scale: 1.05,
+                background: "linear-gradient(180deg, #8CEA69 0%, #EBFE64 100%)",
+              },
+            }}
+            as="a"
+            href="https://discord.gg/rnnKEn4Tc2"
+            target="_blank"
+          >
+            JOIN VERSABOT V1
+          </Button>
         </Flex>
         <HiddenOnDesktop>
           <NavigationLinks pathname={pathname} />

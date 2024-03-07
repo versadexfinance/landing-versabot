@@ -173,9 +173,28 @@ function Dashboard() {
           {/* <VideoComponent src="img/video-swap.mp4" /> */}
         </Stack>
         <Stack gap={4}>
-          <CryptoInfoSection direction="rowReverse" />
-          <CryptoInfoSection direction="rowReverse" />
-          <CryptoInfoSection direction="rowReverse" />
+          <CryptoInfoSection
+            title={"Connect wallet"}
+            direction="rowReverse"
+            description={
+              "Through VersaBot, users  effortlessly purchase cryptocurrencies with just a few clicks, using their credit card or bank transfer."
+            }
+          />
+          <CryptoInfoSection
+            reversed={true}
+            title={"Buy Crypto with FIAT"}
+            description={
+              "VersaBot enables users to seamlessly connect a DeFi wallet with a single click. The bot supports multiple wallets, including Trust Wallet, MetaMask, and more."
+            }
+            direction="rowReverse"
+          />
+          <CryptoInfoSection
+            title={"Swap tokens"}
+            description={
+              "VersaBot empowers users to buy crypto, swap in DeFi with support of AI. "
+            }
+            direction="rowReverse"
+          />
         </Stack>
         <Flex
           css={{

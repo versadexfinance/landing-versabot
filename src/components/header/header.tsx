@@ -61,9 +61,11 @@ const ResponsiveNavLinksContainer = styled(Flex, {
 const NavigationLinks = ({ pathname }: { pathname: string | null }) => (
   <ResponsiveNavLinksContainer>
     <Flex gap={2}>
-      <NextLink href="/hi" >About</NextLink>
-      <NextLink href="/hi1">Docs</NextLink>
-
+      <NextLink href="/hi">Home</NextLink>
+      <NextLink href="#contact">Contact us</NextLink>
+      <NextLink href="https://xdex.gitbook.io/versabot/" target="_blank">
+        Docs
+      </NextLink>
     </Flex>
   </ResponsiveNavLinksContainer>
 );
@@ -123,22 +125,18 @@ const Header = () => {
             },
           }}
         >
-          <NextLink href="dashboard" css={{
-            display: "flex",
-            alignItems: "center",
-            gap: 2,
-            fontSize: "32px",
-            cursor: "pointer",
-          
-          }}>
-            <img
-              src="/img/logo.svg"
-              alt="logo"
-              height={32}
-            /> 
-            <Typography>
-              VersaBot AI
-            </Typography>
+          <NextLink
+            href="dashboard"
+            css={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              fontSize: "32px",
+              cursor: "pointer",
+            }}
+          >
+            <img src="/img/logo.svg" alt="logo" height={32} />
+            <Typography>VersaBot AI</Typography>
           </NextLink>
           <HiddenOnMobile>
             <NavigationLinks pathname={pathname} />
@@ -152,7 +150,7 @@ const Header = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              <NextLink target="_blank" href="https://t.me/capo404">
+              <NextLink target="_blank" href="">
                 <FaTelegramPlane color="white" size="30" />
               </NextLink>
             </motion.div>
@@ -163,7 +161,7 @@ const Header = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              <NextLink target="_blank" href="https://twitter.com/capo_404">
+              <NextLink target="_blank" href="">
                 <BsTwitterX color="white" size="30" />
               </NextLink>
             </motion.div>

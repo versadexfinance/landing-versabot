@@ -32,11 +32,15 @@ const CentralLogo = styled("div", {
 
 const FeatureItem = styled(motion.div, {
   position: "absolute",
-  width: "230px",
-  //   border: "1px solid gray",
-  //   padding: "20px",
-  borderRadius: "20px",
-  // Add additional styling for your feature items
+  width: "240px",
+
+  // borderRadius: "20px",
+  background: "rgba(255, 255, 255, 0.08)",
+  borderRadius: "16px",
+  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  backdropFilter: "blur(7.6px)",
+  "-webkit-backdrop-filter": "blur(7.6px)",
+  border: " 1px solid rgba(255, 255, 255, 0.2)",
 });
 
 const FeatureText = styled("div", {
@@ -114,6 +118,7 @@ export const FeatureItemComponent = ({ imgSrc, title, description, style }) => {
             css={{
               fontSize: "18px",
               color: "#8CEA69",
+              fontWeight: "bold",
             }}
           >
             {title}
@@ -135,7 +140,7 @@ const OrbitingFeatures = () => {
       style: { top: "10%", left: "10%" },
     },
     {
-      imgSrc: "/img/1.png",
+      imgSrc: "/img/2.png",
       title: "AI Swap",
       description: "Swap tokens with support of AI",
       style: { top: "10%", right: "10%" },

@@ -33,9 +33,10 @@ const Countdown = ({}) => {
   return (
     <div>
       {Object.keys(timeLeft).length === 0 ? (
-        <Typography neon="true" css={{ fontSize: "65px", fontWeight: "bold" }}>
-          $CAPO IS NOW BEING REVEALED!!
-        </Typography>
+        <Typography
+          neon="true"
+          css={{ fontSize: "65px", fontWeight: "bold" }}
+        ></Typography>
       ) : (
         <Flex alignItems={"end"} gap={2}>
           {Object.entries(timeLeft).map(([unit, value]) => (

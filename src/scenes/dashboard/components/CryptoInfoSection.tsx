@@ -2,7 +2,13 @@ import { Stack, Flex } from "@/components/box";
 import Typography from "@/components/typography";
 import VideoComponent from "./VideoComponent";
 
-function CryptoInfoSection({ direction = "row" as any }) {
+function CryptoInfoSection({
+  direction = "row" as any,
+  title,
+  description,
+  reversed = false,
+  video = "img/trust-wallet-canva.mp4",
+}) {
   return (
     <div
       style={{
@@ -17,25 +23,37 @@ function CryptoInfoSection({ direction = "row" as any }) {
           borderRadius: "32px",
           mb: "220px",
 
-          background: "black",
+          // background: "black",
+          backgroundImage: "url(img/testnet_section.svg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          border: "1px solid #222",
           nackDropFilter: "blur(10px)",
           zIndex: 9999,
           // boxShadow: "0px 10px 120px 0px #chbcea69 ",
         }}
       >
-        <Flex direction={direction} css={{}}>
+        <Flex direction={!reversed ? direction : "row"} css={{}}>
+          {reversed && (
+            <div
+              style={{
+                width: "400px",
+                // background: "blue",
+              }}
+            ></div>
+          )}
           <Stack
             css={{
               flex: "1",
               mt: 12,
               gap: 4,
-              width: "50%",
+              // width: "50%",
               background: "rgba(0, 0, 0, 0.5)",
             }}
           >
             <div
               style={{
-                width: "50%",
+                width: reversed ? "85%" : "50%",
               }}
             >
               <Typography
@@ -46,15 +64,14 @@ function CryptoInfoSection({ direction = "row" as any }) {
                   mb: 4,
                 }}
               >
-                Buy Crypto with FIAT
+                {title}
               </Typography>
               <Typography
                 css={{
                   fontSize: "28px",
                 }}
               >
-                Through VersaBot, users effortlessly purchase cryptocurrencies
-                with just a few clicks, using their credit card or bank transfer
+                {description}
               </Typography>
             </div>
           </Stack>

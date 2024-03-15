@@ -139,7 +139,7 @@ function HeroSection() {
           }}
           src="img/hero-2.png"
           alt=""
-          width={"100%"}
+          width={"100%"}p
         /> */}
         <div
           style={{

@@ -79,10 +79,18 @@ const AnimatedPage = ({ children }) => {
 
 
 
-  return <div>
+  return <motion.div
+    // initial={{
+    //   x: "95vw", // set 100vw to 95vw
+    // }}
+    animate="in"
+    exit="out"
+    variants={pageVariants}
+    transition={pageTransition}
+  >
   <LevitatingBackground className="levitating-background" style={{ backgroundImage: `url('img/Heado.png')` }} />
     <div className="content">{children}</div>
-  </div>
+  </motion.div>
 };
 
 export default AnimatedPage;

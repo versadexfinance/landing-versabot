@@ -220,7 +220,7 @@ function Dashboard() {
                 </Typography>
                 <Typography
                   css={{
-                    maxWidth: "500px"
+                    maxWidth: "500px",
                     fontSize: "20px",
                     color: "$primary",
                   }}

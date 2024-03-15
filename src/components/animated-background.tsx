@@ -27,7 +27,7 @@ const MyComponent = () => {
 
     // Animation controls (start, pause, resume, reverse, etc.)
 
-    return () => animation.kill();
+    // return () => animation.kill();
   }, []);
 
   return (

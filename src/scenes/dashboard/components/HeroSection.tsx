@@ -111,7 +111,7 @@ function HeroSection() {
               css={{
                 color: "#e1e1e1",
                 fontWeight: "lighter",
-                fontSize: isGtThanMobile ? "20px" : "18px",
+                fontSize: isGtThanMobile ?"24px":"20px",
               }}
             >
               Connect a DeFi wallet with a single click.

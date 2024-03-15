@@ -63,10 +63,10 @@ const NavigationLinks = ({ pathname }: { pathname: string | null }) => (
   <ResponsiveNavLinksContainer>
     <Flex gap={2}>
       <NextLink href="#home">Home</NextLink>
-      <NextLink href="#contact">Contact us</NextLink>
-      <NextLink href="https://xdex.gitbook.io/versabot/" target="_blank">
+      <NextLink href="https://xdex.gitbook.io/VersaBot/" target="_blank">
         Docs
       </NextLink>
+      <NextLink href="#contact">Contact us</NextLink>
     </Flex>
   </ResponsiveNavLinksContainer>
 );
@@ -87,7 +87,7 @@ const HiddenOnDesktop = styled(Flex, {
 });
 
 const Header = () => {
-  const isGtThanMobile = useMediaQuery(media.tablet);
+  const isGtThanMobile = useMediaQuery(media.mobile);
 
   const router = useRouter(); // Get the router instance
   const pathname = usePathname();
@@ -139,10 +139,12 @@ const Header = () => {
             <img src="/img/logo.svg" alt="logo" height={32} />
             <Typography
               css={{
-                fontWeight: "bold",
+                fontWeight: "semibold",
+                // fontStyle: "oblique",
+                lineHeight: "32px",
               }}
             >
-              VersaBotAI
+              VersaBot
             </Typography>
           </NextLink>
           <HiddenOnMobile>
@@ -154,7 +156,9 @@ const Header = () => {
               // mt: 8,
               background: "linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%)",
               boxShadow: "0px 2px 8px 0px rgba(235, 254, 100, 0.4)",
-              fontWeight: "700 !important",
+              // fontWeight: "700 !important",
+              fontWeight: "bold !important !important",
+
               "&:hover": {
                 scale: 1.05,
                 background: "linear-gradient(180deg, #8CEA69 0%, #EBFE64 100%)",
@@ -164,7 +168,7 @@ const Header = () => {
             href="https://discord.gg/rnnKEn4Tc2"
             target="_blank"
           >
-            JOIN VERSABOT V1
+            {isGtThanMobile ? "JOIN VersaBot V1" : "JOIN V1"}
           </Button>
         </Flex>
         <HiddenOnDesktop>

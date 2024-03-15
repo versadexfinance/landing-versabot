@@ -18,7 +18,7 @@ const Typography = styled("div", {
   defaultVariants: {
     weight: "300",
   },
-  fontFamily: "Mabry Pro",
+  fontFamily: "Syne, sans-serif !important",
   // color: "red",
   variants: {
     family: familyVariant,

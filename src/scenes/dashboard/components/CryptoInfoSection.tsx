@@ -32,7 +32,7 @@ function CryptoInfoSection({
           backgroundSize: "cover",
           backgroundPosition: "center",
           border: "1px solid #222",
-          nackDropFilter: "blur(10px)",
+          // nackDropFilter: "blur(10px)",
           zIndex: 9999,
           // boxShadow: "0px 10px 120px 0px #chbcea69 ",
         }}

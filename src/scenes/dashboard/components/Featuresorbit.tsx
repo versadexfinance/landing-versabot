@@ -2,7 +2,7 @@
 import { Flex, Stack } from "@/components/box";
 import Typography from "@/components/typography";
 import media from "@/styled/media";
-import { styled } from "@stitches/react";
+import { keyframes, styled } from "@stitches/react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 
@@ -33,17 +33,26 @@ const CentralLogo = styled("div", {
   // Add additional styling for your logo
 });
 
+const borderAnimation = keyframes({
+  "0%": { borderColor: "#333" },
+  // "25%": { borderColor: "#8CEA69" },
+  "75%": { borderColor: "gray" },
+  "50%": { borderColor: "rgba(255, 255, 255, 0.2)" },
+  "100%": { borderColor: "#333" },
+});
+
 const FeatureItem = styled(motion.div, {
   position: "absolute",
   maxWidth: "300px",
   padding: "10px",
-  background: "rgba(255, 255, 255, 0.08)",
+  background: "rgba(255, 255, 255, 0.1)",
   borderRadius: "16px",
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   backdropFilter: "blur(7.6px)",
   "-webkit-backdrop-filter": "blur(7.6px)",
-  border: " 1px solid rgba(255, 255, 255, 0.2)",
+  border: "1px solid rgba(255, 255, 255, 0.2)",
   zIndex: 10,
+  animation: `${borderAnimation} 4s linear infinite`,
   variants: {
     isMobile: {
       true: {
@@ -106,7 +115,7 @@ export const FeatureItemComponent = ({
     scale: [1, randomScale, 1],
     // rotate: [0, randomRotation, 0],
     transition: {
-      duration: 2, // Duration of one cycle of animation
+      duration: 4, // Duration of one cycle of animation
       repeat: Infinity,
       repeatType: "reverse", // Reverse the animation instead of restarting
       ease: "easeInOut",

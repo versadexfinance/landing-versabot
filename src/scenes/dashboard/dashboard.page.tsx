@@ -17,13 +17,14 @@ import ReferralProgram from "./components/ReferralProgram";
 import ContactForm from "./components/ContactForm";
 import Button from "@/components/button";
 import { motion } from "framer-motion";
+import SectionWrapper from "@/components/section-wrapper";
 
 function Dashboard() {
   const isGtThanMobile = useMediaQuery(media.tablet);
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  // const fadeIn = {
+  //   hidden: { opacity: 0 },
+  //   visible: { opacity: 1 },
+  // };
   return (
     <AnimatedPage>
       <Stack
@@ -35,16 +36,10 @@ function Dashboard() {
           padding: "24px",
         }}
       >
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        <SectionWrapper>
           <HeroSection />
-        </motion.div>
-        <motion.div>
+        </SectionWrapper>
+        <SectionWrapper>
           <Stack
             alignItems={"center"}
             css={{
@@ -70,7 +65,7 @@ function Dashboard() {
                   color: "#f5ffab",
                 }}
               >
-                Versabot - DeFi in your own way through Telegram
+                VersaBot - DeFi in your own way through Telegram
               </Typography>
               <Typography
                 css={{
@@ -93,14 +88,8 @@ function Dashboard() {
               </Typography>
             </Stack>
           </Stack>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <Flex
             css={{
               width: "100%",
@@ -140,14 +129,8 @@ function Dashboard() {
               }}
             ></div>
           </Flex>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <Stack
             css={{
               paddingTop: "80px",
@@ -168,23 +151,11 @@ function Dashboard() {
               Introducign our game chaning feature
             </Typography>
           </Stack>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <OrbitingFeatures />
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <Stack
             gap={4}
             css={{
@@ -206,14 +177,8 @@ function Dashboard() {
               background: "#333",
             }}
           ></div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <Stack
             alignItems={"center"}
             css={{
@@ -273,15 +238,9 @@ function Dashboard() {
             </Flex>
             {/* <VideoComponent src="img/video-swap.mp4" /> */}
           </Stack>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <Stack gap={4}>
+        </SectionWrapper>
+        <Stack gap={4}>
+          <SectionWrapper>
             <CryptoInfoSection
               title={"Connect wallet"}
               direction="rowReverse"
@@ -289,6 +248,8 @@ function Dashboard() {
                 "Through VersaBot, users  effortlessly purchase cryptocurrencies with just a few clicks, using their credit card or bank transfer."
               }
             />
+          </SectionWrapper>
+          <SectionWrapper>
             <CryptoInfoSection
               reversed={true}
               video="img/top-up-demo.mp4"
@@ -298,6 +259,8 @@ function Dashboard() {
               }
               direction="rowReverse"
             />
+          </SectionWrapper>
+          <SectionWrapper>
             <CryptoInfoSection
               title={"Swap tokens"}
               video="img/ai-swap-demo.mp4"
@@ -306,15 +269,9 @@ function Dashboard() {
               }
               direction="rowReverse"
             />
-          </Stack>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+          </SectionWrapper>
+        </Stack>
+        <SectionWrapper>
           <Flex
             css={{
               width: "100%",
@@ -354,16 +311,10 @@ function Dashboard() {
               }}
             ></div>
           </Flex>
-        </motion.div>
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-        >
+        </SectionWrapper>
+        <SectionWrapper>
           <ReferralProgram />
-        </motion.div>
+        </SectionWrapper>
         <div
           style={{
             width: "100%",
@@ -373,7 +324,9 @@ function Dashboard() {
           }}
         ></div>
         {/* <img src="img/BUY.png" alt="" /> */}
-        <ContactForm />
+        <SectionWrapper>
+          <ContactForm />
+        </SectionWrapper>
       </Stack>
       <div
         style={{
@@ -396,7 +349,7 @@ function Dashboard() {
             textAlign: "center",
           }}
         >
-          Start your Non-custiodial journey Now!!
+          {/* Start your Non-custiodial journey Now!! */}
         </Typography>
         <Stack>
           <Button
@@ -413,7 +366,7 @@ function Dashboard() {
             href="https://discord.gg/rnnKEn4Tc2"
             target="_blank"
           >
-            JOIN VERSABOT V1
+            JOIN VersaBot V1
           </Button>
         </Stack>
       </div>

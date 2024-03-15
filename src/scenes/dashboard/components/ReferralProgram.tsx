@@ -29,7 +29,7 @@ function ReferralProgram() {
             textAlign: "center",
           }}
         >
-          Versabot - the referral program
+          R eferral program
         </Typography>
         <Typography
           css={{

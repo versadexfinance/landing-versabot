@@ -27,12 +27,13 @@ const Form = styled("form", {
 const Textarea = styled("textarea", {
   padding: "8px",
   borderRadius: "4px",
-  border: "1px solid #ccc",
+  border: "1px solid #333",
   backgroundColor: "transparent",
   "&:focus": {
     borderColor: "#007bff",
     outline: "none",
   },
+
   gridColumn: "1 / -1", // Span across all columns
 });
 

@@ -127,6 +127,7 @@ function Dashboard() {
                 autoPlay={true}
                 width={130}
                 loop={true}
+                playsInline={true}
                 muted
                 src="img/animated-logo.mp4"
               />
@@ -311,6 +312,7 @@ function Dashboard() {
                 autoPlay={true}
                 width={130}
                 loop={true}
+                playsInline={true}
                 muted
                 src="img/animated-logo.mp4"
               />

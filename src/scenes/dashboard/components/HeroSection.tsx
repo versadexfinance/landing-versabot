@@ -55,7 +55,10 @@ function HeroSection() {
             fontWeight: "bolder",
           }}
         >
-          A full non-custodial Web3 journey!
+          {/* A full non-custodial Web3 journey! */}
+          DeFi in Your 
+          <br />
+          Own Way!
         </Typography>
         <ul
           style={{

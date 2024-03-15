@@ -5,15 +5,17 @@
     font-style: normal;
   }
    */
+   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
    @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/mabp.ttf') format('truetype');
   }
 
    /* @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Bold.eot');
-    src: local('Syne Bold'), local('MabryPro-Bold'),
+    src: local('CustomFont Bold'), local('MabryPro-Bold'),
         url('/MabryPro-Bold.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Bold.woff2') format('woff2'),
         url('/MabryPro-Bold.woff') format('woff'),
@@ -24,9 +26,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Medium.eot');
-    src: local('Syne Medium'), local('MabryPro-Medium'),
+    src: local('CustomFont Medium'), local('MabryPro-Medium'),
         url('/MabryPro-Medium.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Medium.woff2') format('woff2'),
         url('/MabryPro-Medium.woff') format('woff'),
@@ -37,9 +39,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Black.eot');
-    src: local('Syne Black'), local('MabryPro-Black'),
+    src: local('CustomFont Black'), local('MabryPro-Black'),
         url('/MabryPro-Black.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Black.woff2') format('woff2'),
         url('/MabryPro-Black.woff') format('woff'),
@@ -50,9 +52,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-LightItalic.eot');
-    src: local('Syne Light Italic'), local('MabryPro-LightItalic'),
+    src: local('CustomFont Light Italic'), local('MabryPro-LightItalic'),
         url('/MabryPro-LightItalic.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-LightItalic.woff2') format('woff2'),
         url('/MabryPro-LightItalic.woff') format('woff'),
@@ -63,9 +65,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-BoldItalic.eot');
-    src: local('Syne Bold Italic'), local('MabryPro-BoldItalic'),
+    src: local('CustomFont Bold Italic'), local('MabryPro-BoldItalic'),
         url('/MabryPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-BoldItalic.woff2') format('woff2'),
         url('/MabryPro-BoldItalic.woff') format('woff'),
@@ -76,9 +78,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Light.eot');
-    src: local('Syne Light'), local('MabryPro-Light'),
+    src: local('CustomFont Light'), local('MabryPro-Light'),
         url('/MabryPro-Light.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Light.woff2') format('woff2'),
         url('/MabryPro-Light.woff') format('woff'),
@@ -89,9 +91,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-BlackItalic.eot');
-    src: local('Syne Black Italic'), local('MabryPro-BlackItalic'),
+    src: local('CustomFont Black Italic'), local('MabryPro-BlackItalic'),
         url('/MabryPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-BlackItalic.woff2') format('woff2'),
         url('/MabryPro-BlackItalic.woff') format('woff'),
@@ -102,9 +104,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-MediumItalic.eot');
-    src: local('Syne Medium Italic'), local('MabryPro-MediumItalic'),
+    src: local('CustomFont Medium Italic'), local('MabryPro-MediumItalic'),
         url('/MabryPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-MediumItalic.woff2') format('woff2'),
         url('/MabryPro-MediumItalic.woff') format('woff'),
@@ -115,9 +117,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Italic.eot');
-    src: local('Syne Italic'), local('MabryPro-Italic'),
+    src: local('CustomFont Italic'), local('MabryPro-Italic'),
         url('/MabryPro-Italic.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Italic.woff2') format('woff2'),
         url('/MabryPro-Italic.woff') format('woff'),
@@ -128,9 +130,9 @@
   }
   
   @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/MabryPro-Regular.eot');
-    src: local('Syne'), local('MabryPro-Regular'),
+    src: local('CustomFont'), local('MabryPro-Regular'),
         url('/MabryPro-Regular.eot?#iefix') format('embedded-opentype'),
         url('/MabryPro-Regular.woff2') format('woff2'),
         url('/MabryPro-Regular.woff') format('woff'),
@@ -143,7 +145,7 @@
   
   */
    @font-face {
-    font-family: 'Syne';
+    font-family: 'CustomFont';
     src: url('/./fonts/mabp.ttf') format('truetype');
   } 
   :root {
@@ -189,11 +191,11 @@
   }
   
   body {
-    font-family: 'Syne', sans-serif;
+    font-family: 'CustomFont', sans-serif;
   }
   
   *{
-    font-family: 'Syne', sans-serif;
+    font-family: 'CustomFont', sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {

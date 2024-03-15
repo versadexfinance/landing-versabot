@@ -208,7 +208,7 @@ const OrbitingFeatures = () => {
       title: "DeFi Strategies",
       description: "Coming Soon",
       isComingSoon: true,
-      style: { top: "50%", right: "10%", transform: "translate(50%,50%)" },
+      style: { top: "40%", right: "10%", transform: "translate(50%,50%)" },
     },
     {
       imgSrc: "/img/5.png",

@@ -78,6 +78,7 @@ function Dashboard() {
               <Typography
                 css={{
                   mt: 2,
+                  fontSize: "20px",
                 }}
                 textAlign={"center"}
               >
@@ -88,6 +89,7 @@ function Dashboard() {
                 textAlign={"center"}
                 css={{
                   mt: 4,
+                  fontSize: "20px",
                 }}
               >
                 VersaBot offers a non-custodial solution and advanced Web3
@@ -146,7 +148,7 @@ function Dashboard() {
           >
             <Typography
               css={{
-                fontSize: "32px",
+                fontSize: isGtThanMobile? "32px":"28px",
                 fontWeight: "bold",
                 textAlign: "center",
                 color: "#f5ffab",
@@ -155,7 +157,9 @@ function Dashboard() {
             >
               Elevate your DeFi Experience through Telegram
             </Typography>
-            <Typography textAlign={"center"}>
+            <Typography textAlign={"center"} css={{
+              fontSize: "24px",
+            }}>
               Introducign our game chaning feature
             </Typography>
           </Stack>
@@ -216,8 +220,8 @@ function Dashboard() {
                 </Typography>
                 <Typography
                   css={{
-                    maxWidth: "500px",
-                    fontSize: "18px",
+                    maxWidth: "500px"
+                    fontSize: "20px",
                     color: "$primary",
                   }}
                 >

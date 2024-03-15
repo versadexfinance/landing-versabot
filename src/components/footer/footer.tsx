@@ -74,7 +74,7 @@ function Footer() {
               transition: { duration: 0.3 },
             }}
           >
-            <NextLink target="_blank" href="">
+            <NextLink target="_blank" href="https://twitter.com/versadex">
               <BsTwitterX color="white" size="30" />
             </NextLink>
           </motion.div>

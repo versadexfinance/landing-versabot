@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LoadingBar } from "../loading-bar";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
@@ -21,6 +21,10 @@ import Typography from "../typography";
 import Button from "../button";
 
 // Common components
+
+
+import gsap from 'gsap';
+
 
 const StyledNextLink = styled(Link, {
   fontSize: "16px",
@@ -63,7 +67,7 @@ const NavigationLinks = ({ pathname }: { pathname: string | null }) => (
   <ResponsiveNavLinksContainer>
     <Flex gap={2}>
       <NextLink href="#home">Home</NextLink>
-      <NextLink href="https://xdex.gitbook.io/VersaBot/" target="_blank">
+      <NextLink href="https://xdex.gitbook.io/versabot" target="_blank">
         Docs
       </NextLink>
       <NextLink href="#contact">Contact us</NextLink>
@@ -92,6 +96,31 @@ const Header = () => {
   const router = useRouter(); // Get the router instance
   const pathname = usePathname();
   const [loading, setLoading] = useState(false);
+  const buttonRef = useRef(null);
+
+
+  // useEffect(() => {
+  //   const button = buttonRef.current;
+  
+  //   gsap.fromTo(button, 
+  //     { rotationX: 0, rotationY: 0, boxShadow: '0px 2px 8px 0px rgba(235, 254, 100, 0.4)' },
+  //     {
+  //       rotationX: 10, // Tilt forward
+  //       rotationY: 10, // Tilt to the side
+  //       boxShadow: '5px 5px 15px 5px rgba(235, 254, 100, 0.6)', // Enhance shadow
+  //       ease: 'power2.out',
+  //       paused: true,
+  //     }
+  //   );
+  
+  //   button.addEventListener('mouseenter', () => gsap.to(button, { rotationX: 10, rotationY: 10, boxShadow: '5px 5px 15px 5px rgba(235, 254, 100, 0.6)' }));
+  //   button.addEventListener('mouseleave', () => gsap.to(button, { rotationX: 0, rotationY: 0, boxShadow: '0px 2px 8px 0px rgba(235, 254, 100, 0.4)' }));
+  
+  //   return () => {
+  //     button.removeEventListener('mouseenter');
+  //     button.removeEventListener('mouseleave');
+  //   };
+  // }, []);
 
   // useEffect(() => {
   //   if (!router.isReady || typeof window === 'undefined') {
@@ -137,21 +166,27 @@ const Header = () => {
             }}
           >
             <img src="/img/logo.svg" alt="logo" height={32} />
-            <Typography
+            <img src="/img/logo-text.png" height="32px" style={{
+                  filter:" invert(100%) brightness(200%) contrast(100%)"
+
+            }} alt="" />
+            {/* <Typography
               css={{
                 fontWeight: "semibold",
                 // fontStyle: "oblique",
                 lineHeight: "32px",
               }}
             >
-              VersaBot
-            </Typography>
+              
+            </Typography> */}
           </NextLink>
           <HiddenOnMobile>
             <NavigationLinks pathname={pathname} />
           </HiddenOnMobile>
 
           <Button
+            ref={buttonRef}
+
             css={{
               // mt: 8,
               background: "linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%)",

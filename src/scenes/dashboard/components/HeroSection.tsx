@@ -2,9 +2,12 @@ import { Flex, Stack } from "@/components/box";
 import Button from "@/components/button";
 import Typography from "@/components/typography";
 import media from "@/styled/media";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { motion } from "framer-motion";
+
+import gsap from 'gsap';
+
 
 function HeroSection() {
   const isGtThanMobile = useMediaQuery(media.tablet);
@@ -13,6 +16,45 @@ function HeroSection() {
     stiffness: 500,
     damping: 30,
   };
+  useEffect(() => {
+    // Using GSAP for scroll-based animations
+    gsap.utils.toArray('.hero-img').forEach((img:any) => {
+      gsap.to(img, {
+        scrollTrigger: {
+          trigger: img,
+          start: "top bottom", // Start the animation when the top of the img hits the bottom of the viewport
+          end: "bottom top", // End when the bottom of the img hits the top of the viewport
+          scrub: true,
+        },
+        y: 20, // Adjust as needed for subtle vertical movement
+        rotation: 2, // Slight rotation for a dynamic effect
+        ease: "none",
+      });
+    });
+  }, []);
+
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(titleRef.current, {
+      duration: 1,
+      x: -100,
+      opacity: 0,
+      color: "#8CEA69",
+      ease: "power3.out",
+    });
+
+    gsap.from(descriptionRef.current, {
+      duration: 1.2,
+      x: -100,
+      opacity: 0,
+      color: "#EBFE64",
+      ease: "power3.out",
+      delay: 0.2, // Adding a slight delay for a staggering effect
+    });
+  }, []);
+
 
   const pulse = {
     scale: [1, 1.05, 1],
@@ -55,10 +97,7 @@ function HeroSection() {
             fontWeight: "bolder",
           }}
         >
-          {/* A full non-custodial Web3 journey! */}
-          DeFi in Your 
-          <br />
-          Own Way!
+          A full non-custodial Web3 journey!
         </Typography>
         <ul
           style={{
@@ -157,6 +196,7 @@ function HeroSection() {
               top: "40px",
             }}
             src="img/hero-3.png"
+            className="hero-img"
             alt=""
             width={"56%"}
             initial={{ opacity: 0, y: -100 }}
@@ -170,6 +210,7 @@ function HeroSection() {
               top: "20px",
             }}
             src="img/hero-2.png"
+            className="hero-img"
             alt=""
             width={"100%"}
             initial={{ opacity: 0, y: 100 }}

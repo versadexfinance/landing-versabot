@@ -34,12 +34,28 @@ const VideoComponent = ({ src }) => {
   }, [videoRef, controls]);
 
   return (
+    <div style={{
+      // border: "1px solid #EBFE64",
+      borderRadius: "59px",
+      overflow: "hidden",
+      width:"276px",
+      height:"550px",
+      
+      position: "relative",
+    }}>
+
+    
     <motion.video
       style={{
         // border: "1px solid #424242",
         borderRadius: "32px",
+        translateY: "-2%",
         paddingTop: "10px",
-        paddingLeft: "5px",
+        // position:"absolute",
+        translateX: "-8%",
+        // height: "fit-content",
+        margin:"auto"
+        
         // boxShadow: "0px 4px 4px #f5ffab",
       }}
       ref={videoRef}
@@ -47,9 +63,10 @@ const VideoComponent = ({ src }) => {
       muted
       loop
       src={src}
-      whileHover={{ scale: 1.1 }}
+      // whileHover={{ scale: 1.1 }}
       animate={controls}
     />
+    </div>
   );
 };
 export default VideoComponent;

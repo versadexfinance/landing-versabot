@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./fonts.css";
 
@@ -18,6 +18,8 @@ import ContactForm from "./components/ContactForm";
 import Button from "@/components/button";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/section-wrapper";
+import LevitatingBackground from "@/components/levitating-background";
+
 
 function Dashboard() {
   const isGtThanMobile = useMediaQuery(media.tablet);
@@ -25,10 +27,16 @@ function Dashboard() {
   //   hidden: { opacity: 0 },
   //   visible: { opacity: 1 },
   // };
+
+
+  
+    
   return (
-    <AnimatedPage>
+    <AnimatedPage >
+
       <Stack
         gap={4}
+        
         css={{
           margin: "0 auto",
           width: "100%",

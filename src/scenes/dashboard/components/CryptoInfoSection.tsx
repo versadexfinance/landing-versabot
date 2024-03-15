@@ -17,6 +17,7 @@ function CryptoInfoSection({
     <div
       style={{
         position: "relative",
+        
       }}
     >
       <Stack
@@ -26,7 +27,7 @@ function CryptoInfoSection({
           padding: "24px",
           borderRadius: "32px",
           mb: isGtThanMobile ? "220px" : "50px",
-
+          background: "black",
           // background: "black",
           backgroundImage: "url(img/testnet_section.svg)",
           backgroundSize: "cover",

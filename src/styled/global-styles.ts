@@ -22,7 +22,7 @@ export const globalStylesObj = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "stretch",
-    backgroundColor: "$bg",
+    backgroundColor: "#0a0a0a !important",
     color: "$foreground",
     margin: 0,
     padding: 0,

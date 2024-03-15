@@ -103,7 +103,7 @@ function HeroSection() {
             },
           }}
           as="a"
-          href="https://discord.gg/rnnKEn4Tc2"
+          href="https://t.me/versatest_bot"
           target="_blank"
         >
           JOIN VersaBot V1

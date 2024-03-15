@@ -29,7 +29,7 @@ function ReferralProgram() {
             textAlign: "center",
           }}
         >
-          R eferral program
+          Referral program
         </Typography>
         <Typography
           css={{

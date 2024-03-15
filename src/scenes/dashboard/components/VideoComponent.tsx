@@ -58,6 +58,7 @@ const VideoComponent = ({ src }) => {
         
         // boxShadow: "0px 4px 4px #f5ffab",
       }}
+      playsInline={true}
       ref={videoRef}
       width={"320px"}
       muted

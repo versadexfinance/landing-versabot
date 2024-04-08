@@ -67,7 +67,7 @@ const NavigationLinks = ({ pathname }: { pathname: string | null }) => (
   <ResponsiveNavLinksContainer>
     <Flex gap={2}>
       <NextLink href="#home">Home</NextLink>
-      <NextLink href="https://xdex.gitbook.io/versabot" target="_blank">
+      <NextLink href="https://docs.versadex.finance/versabot" target="_blank">
         Docs
       </NextLink>
       <NextLink href="#contact">Contact us</NextLink>

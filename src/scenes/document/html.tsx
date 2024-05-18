@@ -18,6 +18,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 // import useCurrentLocale from '@/pods/i18n/hooks/use-current-locale';
 // import { Locale } from '@/pods/i18n/interfaces';
+
 import { getCssText } from "@/styled/styled";
 import globalStyles from "@/styled/global-styles";
 import "@rainbow-me/rainbowkit/styles.css";

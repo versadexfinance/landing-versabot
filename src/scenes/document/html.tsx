@@ -51,6 +51,35 @@ const Html = ({ children }: HtmlProps) => {
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
           rel="stylesheet"
         />
+
+        <meta property="og:title" content="VersaBot" />
+        <meta
+          property="og:description"
+          content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all."
+        />
+        <meta
+          property="og:image"
+          content="img/og-banner.jpg"
+        />
+        <meta property="og:url" content="https://bot.versadex.finance" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="img/og-banner.jpg" />
+        <meta name="twitter:title" content="Your Page Title" />
+        <meta
+          name="twitter:description"
+          content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI 
+
+VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all."
+        />
+        <meta
+          name="twitter:image"
+          content="img/og-banner.jpg"
+        />
+        <meta
+          name="twitter:url"
+          content="https://bot.versadex.finance"
+        ></meta>
       </Head>
       <body>
         <AnimatePresence mode="wait">

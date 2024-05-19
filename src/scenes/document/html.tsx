@@ -40,7 +40,7 @@ const Html = ({ children }: HtmlProps) => {
   return (
     <html className={poppins.className}>
       <title>VersaBot</title>
-      <Head key={"123"}>
+      <head>
         <style
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
@@ -53,27 +53,49 @@ const Html = ({ children }: HtmlProps) => {
           rel="stylesheet"
         />
 
+        <title>
+          VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram
+          Bot, Enhanced by VersaAI
+        </title>
+        <meta
+          name="title"
+          content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI "
+        />
+        <meta
+          name="description"
+          content="VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all."
+        />
 
-<title>VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI </title>
-<meta name="title" content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI " />
-<meta name="description" content="VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bot.versadex.finance/" />
+        <meta
+          property="og:title"
+          content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI "
+        />
+        <meta
+          property="og:description"
+          content="Versabot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all."
+        />
+        <meta
+          property="og:image"
+          content="https://bot.versadex.finance/img/og-banner.jpg"
+        />
 
-
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bot.versadex.finance/" />
-<meta property="og:title" content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI " />
-<meta property="og:description" content="Versabot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all." />
-<meta property="og:image" content="https://bot.versadex.finance/img/og-banner.jpg" />
-
-
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://bot.versadex.finance/" />
-<meta property="twitter:title" content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI " />
-<meta property="twitter:description" content="VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all." />
-<meta property="twitter:image" content="https://bot.versadex.finance/img/og-banner.jpg" />
-
-
-      </Head>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://bot.versadex.finance/" />
+        <meta
+          property="twitter:title"
+          content="VersaBot: The World’s First Non-Custodial, Cross-chain EVM Telegram Bot, Enhanced by VersaAI "
+        />
+        <meta
+          property="twitter:description"
+          content="VersaBot stands as a revolutionary tool within the DeFi space as it’s the first Telegram bot to offer a complete non-custodial, cross-chain experience with advanced Web3 and features, while also providing a smooth onboarding process for all."
+        />
+        <meta
+          property="twitter:image"
+          content="https://bot.versadex.finance/img/og-banner.jpg"
+        />
+      </head>
       <body>
         <AnimatePresence mode="wait">
           <RecoilRoot>{children}</RecoilRoot>

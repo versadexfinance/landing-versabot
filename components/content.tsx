@@ -5,7 +5,6 @@ import styled from "styled-components";
 export type ContentType = {
   className?: string;
 };
-import { motion } from "framer-motion";
 
 const popAnimation = `
   @keyframes pop {

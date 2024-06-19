@@ -14,7 +14,7 @@ export default createGlobalStyle`@import url('https://fonts.googleapis.com/css2?
 
       @keyframes pop {
         0% {
-          transform: scale(0.83);
+          transform: scale(0.80);
           opacity: 0;
         }
         100% {

@@ -1,13 +1,132 @@
 import { Flex, Stack } from "@/components/box";
-import Button from "@/components/button";
 import Typography from "@/components/typography";
+import { styled } from "@/styled";
 import media from "@/styled/media";
-import React, { useEffect, useRef } from "react";
-import { useMediaQuery } from "usehooks-ts";
 import { motion } from "framer-motion";
+import { NextPage } from "next";
+import { useEffect, useRef } from "react";
+import { useMediaQuery } from "usehooks-ts";
+import gsap from "gsap";
 
-import gsap from 'gsap';
+const GradientText = styled("span", {
+  background: "$gradientText",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+});
 
+const Heading = styled("h1", {
+  margin: "0",
+  alignSelf: "stretch",
+  position: "relative",
+  fontSize: "$headingLarge",
+  lineHeight: "$headingLarge",
+  fontWeight: 700,
+  fontFamily: "$main",
+  "@bp2": {
+    fontSize: "$headingMedium",
+    lineHeight: "$headingMedium",
+  },
+  "@bp3": {
+    fontSize: "$headingSmall",
+    lineHeight: "$headingSmall",
+  },
+});
+
+const Paragraph = styled("p", {
+  margin: "0",
+  fontSize: "$paragraphLarge",
+  color: "$textColor",
+  lineHeight: "$paragraphLarge",
+  "@bp3": {
+    fontSize: "$paragraphSmall",
+    lineHeight: "$paragraphSmall",
+  },
+});
+
+export const Button = styled("button", {
+  cursor: "pointer",
+  border: "none",
+  padding: "16px 40px",
+  backgroundColor: "transparent",
+  boxShadow: "0px 2px 8px rgba(235, 254, 100, 0.4)",
+  borderRadius: "4px",
+  background:
+    "linear-gradient(180deg, $buttonGradientStart, $buttonGradientEnd)",
+  fontSize: "$buttonLarge",
+  lineHeight: "$buttonLarge",
+  textTransform: "uppercase",
+  color: "$buttonTextColor",
+  textAlign: "center",
+  whiteSpace: "nowrap",
+  display: "inline-block",
+  "@bp2": {
+    padding: "14px 35px",
+    fontSize: "$buttonMedium",
+    lineHeight: "$buttonMedium",
+  },
+  "@bp3": {
+    padding: "12px 30px",
+    fontSize: "$buttonSmall",
+    lineHeight: "$buttonSmall",
+  },
+});
+
+const TextBlock = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+  gap: "56px",
+  minWidth: "494px",
+  maxWidth: "100%",
+  zIndex: 1,
+  "@bp2": {
+    gap: "28px",
+    minWidth: "100%",
+  },
+});
+
+const MainPicture = styled("img", {
+  flex: 1,
+  position: "relative",
+  maxWidth: "100%",
+  maxHeight: "100%",
+  zIndex: 1,
+  "@bp1": {
+    width: "auto",
+  },
+});
+
+const HeroSection1 = styled("div", {
+  display: "flex",
+  flexDirection: "row-reverse",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+  gap: "24px",
+  maxWidth: "100%",
+  "@bp1": {
+    flexWrap: "wrap",
+    flexDirection: "row",
+  },
+});
+
+const ContentWrapper = styled("div", {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+  padding: "0px 60px",
+  boxSizing: "border-box",
+  maxWidth: "100%",
+  flexShrink: 0,
+  textAlign: "left",
+  fontSize: "64px",
+  color: "$mainTextColor",
+  fontFamily: "$main",
+  "@bp2": {
+    padding: "0px 30px",
+  },
+});
 
 function HeroSection() {
   const isGtThanMobile = useMediaQuery(media.tablet);
@@ -18,7 +137,7 @@ function HeroSection() {
   };
   useEffect(() => {
     // Using GSAP for scroll-based animations
-    gsap.utils.toArray('.hero-img').forEach((img:any) => {
+    gsap.utils.toArray(".hero-img").forEach((img: any) => {
       gsap.to(img, {
         scrollTrigger: {
           trigger: img,
@@ -54,7 +173,6 @@ function HeroSection() {
       delay: 0.2, // Adding a slight delay for a staggering effect
     });
   }, []);
-
 
   const pulse = {
     scale: [1, 1.05, 1],
@@ -111,7 +229,7 @@ function HeroSection() {
               css={{
                 color: "#e1e1e1",
                 fontWeight: "lighter",
-                fontSize: isGtThanMobile ?"24px":"20px",
+                fontSize: isGtThanMobile ? "24px" : "20px",
               }}
             >
               Connect a DeFi wallet with a single click.
@@ -122,7 +240,7 @@ function HeroSection() {
               css={{
                 color: "#e1e1e1",
                 fontWeight: "lighter",
-                fontSize: isGtThanMobile ?"24px":"20px",
+                fontSize: isGtThanMobile ? "24px" : "20px",
                 textAlign: "justify",
               }}
             >
@@ -234,24 +352,7 @@ function HeroSection() {
           animate={{ scale: 1 }}
           transition={{ type: "tween", duration: 1.2, delay: 0.5 }}
         ></motion.div> */}
-          <motion.div
-            style={{
-              position: "absolute",
-              borderRadius: "658px",
-              width: isGtThanMobile ? "100%" : "80%",
-              height: "208px",
-              top: "180px",
-              left: "20%",
-              transform: "translateX(-50%)",
-              zIndex: -1,
-              background: "linear-gradient(180deg, #EBFE64 0%, #8CEA69 100%)",
-              filter: "blur(100px)",
-            }}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "tween", duration: 1.2 }}
-            whileInView={pulse}
-          ></motion.div>
+      c
         </div>
         {/* <motion.div
           style={{

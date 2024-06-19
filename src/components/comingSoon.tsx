@@ -11,6 +11,7 @@ function CoomingSoon() {
       }}
     >
       <Typography
+
         css={{
           fontWeight: 800,
         }}

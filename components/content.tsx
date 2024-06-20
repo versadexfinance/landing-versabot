@@ -13,7 +13,7 @@ const popAnimation = `
       opacity: 0;
     }
     50% {
-      transform: scale(1.2);
+      transform: scale(1.01);
       opacity: 1;
     }
     100% {

@@ -47,6 +47,7 @@ const H = styled.h1`
   }
 `;
 const SubscriptionDescription = styled.div`
+  font-family: mabry;
   align-self: stretch;
   position: relative;
   font-size: 20px;
@@ -242,7 +243,8 @@ const NavOptions = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
-  gap: 20px;
+  gap: 10px;
+  font-size: 16px;
   @media screen and (max-width: 800px) {
     flex-wrap: wrap;
   }
@@ -379,7 +381,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
         <Subscription>
           <Text1>
             <H>Referral program</H>
-            <SubscriptionDescription>
+            <SubscriptionDescription  >
               Coming soon! Drop your e-mail to join the program
             </SubscriptionDescription>
           </Text1>

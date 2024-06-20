@@ -2,6 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`@import url('https://fonts.googleapis.com/css2?family=Mabry+Pro:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+ font-family: 'Mabry';
+ src: url('/mabp.ttf') format('truetype');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
     body {
       margin: 0; line-height: normal;

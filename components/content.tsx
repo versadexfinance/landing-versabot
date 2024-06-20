@@ -102,6 +102,7 @@ const Paragraph = styled.p`
   margin-top: 20px;
   font-size: 20px;
   color: #e1e1e1;
+  font-family: mabry;
   line-height: 28px;
   @media screen and (max-width: 800px) {
     font-size: 18px;

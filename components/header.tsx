@@ -88,6 +88,7 @@ const LaunchTheWeb = styled.a`
   white-space: nowrap;
 `;
 const NavLinks = styled.div`
+font-family: mabry;
   align-self: stretch;
   display: flex;
   flex-direction: row;

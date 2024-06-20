@@ -48,6 +48,7 @@ const CommunityBannerSubtitles = styled.div`
   }
 `;
 const Text1 = styled.div`
+font-family: mabry;
   align-self: stretch;
   display: flex;
   flex-direction: column;

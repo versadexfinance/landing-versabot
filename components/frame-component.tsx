@@ -141,7 +141,8 @@ const Row1 = styled.div`
   }
 `;
 const MessagePlaceholder = styled.input`
-  width: 100%;
+
+width: 100%;
   border: none;
   outline: none;
   font-size: 16px;
@@ -160,11 +161,12 @@ const MessagePlaceholder = styled.input`
 const Input1 = styled.div`
   align-self: stretch;
   border-radius: 4px;
+  // background-color: red;
   border: 1px solid #535353;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
   justify-content: flex-start;
   padding: 12px 19px;
   max-width: 100%;
@@ -221,6 +223,7 @@ const FormBody = styled.form`
 `;
 const Form = styled.div`
   width: 666px;
+  z-index: 120;
   // background-color: #ffffff;
   margin: auto;
   backdrop-filter: blur(43px);

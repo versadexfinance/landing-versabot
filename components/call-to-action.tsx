@@ -52,6 +52,7 @@ const H = styled.h1`
   }
 `;
 const CallToAction1 = styled.div`
+  font-family: mabry;
   width: 691px;
   position: relative;
   font-size: 20px;

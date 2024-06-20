@@ -23,6 +23,8 @@ const H = styled.h3`
 const FeatureDescription = styled.div`
   position: relative;
   font-size: 20px;
+  font-family: mabry;
+  
   line-height: 28px;
   font-family: Syne;
   color: #afafaf;

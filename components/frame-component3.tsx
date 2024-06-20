@@ -34,6 +34,7 @@ const H = styled.h1`
 `;
 const BannerSubtitleItems = styled.div`
   align-self: stretch;
+  font-family: mabry;
   @media (max-width: 800px) {
     text-align: center;
   }
@@ -42,14 +43,11 @@ const BannerSubtitleItems = styled.div`
   display: inline-block;
   @media screen and (max-width: 450px) {
     font-size: 16px;
-    line-height: 22px;
-  }
-  @media screen and (max-width: 800px) {
+    line-height: 20px;
+    font-weight: 500;
     text-align: justify;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 200;
   }
+
 `;
 const BannerSubtitleItems1 = styled.div`
   align-self: stretch;
@@ -208,7 +206,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             <DefiTrulyAccessible>VersaAI</DefiTrulyAccessible>
           </H>
           <BannerSubtitles>
-            <BannerSubtitleItems>
+            <BannerSubtitleItems >
               VersaAI empowers users to perform transactions with VersaBot in
               their preferred language. By simply typing  straightforward
               instructions, you can effortlessly initiate trades in just a few

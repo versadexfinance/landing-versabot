@@ -221,6 +221,7 @@ const BackgroundPatternIcon = styled.img`
 `;
 const VersabotDesktopOptRoot = styled.div`
   max-width: 1480px;
+  scare: .6;
   margin: auto;
   padding-top: 50px;
   background-color: #0a0a0a;

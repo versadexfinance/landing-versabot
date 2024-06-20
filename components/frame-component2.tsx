@@ -61,8 +61,14 @@ const Feature = styled.div`
   gap: 28px;
   max-width: 100%;
   font-size: 36px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
   @media screen and (max-width: 450px) {
     flex-wrap: wrap;
+  }
+  :hover {
+    cursor: pointer;
+    opacity: 1 !important;
   }
 `;
 const FirstFeatureDescription = styled.b`
@@ -75,6 +81,7 @@ const FirstFeatureDescription = styled.b`
 `;
 const SecondFeatureDescription = styled.div`
   align-self: stretch;
+  font-family: mabry;
   position: relative;
   font-size: 20px;
   line-height: 28px;
@@ -129,7 +136,7 @@ const VideoFeatureIcon = styled.video`
   position: relative;
   margin-top: 40px;
   border-radius: 32px;
-  max-height: 100%
+  max-height: 100%;
   object-fit: cover;
   max-width: 100%;
   margin-right: 25px;
@@ -155,11 +162,10 @@ const Section06Features = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: stace-between;
+  justify-content: space-between;
   padding: 0px 0px 0px 60px;
   box-sizing: border-box;
   position: relative;
-  
   max-width: 100%;
   @media screen and (max-width: 1300px) {
     flex-wrap: wrap;
@@ -194,62 +200,20 @@ const Section06FeaturesWrapperRoot = styled.section`
   }
 `;
 
-// const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
-//   const selected = useState(0);
-
-//   return (
-//     <Section06FeaturesWrapperRoot className={className}>
-//       <Section06Features>
-//         <FeaturesList>
-//           <Feature>
-//             <TimelineIcon loading="lazy" alt="" src="/timeline@2x.png" />
-//             <Content>
-//               <Subtext>Connect wallet</Subtext>
-//               <Subtext1>
-//                 Connect your DeFi wallet with just a single click. VersaBot
-//                 seamlessly supports Trust Wallet, MetaMask, and more.
-//               </Subtext1>
-//             </Content>
-//           </Feature>
-//           <Content1>
-//             <FirstFeatureDescription>
-//               Buy Crypto with FIAT
-//             </FirstFeatureDescription>
-//             <SecondFeatureDescription>
-//               Easily purchase cryptocurrencies within VersaBot using your credit
-//               card or bank transfer.
-//             </SecondFeatureDescription>
-//           </Content1>
-//           <Content2>
-//             <FirstFeatureDescription>
-//               Swap tokens with VersaAi
-//             </FirstFeatureDescription>
-//             <Subtext1>
-//               Swap with AI support effortlessly by typing or voicing a
-//               straightforward instructions in your preferred language.
-//             </Subtext1>
-//           </Content2>
-//         </FeaturesList>
-//         <VideoFeatureIcon loading="lazy" alt="" src="/video-feature@2x.png" />
-//         <BackgroundPatternIcon alt="" src="/background-pattern@2x.png" />
-//       </Section06Features>
-//     </Section06FeaturesWrapperRoot>
-//   );
-// };
-
 const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
-  const videoRef = useRef(null);
-  // const controls = useAnimation();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isInView, setIsInView] = useState(false);
+  const [selected, setSelected] = useState<number>(0);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          videoRef.current.play();
+          videoRef.current?.play();
         } else {
           setIsInView(false);
-          videoRef.current.pause();
+          videoRef.current?.pause();
         }
       },
       {
@@ -268,27 +232,39 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
     };
   }, [videoRef]);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.src = features[selected].video;
+      videoRef.current.load(); // This ensures the video is properly loaded
+      if (isInView) {
+        videoRef.current.play(); // Play the video if it's in view
+      }
+    }
+  }, [selected, isInView]);
+
   const features = [
     {
       iconSrc: "/timeline@2x.png",
       title: "Connect wallet",
       description:
         "Connect your DeFi wallet with just a single click. VersaBot seamlessly supports Trust Wallet, MetaMask, and more.",
+      video: "/Connect.mov",
     },
     {
       iconSrc: "/timeline@2x.png",
       title: "Buy Crypto with FIAT",
+      video: "/Buy.mov",
       description:
         "Easily purchase cryptocurrencies within VersaBot using your credit card or bank transfer.",
     },
     {
       iconSrc: "/timeline@2x.png",
-      title: "Swap tokens with VersaAi",
+      title: "Swap tokens with VersaAI",
+      video: "/Swap.mov",
       description:
         "Swap with AI support effortlessly by typing or voicing a straightforward instructions in your preferred language.",
     },
   ];
-  const [selected, setSelected] = useState<number>(0);
 
   const handleFeatureClick = (index: number) => {
     setSelected(index);
@@ -299,8 +275,14 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
       <Section06Features>
         <FeaturesList>
           {features.map((feature, index) => (
-            <Feature key={index} onClick={() => handleFeatureClick(index)}>
-              {selected == index ? (
+            <Feature
+              key={index}
+              style={{
+                opacity: selected === index ? 1 : 0.5,
+              }}
+              onClick={() => handleFeatureClick(index)}
+            >
+              {selected === index ? (
                 <TimelineIcon loading="lazy" alt="" src={feature.iconSrc} />
               ) : (
                 <div
@@ -325,13 +307,10 @@ const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
 
         <VideoFeatureIcon
           loop
-          style={{}}
           ref={videoRef}
           playsInline={true}
-          src="./vdx-video.mp4"
           muted
         />
-        {/* <BackgroundPatternIcon alt="" src="/background-pattern@2x.png" /> */}
       </Section06Features>
     </Section06FeaturesWrapperRoot>
   );

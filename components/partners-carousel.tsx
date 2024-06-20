@@ -33,10 +33,14 @@ const PartnersColumn = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 600px) {
+    gap: 16px;
+  }
 `;
 
 const ScrollingLogos = styled.div<{ direction: "left" | "right" }>`
   display: flex;
+  
   animation: ${({ direction }) =>
       direction === "left" ? scrollLeft : scrollRight}
     60s linear infinite;
@@ -46,10 +50,13 @@ const ScrollingLogos = styled.div<{ direction: "left" | "right" }>`
   }
 
   width: max-content; /* Ensure the container is as wide as its content */
+  @media (max-width: 600px) {
+    gap: 16px;
+  }
 `;
 
 const ParnersIcon = styled.img`
-  // height: 108px;
+  height: 100%;
   overflow: auto;
   // width: 108px; /* Ensure all images have the same size */
   // object-fit: cover; /* Ensure the image fits within the container and is cropped consistently */
@@ -77,6 +84,9 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px) {
+    padding:2px;
+  }
 `;
 
 const Logo = styled.div`
@@ -94,10 +104,12 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  // @media (max-width: 600px) {
-  //   width: 80px;
-  //   height: 80px;
-  // }
+  // smaller on mobile
+  @media (max-width: 600px) {
+    width: 154px;
+    height: 54px;
+  }
+  
 `;
 
 const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
@@ -190,6 +202,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
             <Logo>
               <ParnersIcon
                 loading="lazy"
+                style={{
+                  height: src.includes("parners") ? "100%": "100%",
+                }}
                 alt={`Partner logo ${index + 1}`}
                 src={src}
               />
@@ -200,6 +215,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
           <LogoWrapper key={partnerImages1.length + index}>
             <Logo>
               <ParnersIcon
+               style={{
+                height: src.includes("parners") ? "100%": "100%",
+              }}
                 loading="lazy"
                 alt={`Partner logo ${src}`}
                 src={src}
@@ -214,6 +232,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
             <Logo>
               <ParnersIcon
                 loading="lazy"
+                style={{
+                  height: src.includes("parners") ? "100%": "100%",
+                }}
                 alt={`Partner logo ${index + 1}`}
                 src={src}
               />
@@ -225,6 +246,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
             <Logo>
               <ParnersIcon
                 loading="lazy"
+                style={{
+                  height: src.includes("parners") ? "100%": "100%",
+                }}
                 alt={`Partner logo ${index + 1}`}
                 src={src}
               />

@@ -14,13 +14,14 @@ const TimelineIcon = styled.img`
 `;
 const Subtext = styled.h2`
   margin: 0;
+  text-align: left;
   position: relative;
   font-size: inherit;
   line-height: 44px;
   font-weight: 700;
   font-family: inherit;
   @media screen and (max-width: 800px) {
-    font-size: 25px;
+    font-size: 24px;
     line-height: 35px;
   }
   @media screen and (max-width: 450px) {
@@ -154,11 +155,11 @@ const Section06Features = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: stace-between;
   padding: 0px 0px 0px 60px;
   box-sizing: border-box;
   position: relative;
-  gap: 146px;
+  
   max-width: 100%;
   @media screen and (max-width: 1300px) {
     flex-wrap: wrap;

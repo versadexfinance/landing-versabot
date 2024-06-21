@@ -73,16 +73,19 @@ const Text2 = styled.div`
     gap: 16px;
   }
 `;
-const JoinVersabotV = styled.b`
+const JoinVersabotV = styled.a`
   width: 99px;
   position: relative;
+  text-decoration: none;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  font-weight: 600;
   display: inline-block;
-  color: #020202;
+  color: #020202 !important;
   text-align: center;
   min-width: 99px;
+
   @media screen and (max-width: 450px) {
     font-size: 14px;
     line-height: 20px;
@@ -350,7 +353,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
               </Text1>
             </Text2>
             <Button>
-              <JoinVersabotV>Apply now</JoinVersabotV>
+              <JoinVersabotV href="#contact-us">Apply now</JoinVersabotV>
             </Button>
           </Content>
         </Banner>

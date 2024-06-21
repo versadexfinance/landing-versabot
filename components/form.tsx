@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import styled from "styled-components";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export type FormComponentType = {
   className?: string;
@@ -277,10 +279,9 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your email sending logic here
     try {
       await axios.post('/api/send-email', formData);
-      alert('Message sent successfully');
+      toast.success('Thank you! Your form has been submitted. \n Our team will review your message and get back to you shortly.');
       setFormData({
         name: "",
         email: "",
@@ -290,7 +291,7 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
       });
     } catch (error) {
       console.error('Error sending message', error);
-      alert('Failed to send message');
+      toast.error('Failed to send message');
     }
   };
 
@@ -299,12 +300,10 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
       e.preventDefault();
     }
   };
-  
-  // Add the handleKeyDown prop to FormBody
-  
 
   return (
     <SectionContactUsWrapperRoot className={className} id="contact-us">
+      
       <SectionContactUs>
         <Form>
           <WrapperShadow>

@@ -239,6 +239,7 @@ const VersabotDesktopOptRoot = styled.div`
 `;
 
 import ScrollToTop from '../components/ScrollToTop';
+import { ToastContainer } from "react-toastify";
 
 
 const VersaBotDesktopOPT7: NextPage = () => {
@@ -296,6 +297,9 @@ const VersaBotDesktopOPT7: NextPage = () => {
     
         <Footer />
         <ScrollToTop />
+        <ToastContainer style={{
+          zIndex: "9999999999",
+        }}  position="top-center" theme="dark" />
       </VersabotDesktopOptRoot>
     </>
   );

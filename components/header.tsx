@@ -14,7 +14,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   background-color: transparent;
-  boxShadow: "0px 2px 8px rgba(235, 254, 100, 0.4)",
+  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   border-radius: 4px;
   background: linear-gradient(180deg, #ebfe64, #8cea69);
   font-size: 16px;
@@ -45,7 +45,6 @@ const LogoIcon = styled.img`
     text-align: center;
     height: 20px;
     width: 25px;
-    
   }
 `;
 const NavPlaceholderIcon = styled.img`
@@ -70,11 +69,9 @@ const Navigation1 = styled.div`
   padding: 11px 0px 0px;
   @media (max-width: 800px) {
     padding-top: 2px;
-  
   }
 `;
 const HeaderContent = styled.div`
-
   width: 204px;
   display: flex;
   flex-direction: row;
@@ -135,14 +132,11 @@ const LaunchTheWeb = styled.a`
 `;
 const NavLinks = styled.div`
   font-family: mabry;
-  // border: 1px solid red;
   align-self: stretch;
-  
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  // gap: 20px;
   @media screen and (max-width: 1125px) {
     display: none;
   }
@@ -162,7 +156,6 @@ const Menu = styled.div`
 `;
 
 const JoinVersabotV = styled.a`
-  // width: 174px;
   font-weight: 600;
   text-decoration: none;
   position: relative;
@@ -171,20 +164,16 @@ const JoinVersabotV = styled.a`
   text-transform: uppercase;
   display: inline-block;
   color: #020202 !important;
-
   white-space: pre-wrap;
   text-align: center;
-  // background-color: #ebfe64;
-  // padding: 12px;
   border-radius: 4px;
   box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
-  // margin-top: 32px;
-  
-
-
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
   @media screen and (max-width: 800px) {
     font-size: 14px;
-    
     line-height: 20px;
   }
   @media screen and (max-width: 450px) {
@@ -195,11 +184,9 @@ const JoinVersabotV = styled.a`
 
 const NavBtn = styled.button`
   cursor: pointer;
-  
   border: none;
   padding: 8px 24px;
   background-color: transparent;
-  // box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   border-radius: 4px;
   background: linear-gradient(180deg, #ebfe64, #8cea69);
   display: flex;
@@ -210,7 +197,7 @@ const NavBtn = styled.button`
   @media screen and (max-width: 800px) {
     display: none;
   }
-   @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1000px) {
     display: none;
     font-size: 14px;
     line-height: 20px;
@@ -233,7 +220,6 @@ const NavBtnMenu = styled.button`
 `;
 
 const HeaderRoot = styled.header`
-  // border: 1px solid blue !important;
   padding: 10px 60px;
   align-self: stretch;
   backdrop-filter: blur(50px);
@@ -244,7 +230,6 @@ const HeaderRoot = styled.header`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  // padding: 16px 60px;
   top: 0;
   z-index: 9999999;
   position: sticky;
@@ -264,7 +249,6 @@ const HeaderRoot = styled.header`
 const Hamburger = styled.div`
   display: none;
   flex-direction: column;
-  // border: 1px solid red;
   cursor: pointer;
   @media screen and (max-width: 1125px) {
     display: flex;
@@ -276,25 +260,30 @@ const Bar = styled.div`
   width: 25px;
   background-color: #e1e1e1;
   margin: 4px 0;
-  transition: 0.4s;
+  transition: 0.5s;
 `;
 
 const MobileMenu = styled.div<{ open: boolean }>`
-  display: ${({ open }) => (open ? "flex" : "none")};
+  display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 64px;
+  top: ${({ open }) => (open ? "64px" : "-400px")};
   left: 0;
   gap: 20px;
-  // margin-left: 60px;
   width: 100%;
   background-color: rgba(10, 10, 10, 0.9);
-  padding: 20px;
+  padding: ${({ open }) => (open ? "20px" : "0")};
   box-sizing: border-box;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  visibility: ${({ open }) => (open ? "visible" : "hidden")};
 
   ${Home}, ${Docs}, ${ContactUs}, ${ForCommunities}, ${LaunchTheWeb} {
     margin: 10px 0;
+    transition: opacity 0.4s ease;
+    opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
 
@@ -307,55 +296,54 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
 
   return (
     <HeaderRoot className={className}>
-      <div style={{
-        display:"flex",
-        width:"1500px",
-        justifyContent: "space-between",
-        margin: "auto",
-        // border:"1px solid green",
-        height:"50px"
-        // padding: "16px"
-      }}>
-      <HeaderContent>
-        <LogoIcon alt="" src="/logo-icon@2x.png" />
-        <Navigation1>
-          <NavPlaceholderIcon  alt="" src="/nav-placeholder@2x.png" />
-        </Navigation1>
-      </HeaderContent>
-      <Menu>
-        <NavLinks>
-          <Home href="#home">Home</Home>
-          <Docs href="https://docs.versadex.finance/versabot" target="_blank">
-            Docs
-          </Docs>
-          <ContactUs href="#contact-us">Contact us</ContactUs>
-          <ForCommunities href="#white-label">For Communities</ForCommunities>
-          {/* <LaunchTheWeb>Launch the web app</LaunchTheWeb> */}
-        </NavLinks>
-      </Menu>
-      <NavBtn>
-        <div style={{
-          display:"flex",
-        }}>
-
-        <JoinVersabotV href="https://t.me/versadex" target="_blank">
-            JOIN VERSABOT V1
-        </JoinVersabotV>
-        </div>
-      </NavBtn>
+      <div
+        style={{
+          display: "flex",
+          width: "1500px",
+          justifyContent: "space-between",
+          margin: "auto",
+          height: "50px"
+        }}
+      >
+        <HeaderContent>
+          <LogoIcon alt="" src="/logo-icon@2x.png" />
+          <Navigation1>
+            <NavPlaceholderIcon alt="" src="/nav-placeholder@2x.png" />
+          </Navigation1>
+        </HeaderContent>
+        <Menu>
+          <NavLinks>
+            <Home href="#home">Home</Home>
+            <Docs href="https://docs.versadex.finance/versabot" target="_blank">
+              Docs
+            </Docs>
+            <ContactUs href="#contact-us">Contact us</ContactUs>
+            <ForCommunities href="#white-label">For Communities</ForCommunities>
+          </NavLinks>
+        </Menu>
+        <NavBtn>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
+            <JoinVersabotV href="https://t.me/versadex" target="_blank">
+              JOIN VERSABOT V1
+            </JoinVersabotV>
+          </div>
+        </NavBtn>
       </div>
-      <div style={{
-        display:"flex",
-        height:"100%",
-        justifyContent: "space-between",
-        margin: "auto",
-        // border:"1px solid green",
-        // padding: "16px"
-      }}>
-
-      <Hamburger onClick={toggleMenu}>
-        <img width={80} src="/hamburguer.svg" alt="" />
-      </Hamburger>
+      <div
+        style={{
+          display: "flex",
+          height: "100%",
+          justifyContent: "space-between",
+          margin: "auto",
+        }}
+      >
+        <Hamburger onClick={toggleMenu}>
+          <img width={80} src="/hamburguer.svg" alt="" />
+        </Hamburger>
       </div>
       <MobileMenu open={menuOpen}>
         <Home href="#home">Home</Home>
@@ -364,15 +352,9 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         </Docs>
         <ContactUs href="#contact-us">Contact us</ContactUs>
         <ForCommunities href="#whitel-label">For Communities</ForCommunities>
-        {/* <LaunchTheWeb>Launch the web app</LaunchTheWeb> */}
         <NavBtnMenu>
           <JoinVersabotV href="https://t.me/versadex" target="_blank">
-          JOIN VERSABOT V1
-            {/* <Button >
-          
-            </Button> */}
-            
-            
+            JOIN VERSABOT V1
           </JoinVersabotV>
         </NavBtnMenu>
       </MobileMenu>

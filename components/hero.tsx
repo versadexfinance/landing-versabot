@@ -94,6 +94,14 @@ const Heading = styled.h1`
   line-height: 72px;
   font-weight: 700;
   font-family: inherit;
+  @media screen and (max-width: 1300px) {
+     font-size: 50px;
+    line-height: 60px;
+  }
+  @media screen and (max-width: 1300px) {
+     font-size: 45px;
+    line-height: 55px;
+  }
   @media screen and (max-width: 800px) {
     font-size: 40px;
     line-height: 50px;
@@ -198,7 +206,7 @@ const MainPicture = styled.div`
     animation: bounce 2s ease-in-out infinite;
     position: absolute;
     width: 20%;
-    max-width: 100px;
+    max-width: 35%;
   }
 
   // .coin:first-of-type {
@@ -223,7 +231,7 @@ const HeroSection = styled.div`
   justify-content: flex-start;
   gap: 24px;
   max-width: 100%;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1000px) {
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -261,11 +269,10 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
         <img
             className="coin"
             style={{
-              bottom: "1%",
+              bottom: "7%",
               zIndex: "21",
-              right: "1%",
-              
-              width: "120px",
+              right: "8%",
+              width: "130px !important" ,
             }}
             src="./new-hero-coin-1 2.png"
             alt="Coin 1"
@@ -273,10 +280,10 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
         <img
             className="coin"
             style={{
-              top: "1%",
+              top: "5%",
               zIndex: "-1",
 
-              width: "80px",
+              width: "85px",
               left: "1%",
             }}
             src="./new-hero-coin-2 1.png"

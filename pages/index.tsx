@@ -105,6 +105,8 @@ const Subtext = styled.div`
   position: relative;
   line-height: 28px;
   display: inline-block;
+  font-family: Mabry;
+  text-align: left;
   flex-shrink: 0;
   max-width: 100%;
   z-index: 1;
@@ -276,7 +278,9 @@ const VersaBotDesktopOPT7: NextPage = () => {
               <DefiExperience>Telegram</DefiExperience>
             </H>
             <InfoDescription>
-              <Subtext>Introducing our game-changing features</Subtext>
+              <Subtext>
+              Connect your DeFi wallet with just a single click, effortlessly buy crypto with fiat, swap assets with AI, and unlock advanced features. Bridge assets, trade perpetuals, lend, borrow, engage with P2P, use on-chain orderbooks, get real-time notifications, and more—all with VersaBot.
+              </Subtext>
             </InfoDescription>
           </InfoContent>
         </Info>

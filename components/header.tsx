@@ -131,6 +131,7 @@ const LaunchTheWeb = styled.a`
   white-space: nowrap;
 `;
 const NavLinks = styled.div`
+margin-top: 5px;
   font-family: mabry;
   align-self: stretch;
   display: flex;
@@ -327,7 +328,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
               display: "flex",
             }}
           >
-            <JoinVersabotV href="https://t.me/versadex" target="_blank">
+            <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
               JOIN VERSABOT V1
             </JoinVersabotV>
           </div>

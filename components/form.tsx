@@ -102,6 +102,20 @@ const InputField = styled.input`
   display: inline-block;
   padding: 0;
 `;
+const Select = styled.select`
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  line-height: 28px;
+  color: #bfbfbf;
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none; /* Remove default styling for Safari */
+`;
 const Input = styled.div`
   flex: 1;
   border-radius: 4px;
@@ -113,6 +127,7 @@ const Input = styled.div`
   justify-content: flex-start;
   padding: 12px 19px;
   min-width: 200px;
+  background: transparent;
 `;
 const Textarea = styled.textarea`
   width: 100%;
@@ -134,6 +149,7 @@ const TextareaContainer = styled.div`
   border: 1px solid #535353;
   box-sizing: border-box;
   padding: 12px 19px;
+  background: transparent;
 `;
 const Row = styled.div`
   align-self: stretch;
@@ -269,7 +285,7 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -281,7 +297,7 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
     e.preventDefault();
     try {
       await axios.post('/api/send-email', formData);
-      toast.success('Thank you! Your form has been submitted. \n Our team will review your message and get back to you shortly.');
+      toast.success('Message sent successfully');
       setFormData({
         name: "",
         email: "",
@@ -303,7 +319,7 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
 
   return (
     <SectionContactUsWrapperRoot className={className} id="contact-us">
-      
+      <ToastContainer />
       <SectionContactUs>
         <Form>
           <WrapperShadow>
@@ -349,13 +365,18 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
                   />
                 </Input>
                 <Input>
-                  <InputField
+                  <Select
                     name="subject"
-                    placeholder="Subject"
-                    type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                  />
+                  >
+                    <option value="" disabled>Select a subject</option>
+                    <option value="General Inquiries">General Inquiries</option>
+                    <option value="White Label Solutions">White Label Solutions</option>
+                    <option value="Partnership Proposals">Partnership Proposals</option>
+                    <option value="Product Support">Product Support</option>
+                    <option value="Other">Other</option>
+                  </Select>
                 </Input>
               </Row>
               <TextareaContainer>

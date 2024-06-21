@@ -28,22 +28,22 @@ const H = styled.h2`
   font-weight: 700;
   font-family: inherit;
   @media screen and (max-width: 800px) {
-    font-size: 29px;
+    font-size: 22px;
     line-height: 35px;
   }
   @media screen and (max-width: 450px) {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
   }
 `;
 const CommunityBannerSubtitles = styled.div`
   align-self: stretch;
-  text-align: justify;
+  // text-align: justify;
   position: relative;
   line-height: 28px;
   @media screen and (max-width: 450px) {
     font-size: 16px;
-    text-align: justify;
+    // text-align: justify;
     line-height: 18px;
   }
 `;
@@ -106,6 +106,7 @@ const Button = styled.button`
   }
 `;
 const Content = styled.div`
+  z-index: 12;
   width: 900px;
   display: flex;
   flex-direction: column;
@@ -147,6 +148,22 @@ const Banner = styled.div`
   @media screen and (max-width: 450px) {
     gap: 18px;
   }
+  
+  @media screen and (max-width: 1300px) {
+    padding-top: 220px;
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 20px;
+
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-top: 120px;
+
+  }
+  
 `;
 const Test1Icon = styled.img`
   height: 723px;
@@ -221,6 +238,7 @@ const WrapperEllipse9Parent = styled.div`
   }
 `;
 const Test1Parent = styled.div`
+  z-index: 2;
   position: absolute;
   top: -25px;
   left: 2px;
@@ -238,10 +256,35 @@ const Test1Parent = styled.div`
   background-position: top;
   max-width: 100%;
   z-index: 2;
+
+  // border: 1px solid red;
+
   @media screen and (max-width: 1300px) {
-    background-image: none;
+    width: 260px;
+    position: absolute;
+    height: 600px;
+    top: -25px;
+    z-index: 1;
+    background-size: contain;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    height: 400px;
+    top: -25px;
+    z-index: 1;
+    background-size: contain;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 140px;
+    height: 200px;
+    top: -25px;
+    z-index: 1;
+    background-size: contain;
   }
 `;
+
 const CommunityBannerContainer = styled.div`
   height: 733px;
   flex: 1;

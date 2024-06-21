@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 export type PartnersCarouselProps = {
   className?: string;
@@ -7,12 +7,12 @@ export type PartnersCarouselProps = {
 
 const scrollLeft = keyframes`
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
 `;
 
 const scrollRight = keyframes`
   0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
+  100% { transform: translateX(-50%); }
 `;
 
 const BannerWrapperRoot = styled.section`
@@ -38,44 +38,31 @@ const PartnersColumn = styled.section`
   }
 `;
 
-const ScrollingLogos = styled.div<{ direction: "left" | "right" }>`
+const ScrollingLogos = styled.div<{ direction: "left" | "right"; duration: number }>`
   display: flex;
-  
-  animation: ${({ direction }) =>
-      direction === "left" ? scrollLeft : scrollRight}
-    60s linear infinite;
+  animation: ${({ direction, duration }) =>
+    direction === "left"
+      ? css`${scrollLeft} ${duration}s linear infinite`
+      : css`${scrollRight} ${duration}s linear infinite`};
   gap: 32px;
   &:hover {
     animation-play-state: paused;
   }
 
-  width: max-content; /* Ensure the container is as wide as its content */
+  width: fit-content;
   @media (max-width: 600px) {
     gap: 16px;
   }
 `;
 
-const ParnersIcon = styled.img`
-  height: 100%;
+const PartnersIcon = styled.img`
+  max-width: 80%;
   overflow: auto;
-  // width: 108px; /* Ensure all images have the same size */
-  // object-fit: cover; /* Ensure the image fits within the container and is cropped consistently */
-  padding: 8px;
-  filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(200deg)
-    saturate(1000%);
-  filter: grayscale(1);
-
-  // filter: sepia(1) saturate(100200%) hue-rotate(30deg);
-  // filter: sepia(1) saturate(10000%) hue-rotate(90deg);
-  // @media (max-width: 600px) {
-  //   height: 80px;
-  //   width: 80px;
-  // }
 `;
 
 const LogoWrapper = styled.div`
-  padding: 4px; /* Adjust based on the desired border width */
-  border-radius: 18px; /* Adjust to be slightly larger than the Logo border radius */
+  padding: 2px;
+  border-radius: 18px;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.5),
@@ -85,170 +72,237 @@ const LogoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 600px) {
-    padding:2px;
+    padding: 2px;
   }
 `;
 
 const Logo = styled.div`
-  width: 308px; /* Ensure all logos have the same size */
-  height: 108px; /* Ensure all logos have the same size */
+  width: 308px;
+  height: 108px;
   backdrop-filter: blur(43px);
   background-color: #131313;
   border-radius: 16px;
   padding: 8px;
   box-sizing: border-box;
   overflow: hidden;
-  // filter: grayscale(100%);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  // smaller on mobile
   @media (max-width: 600px) {
     width: 154px;
     height: 54px;
   }
-  
 `;
 
 const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
-  // const partnerImages1 = [
-  //   // "/parners@2x.png",
-  //   // "/parners-1.svg",
-  //   // "/parners-2@2x.png",
-  //   "/parners-3.svg",
-  //   "/parners-4.svg",
-  //   "/parners-5.svg",
-  //   "velodrome-l.svg"
-    
-  // ];
-
-  // const partnerImages2 = [
-  //   "/decubate.svg",
-  //   "/LOGO_HORIZONTAL_WHITE.svg",
-  //   "/castrum.png",
-  //   "/chaitech(3).jpg",
-  //   "aerodrome-1.svg",
-  //   "/decubate.svg",
-  //   "/castrum.png",
-  //   "/chaitech(3).jpg",
-  //   "aerodrome-1.svg",
-  //   "/decubate.svg",
-  //   "/castrum.png",
-  //   "/chaitech(3).jpg",
-  //   "aerodrome-1.svg",
-  //   "/decubate.svg",
-  //   "/LOGO_HORIZONTAL_WHITE.svg",
-  //   "/castrum.png",
-  //   "/chaitech(3).png",
-  //   "aerodrome-1.svg",
-  //   "/lavender.png",
-  //   // "/lynex.png",
-  //   "/core.png",
-  // ];
-
-  const partnerImages1 =[
+  const partnerImages1 = [
     "/parners-3.svg",
     "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
     "/parners-5.svg",
-    "velodrome-l.svg",
-    "/decubate.svg",
-    "/LOGO_HORIZONTAL_WHITE.svg",
-    "/castrum.png",
-    "aerodrome-1.svg",
-    "/chaitech(3).png",
-    "/lavender.png",
-    "/core.png","/parners-3.svg",
-    "/parners-4.svg",
-    "/parners-5.svg",
-    "velodrome-l.svg",
-    "/decubate.svg",
-    "/LOGO_HORIZONTAL_WHITE.svg",
-    "/castrum.png",    "aerodrome-1.svg",
-    "/chaitech(3).png",
-    "/lavender.png",
-    "/core.png"
-  ]
-
-  const partnerImages2 =[
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
     "/parners-5.svg",
-    "velodrome-l.svg",
-    "/decubate.svg",
-    "/LOGO_HORIZONTAL_WHITE.svg",
-    "/castrum.png",
-    "aerodrome-1.svg",
-    "/chaitech(3).png",
-    "/lavender.png",
-    "/core.png","/parners-3.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
     "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
     "/parners-5.svg",
-    "velodrome-l.svg",
-    "/decubate.svg",
-    "/LOGO_HORIZONTAL_WHITE.svg",
-    "/castrum.png",
-    "aerodrome-1.svg",
-    "/chaitech(3).png",
-    "/lavender.png",
-    "/core.png"
-  ]
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/paraswap.svg",
+  ];
+
+  const partnerImages2 = [
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+    "./decubate.svg",
+    "./castrum.svg",
+    "./lavender.svg",
+    "./chaitech.svg",
+  ];
+
+  const duration1 = partnerImages1.length * 8; // Adjust multiplier for speed
+  const duration2 = partnerImages2.length * 8;
+
   return (
     <PartnersColumn className={className}>
-      <ScrollingLogos direction="left">
-        {partnerImages1.map((src, index) => (
+      <ScrollingLogos direction="left" duration={duration1}>
+        {partnerImages1.concat(partnerImages1).map((src, index) => (
           <LogoWrapper key={index}>
             <Logo>
-              <ParnersIcon
+              <PartnersIcon
                 loading="lazy"
-                style={{
-                  height: src.includes("parners") ? "100%": "100%",
-                }}
                 alt={`Partner logo ${index + 1}`}
-                src={src}
-              />
-            </Logo>
-          </LogoWrapper>
-        ))}
-        {partnerImages1.map((src, index) => (
-          <LogoWrapper key={partnerImages1.length + index}>
-            <Logo>
-              <ParnersIcon
-               style={{
-                height: src.includes("parners") ? "100%": "100%",
-              }}
-                loading="lazy"
-                alt={`Partner logo ${src}`}
                 src={src}
               />
             </Logo>
           </LogoWrapper>
         ))}
       </ScrollingLogos>
-      <ScrollingLogos direction="right">
-        {partnerImages2.map((src, index) => (
+      <ScrollingLogos direction="right" duration={duration2}>
+        {partnerImages2.concat(partnerImages2).map((src, index) => (
           <LogoWrapper key={index}>
             <Logo>
-              <ParnersIcon
+              <PartnersIcon
                 loading="lazy"
-                style={{
-                  height: src.includes("parners") ? "100%": "100%",
-                }}
-                alt={`Partner logo ${index + 1}`}
-                src={src}
-              />
-            </Logo>
-          </LogoWrapper>
-        ))}
-        {partnerImages2.map((src, index) => (
-          <LogoWrapper key={partnerImages2.length + index}>
-            <Logo>
-              <ParnersIcon
-                loading="lazy"
-                style={{
-                  height: src.includes("parners") ? "100%": "100%",
-                }}
                 alt={`Partner logo ${index + 1}`}
                 src={src}
               />

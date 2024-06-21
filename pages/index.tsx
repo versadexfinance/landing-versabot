@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Header from "../components/header";
-import Content from "../components/content";
+import Content from "../components/hero";
 import styled from "styled-components";
 import FrameComponent3 from "../components/frame-component3";
 import FeatureList from "../components/feature-list";
 import CallToAction from "../components/call-to-action";
-import FrameComponent2 from "../components/frame-component2";
+import VideoShowCaseComponent from "../components/video-showcase-component";
 import FrameComponent1 from "../components/frame-component1";
-import FrameComponent from "../components/frame-component";
 import Footer from "../components/footer";
 import PartnersCarousel from "../components/partners-carousel";
-import HeroContent from "../components/content";
+import HeroContent from "../components/hero";
 import useIntersectionObserver from "../hooks/intersectionObserver";
+import FormComponent from "../components/form";
 
 const HeroParent = styled.section`
   align-self: stretch;
@@ -150,8 +150,10 @@ const Info = styled.section`
   font-size: 48px;
   color: #f7ffbb;
   font-family: Syne;
+  margin-top: 120px;
   @media screen and (max-width: 450px) {
-    padding-bottom: 125px;
+    margin-top:100px;
+    padding-bottom: 10px;
     box-sizing: border-box;
   }
 `;
@@ -179,8 +181,6 @@ const IconFramedGlow = styled.img`
   width:200px
   z-index: 2;
   object-fit: contain;
-
-  t
 `;
 const WrapperIconFramedGlow = styled.div`
   height: 152px;
@@ -208,6 +208,7 @@ const ShadowIcon1 = styled.img`
 const BackgroundPatternIcon = styled.img`
   width: 100%;
   height: 720px;
+  z-index: 1;
   position: absolute;
   margin: 0 !important;
   top: 0px;
@@ -235,17 +236,35 @@ const VersabotDesktopOptRoot = styled.div`
   letter-spacing: normal;
 `;
 
+import ScrollToTop from '../components/ScrollToTop';
+
+
 const VersaBotDesktopOPT7: NextPage = () => {
   useIntersectionObserver(".animate-on-scroll");
 
   return (
     <>
+        <BackgroundPatternIcon
+        style={{
+          zIndex: 1,
+        }}
+          alt=""
+          src="/background-pattern-2@2x.png"
+          className="animate-on-scroll"
+        />
       <Header />
       <VersabotDesktopOptRoot>
+        <div style={{
+          zIndex: 2000,
+        }}>
+
         <HeroParent className="animate-on-scroll">
           <HeroContent />
         </HeroParent>
+        </div>
+        </VersabotDesktopOptRoot>
         <PartnersCarousel className="animate-on-scroll" />
+        <VersabotDesktopOptRoot>
         <ImgCoin />
         <FrameComponent3 className="animate-on-scroll" />
         <Info className="animate-on-scroll">
@@ -261,22 +280,21 @@ const VersaBotDesktopOPT7: NextPage = () => {
             </InfoDescription>
           </InfoContent>
         </Info>
-        <IconFramedGlow loading="lazy" alt="" src="/icon-framed-glow@2x.png" />
+        <div>
+          <IconFramedGlow loading="lazy" alt="" src="/icon-framed-glow@2x.png" />
+        </div>
         <FeatureList />
         <CallToAction />
         <ShadowIcon1 alt="" src="/shadow1.svg" />
-        <FrameComponent2 className="animate-on-scroll" />
+        <VideoShowCaseComponent className="animate-on-scroll" />
         <FrameComponent1 className="animate-on-scroll" />
-        <FrameComponent className="animate-on-scroll" />
-        <BackgroundPatternIcon
-          alt=""
-          src="/background-pattern-2@2x.png"
-          className="animate-on-scroll"
-        />
+        <FormComponent className="animate-on-scroll" />
+    
         <Footer />
+        <ScrollToTop />
       </VersabotDesktopOptRoot>
     </>
   );
 };
-
 export default VersaBotDesktopOPT7;
+

@@ -25,7 +25,7 @@ const H = styled.h1`
   @media screen and (max-width: 800px) {
     font-size: 28px;
     line-height: 42px;
-    text-align: center;
+    // text-align: center;
   }
   @media screen and (max-width: 450px) {
     font-size: 29px;
@@ -36,7 +36,8 @@ const BannerSubtitleItems = styled.div`
   align-self: stretch;
   font-family: mabry;
   @media (max-width: 800px) {
-    text-align: center;
+    // text-align: center;
+    font-size: 16px;
   }
   position: relative;
   line-height: 28px;
@@ -45,7 +46,7 @@ const BannerSubtitleItems = styled.div`
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
-    text-align: justify;
+    // text-align: justify;
   }
 
 `;
@@ -192,6 +193,13 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
     <BannerWrapperRoot
       style={
         {
+          padding:"12px",
+          paddingBottom: "100px",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          width: "100%",
+          
           // border: "1px solid red",
         }
       }

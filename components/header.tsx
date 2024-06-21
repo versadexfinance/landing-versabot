@@ -240,6 +240,8 @@ const HeaderRoot = styled.header`
   font-size: 18px;
   color: #e1e1e1;
 
+ 
+
   @media screen and (max-width: 800px) {
     padding-left: 30px;
     padding-right: 30px;
@@ -256,13 +258,19 @@ const Hamburger = styled.div`
   }
 `;
 
-const Bar = styled.div`
-  height: 3px;
-  width: 25px;
-  background-color: #e1e1e1;
-  margin: 4px 0;
-  transition: 0.5s;
+const HamburguerCntainer = styled.div`
+  align-self: center;
+  display:none;
+  @media screen and (max-width: 1125px) {
+    display: flex;
+    height: 100%,
+    
+    justifyContent: "space-between",
+   margin: auto,
+  }
 `;
+
+
 
 const MobileMenu = styled.div<{ open: boolean }>`
   display: flex;
@@ -334,18 +342,16 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           </div>
         </NavBtn>
       </div>
-      <div
+      <HamburguerCntainer
         style={{
-          display: "flex",
-          height: "100%",
-          justifyContent: "space-between",
-          margin: "auto",
+        
+          
         }}
       >
         <Hamburger onClick={toggleMenu}>
           <img width={80} src="/hamburguer.svg" alt="" />
         </Hamburger>
-      </div>
+      </HamburguerCntainer>
       <MobileMenu open={menuOpen}>
         <Home href="#home">Home</Home>
         <Docs href="https://docs.versadex.finance/versabot" target="_blank">

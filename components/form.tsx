@@ -323,7 +323,9 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
       <SectionContactUs>
         <Form>
           <WrapperShadow>
-            <ShadowIcon alt="" src="/shadow2.svg" />
+            <ShadowIcon style={{
+              zIndex: 1,
+            }} alt="" src="/shadow2.svg" />
           </WrapperShadow>
           <Title>
             <LogoFrameIcon loading="lazy" alt="" src="/logo-frame@2x.png" />
@@ -332,7 +334,10 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
               If you have any questions, please don't hesitate to get in touch
             </FormSubtitle>
           </Title>
-          <FormBody onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+          <FormBody style={{
+            zIndex: 1,
+          
+          }} onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
             <Inputs>
               <Row>
                 <Input>

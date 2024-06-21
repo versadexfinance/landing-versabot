@@ -6,15 +6,19 @@ const useIntersectionObserver = (
 ) => {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
+    let timeoutId = null;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("pop-in");
-          } else {
-            entry.target.classList.remove("pop-in");
-          }
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("pop-in");
+            } else {
+              entry.target.classList.remove("pop-in");
+            }
+          }, 100); // Delay in milliseconds, adjust as needed
         });
       },
       { rootMargin }
@@ -23,6 +27,7 @@ const useIntersectionObserver = (
     elements.forEach((el) => observer.observe(el));
 
     return () => {
+      clearTimeout(timeoutId);
       elements.forEach((el) => observer.unobserve(el));
     };
   }, [selector, rootMargin]);

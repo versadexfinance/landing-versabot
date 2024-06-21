@@ -221,7 +221,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
               clicks.
             </BannerSubtitleItems>
 
-            <RobotIconMobile alt="" src="/img@2x.png" />
+            <RobotIconMobile alt="" src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png" />
 
             <BannerSubtitleItems>
               VersaAI will soon support voice commands, manage advanced DeFi
@@ -232,7 +232,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
         </BannerContent>
 
         <RobotContainer>
-          <RobotIcon alt="" src="/img@2x.png" />
+          <RobotIcon alt="" src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png" />
         </RobotContainer>
       </Banner>
     </BannerWrapperRoot>

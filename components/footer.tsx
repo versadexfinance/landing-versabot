@@ -110,11 +110,16 @@ const JoinVersabotV = styled.b`
   color: #020202;
   text-align: center;
   min-width: 94px;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 const Button = styled.button`
   cursor: pointer;
   border: none;
   padding: 16px 40px;
+
   background-color: transparent;
   box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   border-radius: 4px;
@@ -123,6 +128,9 @@ const Button = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  @media screen and (max-width: 800px) {
+    padding: 12px 30px;
+  }
 `;
 const Form = styled.div`
   width: 550px;
@@ -163,6 +171,11 @@ const LogoIcon = styled.img`
   width: 50px;
   position: relative;
   object-fit: cover;
+  @media (max-width: 800px) {
+    text-align: center;
+    height: 20px;
+    width: 25px;
+  }
 `;
 const BrandContainerIcon = styled.img`
   align-self: stretch;
@@ -172,6 +185,10 @@ const BrandContainerIcon = styled.img`
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
+  @media (max-width: 800px) {
+    height: 18px;
+    width: 120px;
+  }
 `;
 const LogoText = styled.div`
   flex: 1;
@@ -255,10 +272,12 @@ const Menu = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 56px;
+  gap: 36px;
   max-width: 100%;
-  @media screen and (max-width: 800px) {
-    gap: 28px;
+  @media screen and (min-width: 800px) {
+    font-size: 12x !important; 
+    gap: 10px;
+    bg-color: blue !important;
   }
 `;
 const Menu1 = styled.div`
@@ -365,8 +384,8 @@ const FooterRoot = styled.footer`
   color: #fff;
   font-family: Syne;
   @media screen and (max-width: 800px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
     box-sizing: border-box;
   }
 `;

@@ -361,7 +361,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
           {/* <Test1Icon alt="" src="/test-1@2x.png" /> */}
           <WrapperEllipse9Parent>
             <WrapperEllipse>
-              <WrapperEllipse9Child alt="" src="/ellipse-9-1.svg" />
+              <WrapperEllipse9Child alt="" src="https://res.cloudinary.com/versadex/image/upload/v1718976353/hkqzc1rwuy1utgmzh6mu.png" />
             </WrapperEllipse>
             <FrameChild loading="lazy" alt="" src="/group-1000002433.svg" />
             <FrameItem loading="lazy" alt="" src="/group-1000002435@2x.png" />

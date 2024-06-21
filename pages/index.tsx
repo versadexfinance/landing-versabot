@@ -19,7 +19,7 @@ const HeroParent = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 0px 199px;
+  padding: 0px 0px 149px;
   box-sizing: border-box;
   gap: 68px;
   max-width: 100%;

@@ -86,7 +86,7 @@ const JoinVersabotV = styled.a`
   line-height: 24px;
   text-transform: uppercase;
   display: inline-block;
-  color: #020202;
+  color: #020202 !important;
   white-space: pre-wrap;
   text-align: center;
   @media screen and (max-width: 800px) {

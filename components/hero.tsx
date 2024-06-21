@@ -40,7 +40,7 @@ const JoinVersabotV = styled.a`
   // padding: 12px;
   border-radius: 4px;
   box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
-  margin-top: 32px;
+  margin-top: 22px;
   @media screen and (max-width: 800px) {
     font-size: 14px;
     line-height: 20px;
@@ -120,6 +120,7 @@ const Paragraph = styled.p`
   color: #e1e1e1;
   font-family: mabry;
   line-height: 28px;
+  max-width: 600px;
   @media screen and (max-width: 800px) {
     font-size: 18px;
     line-height: 26px;
@@ -294,12 +295,12 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
             style={{
               zIndex:"11"
             }}
-            src="./main-phone 1.png"
+            src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
             className="phone"
             alt="Phone"
           />
           <img
-            src="./v-asset 1.png"
+            src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
             style={{ zIndex:"10",margin: "auto", width: "100%"}}
             alt="V Asset"
           />

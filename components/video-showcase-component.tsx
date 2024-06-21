@@ -179,12 +179,15 @@ const Section06Features = styled.div`
     justify-content: center;
     padding-left: 30px;
     box-sizing: border-box;
+    flex-direction: row-reverse;
   }
   @media screen and (max-width: 800px) {
     gap: 36px;
+    flex-direction: row-reverse;
   }
   @media screen and (max-width: 450px) {
     gap: 18px;
+    flex-direction: row-reverse;
   }
 `;
 const Section06FeaturesWrapperRoot = styled.section`

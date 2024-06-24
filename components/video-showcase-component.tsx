@@ -6,8 +6,6 @@ export type VideoShowCaseComponentType = {
   className?: string;
 };
 
-
-
 const TimelineIcon = styled.img`
   height: 126px;
   width: 4px;
@@ -147,7 +145,18 @@ const VideoFeatureIcon = styled.video`
 
   @media screen and (max-width: 1300px) {
     flex: 1;
+    margin: 0;
   }
+`;
+
+const VideoContainer = styled.div`
+  // width: 676px;
+  // height: 380px;
+  // @media screen and (max-width: 1300px) {
+  //   width: 100%;
+  //   flex: 1;
+    
+  // }
 `;
 
 const BackgroundPatternIcon = styled.img`
@@ -166,10 +175,9 @@ const BackgroundPatternIcon = styled.img`
 const Section06Features = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 0px 0px 60px;
+  padding: 30px;
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
@@ -179,29 +187,29 @@ const Section06Features = styled.div`
     justify-content: center;
     padding-left: 30px;
     box-sizing: border-box;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
   }
   @media screen and (max-width: 800px) {
     gap: 36px;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
   }
   @media screen and (max-width: 450px) {
     gap: 18px;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
   }
 `;
 const Section06FeaturesWrapperRoot = styled.section`
   align-self: stretch;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column-reverse;
+  align-items: center;
   padding: 0px 0px 169px;
   box-sizing: border-box;
   max-width: 100%;
   text-align: center;
   font-size: 24px;
   color: #f7ffbb;
+  transition: * 0.5s;
   font-family: Syne;
   @media screen and (max-width: 800px) {
     padding-bottom: 110px;
@@ -209,7 +217,9 @@ const Section06FeaturesWrapperRoot = styled.section`
   }
 `;
 
-const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({ className = "" }) => {
+const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
+  className = "",
+}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [selected, setSelected] = useState<number>(0);
@@ -257,19 +267,22 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({ classNam
       title: "Connect wallet",
       description:
         "Connect your DeFi wallet with just a single click. VersaBot seamlessly supports Trust Wallet, MetaMask, and more.",
-      video: "https://res.cloudinary.com/versadex/video/upload/v1718891554/connect-wallet.mov",
+      video:
+        "https://res.cloudinary.com/versadex/video/upload/v1718891554/connect-wallet.mov",
     },
     {
       iconSrc: "/timeline@2x.png",
       title: "Buy Crypto with FIAT",
-      video: "https://res.cloudinary.com/versadex/video/upload/v1718891417/buy-fiat.mov",
+      video:
+        "https://res.cloudinary.com/versadex/video/upload/v1718891417/buy-fiat.mov",
       description:
         "Easily purchase cryptocurrencies within VersaBot using your credit card or bank transfer.",
     },
     {
       iconSrc: "/timeline@2x.png",
       title: "Swap tokens with VersaAI",
-      video: "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
+      video:
+        "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
       description:
         "Swap with AI support effortlessly by typing or voicing a straightforward instructions in your preferred language.",
     },
@@ -296,7 +309,7 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({ classNam
               ) : (
                 <div
                   style={{
-                    width: "2px",
+                    width: "4px",
                   }}
                 ></div>
               )}
@@ -314,12 +327,10 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({ classNam
           ))}
         </FeaturesList>
 
-        <VideoFeatureIcon
-          loop
-          ref={videoRef}
-          playsInline={true}
-          muted
-        />
+
+<VideoFeatureIcon loop ref={videoRef} playsInline={true} muted />
+
+  
       </Section06Features>
     </Section06FeaturesWrapperRoot>
   );

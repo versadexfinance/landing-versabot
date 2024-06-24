@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import styled from "styled-components";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export type FormComponentType = {
@@ -29,6 +29,11 @@ const WrapperShadow = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 0;
+  @media screen and (max-width: 800px) {
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 const LogoFrameIcon = styled.img`
   width: 96px;
@@ -271,7 +276,9 @@ const SectionContactUsWrapperRoot = styled.section`
   font-size: 48px;
   color: #e1e1e1;
   font-family: Syne;
-  media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
+    margin-top: 180px;
+    margin-
     // border: 1px solid red;
   }
 `;
@@ -297,7 +304,7 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
     e.preventDefault();
     try {
       await axios.post('/api/send-email', formData);
-      toast.success('Message sent successfully');
+      toast.success('Thank you! Your form has been submitted. Our team will review your message and get back to you shortly.');
       setFormData({
         name: "",
         email: "",
@@ -319,7 +326,6 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
 
   return (
     <SectionContactUsWrapperRoot className={className} id="contact-us">
-      <ToastContainer />
       <SectionContactUs>
         <Form>
           <WrapperShadow>

@@ -210,7 +210,6 @@ const NavBtnMenu = styled.button`
   border: none;
   padding: 8px 24px;
   background-color: transparent;
-  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   border-radius: 4px;
   background: linear-gradient(180deg, #ebfe64, #8cea69);
   display: flex;
@@ -320,8 +319,8 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             <NavPlaceholderIcon alt="" src="/nav-placeholder@2x.png" />
           </Navigation1>
         </HeaderContent>
-        <Menu>
-          <NavLinks>
+        <Menu >
+          <NavLinks onClick={()=>setMenuOpen(false)}>
             <Home href="#home">Home</Home>
             <Docs href="https://docs.versadex.finance/versabot" target="_blank">
               Docs
@@ -358,7 +357,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           Docs
         </Docs>
         <ContactUs href="#contact-us">Contact us</ContactUs>
-        <ForCommunities href="#whitel-label">For Communities</ForCommunities>
+        <ForCommunities href="#white-label">For Communities</ForCommunities>
         <NavBtnMenu>
           <JoinVersabotV href="https://t.me/versadex" target="_blank">
             JOIN VERSABOT V1

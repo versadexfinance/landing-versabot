@@ -99,23 +99,33 @@ const JoinVersabotV = styled.a`
   }
 `;
 const Button = styled.button`
-  cursor: pointer;
+ cursor: pointer;
   border: none;
+  font-weight: 600;
+  border-radius: 4px;
   padding: 16px 40px;
+  display: flex;
+  align-items: center;
   background-color: transparent;
-  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   border-radius: 4px;
   background: linear-gradient(180deg, #ebfe64, #8cea69);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #020202 !important;
+  text-align: center;
+  
   white-space: nowrap;
+  display: inline-block;
   @media screen and (max-width: 800px) {
-    padding: 12px 30px;
+    padding: 14px 35px;
+    font-size: 14px;
+    line-height: 22px;
   }
   @media screen and (max-width: 450px) {
-    padding: 10px 20px;
+    padding: 12px 30px;
+    font-size: 12px;
+    line-height: 20px;
   }
 `;
 const JoinVersabotV1 = styled.b`
@@ -144,6 +154,8 @@ const CallToActionButtonContaine = styled.div`
   justify-content: flex-start;
   gap: 40px;
   max-width: 100%;
+  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;,
+
   @media screen and (max-width: 800px) {
     flex-wrap: wrap;
     gap: 20px;

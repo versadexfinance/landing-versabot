@@ -13,18 +13,17 @@ const H = styled.h3`
   line-height: 32px;
   font-weight: 700;
   font-family: Syne;
-  // font-family: inherit;
   display: inline-block;
   @media screen and (max-width: 450px) {
     font-size: 22px;
     line-height: 26px;
   }
 `;
+
 const FeatureDescription = styled.div`
   position: relative;
   font-size: 20px;
   font-family: mabry;
-  
   line-height: 28px;
   font-family: Syne;
   color: #afafaf;
@@ -34,6 +33,7 @@ const FeatureDescription = styled.div`
     line-height: 22px;
   }
 `;
+
 const Feature = styled.div`
   position: absolute;
   top: 0px;
@@ -53,6 +53,7 @@ const Feature = styled.div`
   gap: 16px;
   z-index: 1;
 `;
+
 const WalletColor1Icon = styled.img`
   position: absolute;
   height: 100%;
@@ -63,6 +64,7 @@ const WalletColor1Icon = styled.img`
   width: 213px;
   object-fit: cover;
 `;
+
 const Shadow = styled.div`
   position: absolute;
   top: 27px;
@@ -75,6 +77,7 @@ const Shadow = styled.div`
   mix-blend-mode: multiply;
   z-index: 1;
 `;
+
 const NewWalletCoin1Icon = styled.img`
   position: absolute;
   top: 20px;
@@ -84,6 +87,7 @@ const NewWalletCoin1Icon = styled.img`
   object-fit: contain;
   z-index: 2;
 `;
+
 const IconBackground = styled.div`
   height: 202px;
   width: 268px;
@@ -91,8 +95,8 @@ const IconBackground = styled.div`
   flex-shrink: 0;
   debug_commit: 69da668;
 `;
+
 const DIcon = styled.div`
-  // border: 1px solid blue;
   position: absolute;
   bottom: -10px;
   right: 0px;
@@ -106,11 +110,17 @@ const DIcon = styled.div`
   box-sizing: border-box;
   z-index: 2;
 `;
+
 const FeatureContainer = styled.div`
   align-self: stretch;
   height: 430px;
   position: relative;
+  margin-bottom: 34px; // Added margin-bottom for spacing
+  @media screen and (max-width: 450px) {
+    margin-bottom: 17px; // Consistent margin for mobile
+  }
 `;
+
 const DIcon1 = styled.img`
   width: 264px;
   height: 264px;
@@ -121,6 +131,7 @@ const DIcon1 = styled.img`
   object-fit: contain;
   z-index: 1;
 `;
+
 const Feature1 = styled.div`
   align-self: stretch;
   height: 384px;
@@ -137,6 +148,7 @@ const Feature1 = styled.div`
   position: relative;
   gap: 16px;
 `;
+
 const FeatureItems = styled.div`
   flex: 1;
   display: flex;
@@ -145,6 +157,7 @@ const FeatureItems = styled.div`
   justify-content: flex-start;
   gap: 34px;
   min-width: 328px;
+  margin-top: 50px;
   @media screen and (max-width: 1200px) {
     gap: 17px;
     &:last-of-type {
@@ -185,12 +198,14 @@ const FeatureDescription1 = styled.div`
     line-height: 22px;
   }
 `;
+
 const VAsset = styled.div`
   width: 78px;
   height: 78px;
   position: relative;
   display: none;
 `;
+
 const Feature2 = styled.div`
   position: absolute;
   top: 0px;
@@ -210,6 +225,7 @@ const Feature2 = styled.div`
   gap: 16px;
   z-index: 1;
 `;
+
 const Swap1Icon = styled.img`
   position: absolute;
   top: 0px;
@@ -218,6 +234,7 @@ const Swap1Icon = styled.img`
   height: 100%;
   object-fit: contain;
 `;
+
 const Shadow1 = styled.div`
   position: absolute;
   top: 136.2px;
@@ -230,6 +247,7 @@ const Shadow1 = styled.div`
   mix-blend-mode: multiply;
   z-index: 1;
 `;
+
 const NewSwapCoin1Icon = styled.img`
   position: absolute;
   top: 94.2px;
@@ -239,6 +257,7 @@ const NewSwapCoin1Icon = styled.img`
   object-fit: contain;
   z-index: 2;
 `;
+
 const IconBackground1 = styled.div`
   margin-top: -27.2px;
   height: 334.5px;
@@ -247,6 +266,7 @@ const IconBackground1 = styled.div`
   flex-shrink: 0;
   debug_commit: 69da668;
 `;
+
 const DIcon2 = styled.div`
   position: absolute;
   top: 166px;
@@ -262,6 +282,7 @@ const DIcon2 = styled.div`
   box-sizing: border-box;
   z-index: 2;
 `;
+
 const Feature3 = styled.div`
   position: absolute;
   top: 0px;
@@ -280,7 +301,12 @@ const Feature3 = styled.div`
   justify-content: flex-start;
   padding: 36px 20px 36px 36px;
   gap: 16px;
+  @media screen and (max-width: 450px) {
+  
+  
+  }
 `;
+
 const NewPerpCoin2Icon = styled.img`
   position: absolute;
   top: 23.8px;
@@ -289,6 +315,7 @@ const NewPerpCoin2Icon = styled.img`
   height: 163.9px;
   object-fit: contain;
 `;
+
 const Shadow2 = styled.div`
   position: absolute;
   top: 53.1px;
@@ -301,6 +328,7 @@ const Shadow2 = styled.div`
   mix-blend-mode: multiply;
   z-index: 1;
 `;
+
 const NewPerpCoin1Icon = styled.img`
   position: absolute;
   top: 0px;
@@ -310,6 +338,7 @@ const NewPerpCoin1Icon = styled.img`
   object-fit: contain;
   z-index: 2;
 `;
+
 const NewPerpCoin2Parent = styled.div`
   height: 229.3px;
   width: 283.1px;
@@ -317,6 +346,7 @@ const NewPerpCoin2Parent = styled.div`
   flex-shrink: 0;
   debug_commit: 69da668;
 `;
+
 const DIcon3 = styled.div`
   position: absolute;
   top: 166px;
@@ -331,6 +361,7 @@ const DIcon3 = styled.div`
   box-sizing: border-box;
   z-index: 1;
 `;
+
 const FeatureContainer1 = styled.div`
   cursor: pointer;
   align-self: stretch;
@@ -343,6 +374,7 @@ const FeatureContainer1 = styled.div`
     gap: 17px;
   }
 `;
+
 const FeatureItems1 = styled.div`
   flex: 1;
   display: flex;
@@ -352,7 +384,6 @@ const FeatureItems1 = styled.div`
   padding: 160px 0px 0px;
   box-sizing: border-box;
   min-width: 328px;
-
   @media screen and (max-width: 1125px) {
     padding-top: 104px;
     box-sizing: border-box;
@@ -362,9 +393,11 @@ const FeatureItems1 = styled.div`
     box-sizing: border-box;
   }
 `;
+
 const BuyCrypto = styled.p`
   margin: 0;
 `;
+
 const Feature4 = styled.div`
   position: absolute;
   top: 0px;
@@ -383,6 +416,7 @@ const Feature4 = styled.div`
   gap: 16px;
   z-index: 1;
 `;
+
 const Card1Icon = styled.img`
   position: absolute;
   height: 100%;
@@ -393,6 +427,7 @@ const Card1Icon = styled.img`
   width: 230.1px;
   object-fit: cover;
 `;
+
 const Shadow3 = styled.div`
   position: absolute;
   top: 124.76px;
@@ -407,6 +442,7 @@ const Shadow3 = styled.div`
   mix-blend-mode: multiply;
   z-index: 1;
 `;
+
 const NewCardCoin1Icon = styled.img`
   position: absolute;
   top: 72px;
@@ -416,6 +452,7 @@ const NewCardCoin1Icon = styled.img`
   object-fit: contain;
   z-index: 2;
 `;
+
 const IconBackground2 = styled.div`
   height: 229px;
   flex: 1;
@@ -430,6 +467,7 @@ const BridgeColor2Icon = styled.img`
   height: 203px;
   object-fit: cover;
 `;
+
 const Shadow4 = styled.div`
   position: absolute;
   top: 61px;
@@ -442,6 +480,7 @@ const Shadow4 = styled.div`
   mix-blend-mode: multiply;
   z-index: 1;
 `;
+
 const NewHeroCoin21Icon = styled.img`
   position: absolute;
   top: 0px;
@@ -451,11 +490,13 @@ const NewHeroCoin21Icon = styled.img`
   object-fit: contain;
   z-index: 2;
 `;
+
 const BridgeColor2Parent = styled.div`
   height: 260px;
   flex: 1;
   position: relative;
 `;
+
 const DIcon5 = styled.div`
   position: absolute;
   top: 166px;
@@ -482,7 +523,12 @@ const FeatureRow = styled.div`
   @media screen and (max-width: 1125px) {
     gap: 40px;
   }
+  @media screen and (max-width: 600px) {
+    gap: 0px;
+  
+  }
 `;
+
 const FeatureListRoot = styled.section`
   align-self: stretch;
   display: flex;
@@ -506,6 +552,7 @@ const FeatureListRoot = styled.section`
 `;
 
 const Columna = styled.section``;
+
 const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
   useIntersectionObserver(".animate-on-scroll");
 
@@ -570,7 +617,9 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
                 </IconBackground1>
               </DIcon>
             </FeatureContainer>
-            <FeatureContainer>
+            <FeatureContainer style={{
+              marginBottom: "0px",
+            }}>
               <Feature3>
                 <H>Perps</H>
                 <FeatureDescription>Coming soon</FeatureDescription>

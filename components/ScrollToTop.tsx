@@ -28,6 +28,7 @@ const ScrollToTopButton = styled.button<{ isVisible: boolean }>`
   position: fixed;
   bottom: 50px;
   right: 100px;
+  cursor: pointer;
   width: 50px;
   height: 50px;
   font-size: 24px;
@@ -56,7 +57,7 @@ const ScrollToTopButton = styled.button<{ isVisible: boolean }>`
     // box-shadow: 0px 4px 12px rgba(235, 254, 100, 0.6);
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 800px) {
     bottom: 30px;
     right: 30px;
     width: 40px;

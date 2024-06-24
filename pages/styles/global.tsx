@@ -65,4 +65,32 @@ button:hover {
 .fly-in {
   animation: fly 1.5s ease-out forwards;
 }
+
+img{
+  transition: transform 0.3s ease;
+}
+
+.mouse-icon {
+  width: 100px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 50px;
+  position: relative;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 `;
+
+
+
+

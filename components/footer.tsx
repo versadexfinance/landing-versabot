@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
+import { FaTelegramPlane } from "react-icons/fa";
 
 export type FooterType = {
   className?: string;
@@ -447,10 +448,23 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               VersaDex Copyright 2024. All Rights Reserved.
             </VersadexCopyright>
             <SocialIconsContainer>
-              <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />
+            <a style={{
+                textDecoration: "none",
+                color: "inherit",
+                height: "24px",
+                width: "24px",
+                opacity: .5,
+              }} href="https://t.me/versadex" target="_blank">
+              <FaTelegramPlane color="white"  size={24} />
+
+              </a>
+              <a href="https://discord.gg/rnnKEn4Tc2" target="_blank">
+                <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />
+              </a>
               <a href="https://x.com/versadex" target="_blank">
                 <SocialIcons alt="" src="/social-icons-1.svg" />
               </a>
+           
             </SocialIconsContainer>
           </CopyrightSocials>
         </LineParent>

@@ -19,7 +19,7 @@ const HeroParent = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 0px 149px;
+  padding: 0px 0px 109px;
   box-sizing: border-box;
   gap: 68px;
   max-width: 100%;
@@ -153,6 +153,7 @@ const Info = styled.section`
   color: #f7ffbb;
   font-family: Syne;
   margin-top: 120px;
+  
   @media screen and (max-width: 450px) {
     margin-top:100px;
     padding-bottom: 10px;
@@ -278,7 +279,17 @@ const VersaBotDesktopOPT7: NextPage = () => {
               <ElevateYour>{`  through `}</ElevateYour>
               <DefiExperience>Telegram</DefiExperience>
             </H>
-            <InfoDescription>
+            <img  src="./bg-grid.svg" style={{
+              position: "absolute",
+              // margin:"auto",
+              width: "100%",
+              right:"50%",
+              translate: "transformX(-50%)",
+
+              
+            }}/>
+            <InfoDescription style={{
+            }}>
               <Subtext>
               Connect your DeFi wallet with just a single click, effortlessly buy crypto with fiat, swap assets with AI, and unlock advanced features. Bridge assets, trade perpetuals, lend, borrow, engage with P2P, use on-chain orderbooks, get real-time notifications, and more—all with VersaBot.
               </Subtext>

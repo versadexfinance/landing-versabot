@@ -39,7 +39,6 @@ const JoinVersabotV = styled.a`
   // background-color: #ebfe64;
   // padding: 12px;
   border-radius: 4px;
-  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
   margin-top: 22px;
   @media screen and (max-width: 800px) {
     font-size: 14px;
@@ -140,7 +139,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   background-color: transparent;
-  boxShadow: "0px 2px 8px rgba(235, 254, 100, 0.4)",
+  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;,
   border-radius: 4px;
   background: linear-gradient(180deg, #ebfe64, #8cea69);
   font-size: 16px;
@@ -244,7 +243,7 @@ const ContentWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   background-image: url("./bg-hero.png");
-  // padding: 0px 60px;
+  padding: 0px 60px;
   box-sizing: border-box;
   max-width: 100%;
   flex-shrink: 0;
@@ -262,12 +261,48 @@ const ContentWrapper = styled.div`
   }
 `;
 
+const Arrow = styled.div`
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  margin-top:0px;
+  cursor: pointer;
+  img {
+    animation: bounce 5s ease-in-out infinite;
+  }
+    padding: 0px 60px;
+  box-sizing: border-box;
+  max-width: 100%;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 64px;
+  color: #f7ffbb;
+  font-family: Syne;
+  padding: 0px 60px;
+  @media screen and (max-width: 1300px) {
+    // display: none;
+    margin-top: 20px;
+    padding: 0px 44px;
+
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    padding: 0px 30px;
+
+  }
+`;
+
 const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
   return (
+    <div>
+
+    
     <ContentWrapper className={className}>
       <HeroSection>
         <MainPicture>
         <img
+            loading="lazy"
             className="coin"
             style={{
               bottom: "7%",
@@ -279,6 +314,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
             alt="Coin 1"
           />
         <img
+            loading="lazy"
             className="coin"
             style={{
               top: "5%",
@@ -292,6 +328,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
           />
           <img
             id="home"
+            loading="lazy"
             style={{
               zIndex:"11"
             }}
@@ -300,6 +337,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
             alt="Phone"
           />
           <img
+            loading="lazy"  
             src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
             style={{ zIndex:"10",margin: "auto", width: "100%"}}
             alt="V Asset"
@@ -329,12 +367,20 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
               </Paragraph> */}
             </div>
           </div>
+          <div>
           <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
             <Button>JOIN VERSABOT V1</Button>
           </JoinVersabotV>
+       
+          </div>
         </TextBlock>
       </HeroSection>
+      
     </ContentWrapper>
+    <Arrow >
+            <img width={32}  src="/down-arrow.svg" alt="" />
+            </Arrow>
+    </div>
   );
 };
 

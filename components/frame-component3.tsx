@@ -109,6 +109,7 @@ const Banner = styled.div`
   position: relative;
   max-width: 100%;
   z-index: 1;
+  box-shadow: 0px 2px 20px rgba(235, 254, 100, 0.01) !important;
   @media screen and (max-width: 1300px) {
     flex-wrap: wrap;
     padding-left: 44px;

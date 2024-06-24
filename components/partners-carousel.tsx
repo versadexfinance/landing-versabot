@@ -90,6 +90,10 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  @media (max-width: 1300px) {
+    width: 204px;
+    height: 72px;
+  }
   @media (max-width: 600px) {
     width: 154px;
     height: 54px;
@@ -109,6 +113,20 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
+,    "/paraswap.svg",
+    "/parners-3.svg",
+    "/parners-4.svg",
+    "/aerodrome.svg",
+    "/optimism.svg",
+    "/velodrome.svg",
+    "/parners-5.svg",
+    "/lynex.svg",
+    "/core.svg",
+    "/corex.svg",
+    "/arbitrum.svg",
+    "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -121,6 +139,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -133,6 +152,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -145,6 +165,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -157,6 +178,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -169,6 +191,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -181,6 +204,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -193,6 +217,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -205,18 +230,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/corex.svg",
     "/arbitrum.svg",
     "/bnbchain.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
+    "/mantle.svg",
     "/paraswap.svg",
   ];
 

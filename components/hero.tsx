@@ -94,11 +94,11 @@ const Heading = styled.h1`
   font-weight: 700;
   font-family: inherit;
   @media screen and (max-width: 1300px) {
-     font-size: 50px;
+    font-size: 50px;
     line-height: 60px;
   }
   @media screen and (max-width: 1300px) {
-     font-size: 45px;
+    font-size: 45px;
     line-height: 55px;
   }
   @media screen and (max-width: 800px) {
@@ -164,7 +164,7 @@ const Button = styled.button`
 
 const TextBlock = styled.div`
   // border: 1px solid red;
-  
+
   flex: 6;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,6 @@ const MainPicture = styled.div`
     height: 80%;
     top: 0;
     transform: translateX(-50%);
-    
   }
 
   .coin {
@@ -265,12 +264,12 @@ const Arrow = styled.div`
   display: flex;
   // align-items: center;
   // justify-content: center;
-  margin-top:0px;
+  margin-top: 0px;
   cursor: pointer;
   img {
     animation: bounce 5s ease-in-out infinite;
   }
-    padding: 0px 60px;
+  padding: 0px 60px;
   box-sizing: border-box;
   max-width: 100%;
   flex-shrink: 0;
@@ -283,103 +282,102 @@ const Arrow = styled.div`
     // display: none;
     margin-top: 20px;
     padding: 0px 44px;
-
   }
 
   @media screen and (max-width: 800px) {
     margin-top: 30px;
     padding: 0px 30px;
-
   }
 `;
 
 const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
+      <ContentWrapper className={className}>
+        <HeroSection>
+          <MainPicture>
+            <img
+              loading="lazy"
+              className="coin"
+              style={{
+                bottom: "7%",
+                zIndex: "21",
+                right: "8%",
+                width: "130px !important",
+              }}
+              src="./new-hero-coin-1 2.png"
+              alt="Coin 1"
+            />
+            <img
+              loading="lazy"
+              className="coin"
+              style={{
+                top: "5%",
+                zIndex: "-1",
 
-    
-    <ContentWrapper className={className}>
-      <HeroSection>
-        <MainPicture>
-        <img
-            loading="lazy"
-            className="coin"
-            style={{
-              bottom: "7%",
-              zIndex: "21",
-              right: "8%",
-              width: "130px !important" ,
-            }}
-            src="./new-hero-coin-1 2.png"
-            alt="Coin 1"
-          />
-        <img
-            loading="lazy"
-            className="coin"
-            style={{
-              top: "5%",
-              zIndex: "-1",
-
-              width: "85px",
-              left: "1%",
-            }}
-            src="./new-hero-coin-2 1.png"
-            alt="Coin 2"
-          />
-          <img
-            id="home"
-            loading="lazy"
-            style={{
-              zIndex:"11"
-            }}
-            src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
-            className="phone"
-            alt="Phone"
-          />
-          <img
-            loading="lazy"  
-            src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
-            style={{ zIndex:"10",margin: "auto", width: "100%"}}
-            alt="V Asset"
-          />
-
-     
-        </MainPicture>
-        <TextBlock >
-          <div>
-            <Heading>
-              <GradientText>Introducing a </GradientText>
-              <span>Fully Non-custodial</span>
-              <GradientText> Web3 trading experience</GradientText>
-            </Heading>
+                width: "85px",
+                left: "1%",
+              }}
+              src="./new-hero-coin-2 1.png"
+              alt="Coin 2"
+            />
+            <img
+              id="home"
+              loading="lazy"
+              style={{
+                zIndex: "11",
+              }}
+              src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+              className="phone"
+              alt="Phone"
+            />
+            <img
+              loading="lazy"
+              src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
+              style={{ zIndex: "10", margin: "auto", width: "100%" }}
+              alt="V Asset"
+            />
+          </MainPicture>
+          <TextBlock>
             <div>
-              <Paragraph>
-                VersaBot is the world’s first non-custodial, cross-chain EVM
-                Telegram Bot enhanced by VersaAI. Experience seamless
-                onboarding, advanced DeFi features, and top-notch security.
-              </Paragraph>
-              {/* <Paragraph>
+              <Heading>
+                <GradientText>Introducing a </GradientText>
+                <span>Fully Non-custodial</span>
+                <GradientText> Web3 trading experience</GradientText>
+              </Heading>
+              <div>
+                <Paragraph>
+                  VersaBot is the world’s first non-custodial, cross-chain EVM
+                  Telegram Bot enhanced by VersaAI. Experience seamless
+                  onboarding, advanced DeFi features, and top-notch security.
+                </Paragraph>
+                {/* <Paragraph>
                 Connect your DeFi wallet in one click, effortlessly buy crypto
                 with fiat, swap assets with AI, and unlock advanced features.
                 Bridge assets, trade perpetuals, lend, borrow, engage in P2P,
                 use on-chain orderbooks, get real-time notifications, and
                 more—all with VersaBot.
               </Paragraph> */}
+              </div>
             </div>
-          </div>
-          <div>
-          <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
-            <Button>JOIN VERSABOT V1</Button>
-          </JoinVersabotV>
-       
-          </div>
-        </TextBlock>
-      </HeroSection>
-      
-    </ContentWrapper>
-    <Arrow >
-            <img width={32}  src="/down-arrow.svg" alt="" />
-            </Arrow>
+            <div>
+              <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
+                <Button>JOIN VERSABOT V1</Button>
+              </JoinVersabotV>
+            </div>
+          </TextBlock>
+        </HeroSection>
+      </ContentWrapper>
+      <Arrow onClick={() => scrollToBottom()}>
+        <img width={32} src="/down-arrow.svg" alt="" />
+      </Arrow>
     </div>
   );
 };

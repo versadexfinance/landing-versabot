@@ -58,7 +58,7 @@ const Feature = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 28px;
+  gap: 40px;
   max-width: 100%;
   font-size: 36px;
   opacity: 0.5;
@@ -155,7 +155,7 @@ const VideoContainer = styled.div`
   // @media screen and (max-width: 1300px) {
   //   width: 100%;
   //   flex: 1;
-    
+
   // }
 `;
 
@@ -327,10 +327,7 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
           ))}
         </FeaturesList>
 
-
-<VideoFeatureIcon loop ref={videoRef} playsInline={true} muted />
-
-  
+        <VideoFeatureIcon loop ref={videoRef} playsInline={true} muted />
       </Section06Features>
     </Section06FeaturesWrapperRoot>
   );

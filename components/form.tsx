@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 import axios from "axios";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 export type FormComponentType = {
   className?: string;
@@ -292,7 +292,11 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -303,8 +307,10 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('/api/send-email', formData);
-      toast.success('Thank you! Your form has been submitted. Our team will review your message and get back to you shortly.');
+      await axios.post("/api/send-email", formData);
+      toast.success(
+        "Thank you! Your form has been submitted. Our team will review your message and get back to you shortly."
+      );
       setFormData({
         name: "",
         email: "",
@@ -313,13 +319,13 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
         message: "",
       });
     } catch (error) {
-      console.error('Error sending message', error);
-      toast.error('Failed to send message');
+      console.error("Error sending message", error);
+      toast.error("Failed to send message");
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       e.preventDefault();
     }
   };
@@ -329,9 +335,13 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
       <SectionContactUs>
         <Form>
           <WrapperShadow>
-            <ShadowIcon style={{
-              zIndex: 1,
-            }} alt="" src="/shadow2.svg" />
+            <ShadowIcon
+              style={{
+                zIndex: 1,
+              }}
+              alt=""
+              src="/shadow2.svg"
+            />
           </WrapperShadow>
           <Title>
             <LogoFrameIcon loading="lazy" alt="" src="/logo-frame@2x.png" />
@@ -340,10 +350,13 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
               If you have any questions, please don't hesitate to get in touch
             </FormSubtitle>
           </Title>
-          <FormBody style={{
-            zIndex: 1,
-          
-          }} onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+          <FormBody
+            style={{
+              zIndex: 1,
+            }}
+            onSubmit={handleSubmit}
+            onKeyDown={handleKeyDown}
+          >
             <Inputs>
               <Row>
                 <Input>
@@ -381,10 +394,16 @@ const FormComponent: NextPage<FormComponentType> = ({ className = "" }) => {
                     value={formData.subject}
                     onChange={handleChange}
                   >
-                    <option value="" disabled>Select a subject</option>
+                    <option value="" disabled>
+                      Select a subject
+                    </option>
                     <option value="General Inquiries">General Inquiries</option>
-                    <option value="White Label Solutions">White Label Solutions</option>
-                    <option value="Partnership Proposals">Partnership Proposals</option>
+                    <option value="White Label Solutions">
+                      White Label Solutions
+                    </option>
+                    <option value="Partnership Proposals">
+                      Partnership Proposals
+                    </option>
                     <option value="Product Support">Product Support</option>
                     <option value="Other">Other</option>
                   </Select>

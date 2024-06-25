@@ -38,12 +38,19 @@ const PartnersColumn = styled.section`
   }
 `;
 
-const ScrollingLogos = styled.div<{ direction: "left" | "right"; duration: number }>`
+const ScrollingLogos = styled.div<{
+  direction: "left" | "right";
+  duration: number;
+}>`
   display: flex;
   animation: ${({ direction, duration }) =>
     direction === "left"
-      ? css`${scrollLeft} ${duration}s linear infinite`
-      : css`${scrollRight} ${duration}s linear infinite`};
+      ? css`
+          ${scrollLeft} ${duration}s linear infinite
+        `
+      : css`
+          ${scrollRight} ${duration}s linear infinite
+        `};
   gap: 32px;
   &:hover {
     animation-play-state: paused;
@@ -114,7 +121,8 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
-,    "/paraswap.svg",
+    ,
+    "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
     "/aerodrome.svg",

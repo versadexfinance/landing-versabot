@@ -101,7 +101,7 @@ const H = styled.h1`
   }
 `;
 const Subtext = styled.div`
-  width: 662px;
+  width: 620px;
   position: relative;
   line-height: 28px;
   display: inline-block;
@@ -153,9 +153,9 @@ const Info = styled.section`
   color: #f7ffbb;
   font-family: Syne;
   margin-top: 120px;
-  
+
   @media screen and (max-width: 450px) {
-    margin-top:100px;
+    margin-top: 100px;
     padding-bottom: 10px;
     box-sizing: border-box;
   }
@@ -182,6 +182,7 @@ const BgGridIcon = styled.img`
 const IconFramedGlow = styled.img`
   height: 200px;
   width:200px
+  margin: auto;
   z-index: 2;
   object-fit: contain;
 `;
@@ -225,7 +226,7 @@ const BackgroundPatternIcon = styled.img`
 `;
 const VersabotDesktopOptRoot = styled.div`
   max-width: 1480px;
-  scare: .6;
+  scare: 0.6;
   margin: auto;
   padding-top: 50px;
   background-color: #0a0a0a;
@@ -239,65 +240,109 @@ const VersabotDesktopOptRoot = styled.div`
   letter-spacing: normal;
 `;
 
-import ScrollToTop from '../components/ScrollToTop';
+import ScrollToTop from "../components/ScrollToTop";
 import { ToastContainer } from "react-toastify";
-
 
 const VersaBotDesktopOPT7: NextPage = () => {
   useIntersectionObserver(".animate-on-scroll");
 
   return (
     <>
-        <BackgroundPatternIcon
+      <BackgroundPatternIcon
         style={{
           zIndex: 1,
         }}
-          alt=""
-          src="/background-pattern-2@2x.png"
-          className="animate-on-scroll"
-        />
+        alt=""
+        src="/background-pattern-2@2x.png"
+        className="animate-on-scroll"
+      />
       <Header />
       <VersabotDesktopOptRoot>
-        <div style={{
-          zIndex: 2000,
-        }}>
-
-        <HeroParent className="animate-on-scroll">
-          <HeroContent />
-        </HeroParent>
+        <div
+          style={{
+            zIndex: 2000,
+          }}
+        >
+          <HeroParent className="animate-on-scroll">
+            <HeroContent />
+          </HeroParent>
         </div>
-        </VersabotDesktopOptRoot>
-        <PartnersCarousel className="animate-on-scroll" />
-        <VersabotDesktopOptRoot>
+      </VersabotDesktopOptRoot>
+      <PartnersCarousel className="animate-on-scroll" />
+      <VersabotDesktopOptRoot
+        style={
+          {
+            // border: "1px solid green",
+          }
+        }
+      >
         <ImgCoin />
         <FrameComponent3 className="animate-on-scroll" />
-        <Info className="animate-on-scroll">
-          <InfoContent>
-            <H>
-              <ElevateYour>{`Elevate your `}</ElevateYour>
-              <DefiExperience>DeFi experience</DefiExperience>
-              <ElevateYour>{`  through `}</ElevateYour>
-              <DefiExperience>Telegram</DefiExperience>
-            </H>
-            <img  src="./bg-grid.svg" style={{
-              position: "absolute",
-              // margin:"auto",
-              width: "100%",
-              right:"50%",
-              translate: "transformX(-50%)",
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            backgroundImage: "url(/bg-grid.svg)",
+            gap: "32px",
+          }}
+        >
+          <Info
+            className="animate-on-scroll"
+            style={{
+              // border: "1px solid purple",
+              zIndex: 2,
+            }}
+          >
+            <InfoContent
+              style={
+                {
+                  // border: "1px solid red",
+                }
+              }
+            >
+              <H>
+                <ElevateYour>{`Elevate your `}</ElevateYour>
+                <DefiExperience>DeFi experience</DefiExperience>
+                <ElevateYour>{`  through `}</ElevateYour>
+                <DefiExperience>Telegram</DefiExperience>
+              </H>
 
-              
-            }}/>
-            <InfoDescription style={{
-            }}>
-              <Subtext>
-              Connect your DeFi wallet with just a single click, effortlessly buy crypto with fiat, swap assets with AI, and unlock advanced features. Bridge assets, trade perpetuals, lend, borrow, engage with P2P, use on-chain orderbooks, get real-time notifications, and more—all with VersaBot.
-              </Subtext>
-            </InfoDescription>
-          </InfoContent>
-        </Info>
-        <div>
-          <IconFramedGlow loading="lazy" alt="" src="/icon-framed-glow@2x.png" />
+              <InfoDescription style={{}}>
+                <Subtext
+                  style={
+                    {
+                      // border: "1px solid red",
+                    }
+                  }
+                >
+                  Connect your DeFi wallet with just a single click,
+                  effortlessly buy crypto with fiat, swap assets with AI, and
+                  unlock advanced features. Bridge assets, trade perpetuals,
+                  lend, borrow, engage with P2P, use on-chain orderbooks, get
+                  real-time notifications, and more—all with VersaBot.
+                </Subtext>
+              </InfoDescription>
+            </InfoContent>
+          </Info>
+          <div
+            style={
+              {
+                // border: "1px solid red",
+              }
+            }
+          >
+            <IconFramedGlow
+              style={{
+                // border: "1px solid blue",
+                zIndex: 1000,
+              }}
+              loading="lazy"
+              alt=""
+              src="/icon-framed-glow@2x.png"
+            />
+          </div>
         </div>
         <FeatureList />
         <CallToAction />
@@ -305,15 +350,18 @@ const VersaBotDesktopOPT7: NextPage = () => {
         <VideoShowCaseComponent className="animate-on-scroll" />
         <FrameComponent1 className="animate-on-scroll" />
         <FormComponent className="animate-on-scroll" />
-    
+
         <Footer />
         <ScrollToTop />
-        <ToastContainer style={{
-          zIndex: "9999999999",
-        }}  position="top-center" theme="dark" />
+        <ToastContainer
+          style={{
+            zIndex: "9999999999",
+          }}
+          position="top-center"
+          theme="dark"
+        />
       </VersabotDesktopOptRoot>
     </>
   );
 };
 export default VersaBotDesktopOPT7;
-

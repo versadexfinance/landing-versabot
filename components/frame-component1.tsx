@@ -48,7 +48,7 @@ const CommunityBannerSubtitles = styled.div`
   }
 `;
 const Text1 = styled.div`
-font-family: mabry;
+  font-family: mabry;
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -151,22 +151,18 @@ const Banner = styled.div`
   @media screen and (max-width: 450px) {
     gap: 18px;
   }
-  
+
   @media screen and (max-width: 1300px) {
     padding-top: 220px;
-
   }
 
   @media screen and (max-width: 1200px) {
     padding-top: 20px;
-
   }
 
   @media screen and (max-width: 800px) {
     padding-top: 120px;
-
   }
-  
 `;
 const Test1Icon = styled.img`
   height: 723px;
@@ -300,7 +296,7 @@ const CommunityBannerContainerWrapperRoot = styled.section`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 0px 60px 148px;
+  padding: 0px 60px 88px;
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;

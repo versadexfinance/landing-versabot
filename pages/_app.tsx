@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://versadex.finance/img/og-banner.jpg"
+          content="https://versadex.finance/og-banner.jpg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           name="twitter:image"
-          content="https://versadex.finance/img/og-banner.jpg"
+          content="https://versadex.finance/og-banner.jpg"
         />
 
         <style

@@ -286,6 +286,7 @@ const VersaBotDesktopOPT7: NextPage = () => {
             alignItems: "center",
             backgroundImage: "url(/bg-grid.svg)",
             gap: "32px",
+            maxWidth: "110%",
           }}
         >
           <Info

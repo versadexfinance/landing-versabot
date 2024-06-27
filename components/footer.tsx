@@ -27,7 +27,7 @@ const WrapperEllipse = styled.div`
   justify-content: center;
   z-index: 0;
 `;
-const H = styled.h1`
+const H = styled.h2`
   margin: 0;
   align-self: stretch;
   position: relative;

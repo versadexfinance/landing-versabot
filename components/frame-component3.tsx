@@ -14,7 +14,7 @@ const Making = styled.span`
   }
 `;
 const DefiTrulyAccessible = styled.span``;
-const H = styled.h1`
+const H = styled.h2`
   margin: 0;
   align-self: stretch;
   position: relative;
@@ -48,7 +48,6 @@ const BannerSubtitleItems = styled.div`
     font-weight: 500;
     // text-align: justify;
   }
-
 `;
 const BannerSubtitleItems1 = styled.div`
   align-self: stretch;
@@ -192,18 +191,16 @@ const RobotIconMobile = styled.img`
 const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
   return (
     <BannerWrapperRoot
-      style={
-        {
-          padding:"12px",
-          paddingBottom: "100px",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          width: "100%",
-          
-          // border: "1px solid red",
-        }
-      }
+      style={{
+        padding: "12px",
+        paddingBottom: "100px",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        width: "100%",
+
+        // border: "1px solid red",
+      }}
       className={className}
     >
       <Banner>
@@ -215,14 +212,17 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             <DefiTrulyAccessible>VersaAI</DefiTrulyAccessible>
           </H>
           <BannerSubtitles>
-            <BannerSubtitleItems >
+            <BannerSubtitleItems>
               VersaAI empowers users to perform transactions with VersaBot in
               their preferred language. By simply typing  straightforward
               instructions, you can effortlessly initiate trades in just a few
               clicks.
             </BannerSubtitleItems>
 
-            <RobotIconMobile alt="" src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png" />
+            <RobotIconMobile
+              alt=""
+              src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
+            />
 
             <BannerSubtitleItems>
               VersaAI will soon support voice commands, manage advanced DeFi
@@ -233,7 +233,10 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
         </BannerContent>
 
         <RobotContainer>
-          <RobotIcon alt="" src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png" />
+          <RobotIcon
+            alt=""
+            src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
+          />
         </RobotContainer>
       </Banner>
     </BannerWrapperRoot>

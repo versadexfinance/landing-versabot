@@ -82,7 +82,7 @@ const ElevateYour = styled.span`
   -webkit-text-fill-color: transparent;
 `;
 const DefiExperience = styled.span``;
-const H = styled.h1`
+const H = styled.h2`
   margin: 0;
   align-self: stretch;
   position: relative;

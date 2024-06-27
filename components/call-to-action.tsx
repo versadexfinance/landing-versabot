@@ -34,7 +34,7 @@ const ImgTelegramIcon = styled.img`
   }
 `;
 
-const H = styled.h1`
+const H = styled.h2`
   margin: 0;
   align-self: stretch;
   position: relative;
@@ -99,7 +99,7 @@ const JoinVersabotV = styled.a`
   }
 `;
 const Button = styled.button`
- cursor: pointer;
+  cursor: pointer;
   border: none;
   font-weight: 600;
   border-radius: 4px;
@@ -114,7 +114,7 @@ const Button = styled.button`
   text-transform: uppercase;
   color: #020202 !important;
   text-align: center;
-  
+
   white-space: nowrap;
   display: inline-block;
   @media screen and (max-width: 800px) {
@@ -154,8 +154,9 @@ const CallToActionButtonContaine = styled.div`
   justify-content: flex-start;
   gap: 40px;
   max-width: 100%;
-  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;,
+  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;
 
+  ,
   @media screen and (max-width: 800px) {
     flex-wrap: wrap;
     gap: 20px;

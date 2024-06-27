@@ -44,7 +44,7 @@ const LogoFrameIcon = styled.img`
   flex-shrink: 0;
   object-fit: cover;
 `;
-const H = styled.h1`
+const H = styled.h2`
   margin: 0;
   position: relative;
   font-size: inherit;

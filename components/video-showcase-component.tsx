@@ -12,7 +12,7 @@ const TimelineIcon = styled.img`
   position: relative;
   object-fit: contain;
 `;
-const Subtext = styled.h2`
+const Subtext = styled.h3`
   margin: 0;
   text-align: left;
   position: relative;

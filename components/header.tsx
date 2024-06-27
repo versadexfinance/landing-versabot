@@ -131,7 +131,7 @@ const LaunchTheWeb = styled.a`
   white-space: nowrap;
 `;
 const NavLinks = styled.div`
-margin-top: 5px;
+  margin-top: 5px;
   font-family: mabry;
   align-self: stretch;
   display: flex;
@@ -169,6 +169,12 @@ const JoinVersabotV = styled.a`
   text-align: center;
   border-radius: 4px;
   box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4);
+
+  @media screen and (max-width: 1200px) {
+    font-size: 12px;
+
+    line-height: 18px;
+  }
   @media screen and (max-width: 1000px) {
     font-size: 14px;
     line-height: 20px;
@@ -195,6 +201,11 @@ const NavBtn = styled.button`
   align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
+  height: 35px;
+  margin-left: 20px;
+  @media screen and (max-width: 1200px) {
+    padding: 4px 12px;
+  }
   @media screen and (max-width: 800px) {
     display: none;
   }
@@ -239,8 +250,6 @@ const HeaderRoot = styled.header`
   font-size: 18px;
   color: #e1e1e1;
 
- 
-
   @media screen and (max-width: 800px) {
     padding-left: 30px;
     padding-right: 30px;
@@ -268,8 +277,6 @@ const HamburguerCntainer = styled.div`
    margin: auto,
   }
 `;
-
-
 
 const MobileMenu = styled.div<{ open: boolean }>`
   display: flex;
@@ -309,8 +316,9 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           display: "flex",
           width: "1500px",
           justifyContent: "space-between",
+          alignItems: "center",
           margin: "auto",
-          height: "50px"
+          height: "50px",
         }}
       >
         <HeaderContent>
@@ -319,8 +327,8 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             <NavPlaceholderIcon alt="" src="/nav-placeholder@2x.png" />
           </Navigation1>
         </HeaderContent>
-        <Menu >
-          <NavLinks onClick={()=>setMenuOpen(false)}>
+        <Menu>
+          <NavLinks onClick={() => setMenuOpen(false)}>
             <Home href="#home">Home</Home>
             <Docs href="https://docs.versadex.finance/versabot" target="_blank">
               Docs
@@ -341,12 +349,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           </div>
         </NavBtn>
       </div>
-      <HamburguerCntainer
-        style={{
-        
-          
-        }}
-      >
+      <HamburguerCntainer style={{}}>
         <Hamburger onClick={toggleMenu}>
           <img width={80} src="/hamburguer.svg" alt="" />
         </Hamburger>

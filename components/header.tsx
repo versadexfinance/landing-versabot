@@ -301,7 +301,6 @@ const MobileMenu = styled.div<{ open: boolean }>`
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
-
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 

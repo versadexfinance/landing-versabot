@@ -109,6 +109,7 @@ const Logo = styled.div`
 
 const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
   const partnerImages1 = [
+    "/bybit-new.svg",
     "/parners-3.svg",
     "/parners-4.svg",
     "/aerodrome.svg",
@@ -121,7 +122,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
-    ,
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -135,6 +136,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -148,6 +150,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -161,6 +164,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -174,6 +178,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -187,6 +192,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -200,6 +206,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -213,6 +220,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -226,6 +234,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
     "/parners-3.svg",
     "/parners-4.svg",
@@ -239,6 +248,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
+    "/bybit-new.svg",
     "/paraswap.svg",
   ];
 
@@ -314,6 +324,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
                 loading="lazy"
                 alt={`Partner logo ${index + 1}`}
                 src={src}
+                style={{
+                  marginBottom: src == "./bybit-new.svg" ? "15px" : "0px",
+                }}
               />
             </Logo>
           </LogoWrapper>
@@ -327,6 +340,9 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
                 loading="lazy"
                 alt={`Partner logo ${index + 1}`}
                 src={src}
+                style={{
+                  marginBottom: src == "./bybit-new.svg" ? "15px" : "0px",
+                }}
               />
             </Logo>
           </LogoWrapper>

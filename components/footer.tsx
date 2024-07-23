@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
 import { FaTelegramPlane } from "react-icons/fa";
+import Link from "next/link";
+import { useState } from "react";
 
 export type FooterType = {
   className?: string;
@@ -301,7 +303,15 @@ const VersadexCopyright = styled.div`
   line-height: 24px;
   font-weight: 500;
   display: inline-block;
+  .terms {
+    a {
+      &:hover {
+        color: white !important;
+      }
+    }
+  }
 `;
+
 const SocialIcons = styled.img`
   height: 24px;
   width: 24px;
@@ -394,6 +404,8 @@ const FooterRoot = styled.footer`
 `;
 
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
+  const [hover, setHover] = useState({ terms: false, privacy: false });
+
   return (
     <FooterRoot className={className}>
       <Footer1>
@@ -448,6 +460,44 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <CopyrightSocials>
             <VersadexCopyright>
               VersaDex Copyright 2024. All Rights Reserved.
+              <div
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  fontStyle: "none !important",
+                  textDecoration: "none !important",
+                  // background: "red",
+                  width: "100%",
+                  fontSize: "10px",
+                }}
+              >
+                <Link
+                  target="_blank"
+                  className="terms"
+                  href={"https://docs.versadex.finance/terms-and-conditions"}
+                  style={{
+                    textDecoration: "none",
+                    color: hover.terms ? "white" : "#4d4d4d",
+                  }}
+                  onMouseEnter={() => setHover({ ...hover, terms: true })}
+                  onMouseLeave={() => setHover({ ...hover, terms: false })}
+                >
+                  Terms And Conditions
+                </Link>
+                <Link
+                  className="terms"
+                  style={{
+                    textDecoration: "none",
+                    color: hover.privacy ? "white" : "#4d4d4d",
+                  }}
+                  target="_blank"
+                  href={"https://docs.versadex.finance/privacy-notice"}
+                  onMouseEnter={() => setHover({ ...hover, privacy: true })}
+                  onMouseLeave={() => setHover({ ...hover, privacy: false })}
+                >
+                  Privacy Notice
+                </Link>
+              </div>
             </VersadexCopyright>
             <SocialIconsContainer>
               <a

@@ -474,7 +474,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 <Link
                   target="_blank"
                   className="terms"
-                  href={"https://docs.versadex.finance/terms-and-conditions"}
+                  href={"/terms-and-conditions"}
                   style={{
                     textDecoration: "none",
                     color: hover.terms ? "white" : "#4d4d4d",
@@ -491,7 +491,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                     color: hover.privacy ? "white" : "#4d4d4d",
                   }}
                   target="_blank"
-                  href={"https://docs.versadex.finance/privacy-notice"}
+                  href={"/privacy-notice"}
                   onMouseEnter={() => setHover({ ...hover, privacy: true })}
                   onMouseLeave={() => setHover({ ...hover, privacy: false })}
                 >

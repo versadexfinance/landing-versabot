@@ -368,7 +368,10 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
               </div>
             </div>
             <div>
-              <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
+              <JoinVersabotV
+                href="https://t.me/OfficialVersaBot"
+                target="_blank"
+              >
                 <Button>JOIN VERSABOT V1</Button>
               </JoinVersabotV>
             </div>

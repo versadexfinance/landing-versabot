@@ -450,7 +450,11 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 >
                   Docs
                 </Docs1>
+                <Docs1 href="https://docs.versadex.finance/versabot/faq-and-troubleshooting">
+                  FAQ
+                </Docs1>
                 <ContactUs href="#contact-us">Contact us</ContactUs>
+
                 <ForCommunities href="#white-label">
                   For Communities
                 </ForCommunities>

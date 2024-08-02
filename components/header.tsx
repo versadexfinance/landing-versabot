@@ -342,7 +342,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
               display: "flex",
             }}
           >
-            <JoinVersabotV href="https://t.me/versatest_bot" target="_blank">
+            <JoinVersabotV href="https://t.me/OfficialVersaBot" target="_blank">
               JOIN VERSABOT V1
             </JoinVersabotV>
           </div>

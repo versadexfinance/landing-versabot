@@ -36,7 +36,7 @@ const Button = styled.button`
   }
 `;
 
-const LogoIcon = styled.img`
+const LogoIcon = styled.div`
   height: 40px;
   width: 50px;
   position: relative;
@@ -49,14 +49,15 @@ const LogoIcon = styled.img`
 `;
 const NavPlaceholderIcon = styled.img`
   align-self: stretch;
-  height: 18px;
+  // height: 25px;
   position: relative;
   max-width: 100%;
+  marginBott
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
   @media (max-width: 800px) {
-    height: 18px;
+    height: 30px;
     width: 120px;
   }
 `;
@@ -321,9 +322,9 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         }}
       >
         <HeaderContent>
-          <LogoIcon alt="" src="/logo-icon@2x.png" />
+          <LogoIcon />
           <Navigation1>
-            <NavPlaceholderIcon alt="" src="/nav-placeholder@2x.png" />
+            <NavPlaceholderIcon alt="" src="/versax-logo.svg" />
           </Navigation1>
         </HeaderContent>
         <Menu>

@@ -154,11 +154,17 @@ const CallToActionButtonContaine = styled.div`
   justify-content: flex-start;
   gap: 40px;
   max-width: 100%;
-  box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;
+  // box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;
 
+  @media screen and (max-width: 900px) {
+    // flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
   ,
   @media screen and (max-width: 800px) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
   }
   @media screen and (max-width: 450px) {
@@ -222,7 +228,7 @@ const WrapperEllipse = styled.div`
 `;
 const Banner = styled.div`
   margin-top: 50px;
-  height: 400px;
+  height: 500px;
   width: 1096px;
   position: relative;
   backdrop-filter: blur(91px);
@@ -235,7 +241,7 @@ const Banner = styled.div`
   max-width: 100%;
   @media screen and (max-width: 800px) {
     height: 500px;
-    min-height: 400px;
+    min-height: 600px;
     width: 100%;
   }
 `;
@@ -273,14 +279,16 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
         <Content>
           <Text1>
             <H>
-              <TailoredFor>{`Tailored for `}</TailoredFor>
-              <AllYourDefi>all your DeFi needs</AllYourDefi>
+              <TailoredFor>{`Smart Trading `}</TailoredFor>
+              <AllYourDefi>on Telegram and Web</AllYourDefi>
               <TailoredFor></TailoredFor>
             </H>
             <CallToAction1>
-              VersaBot ensures a seamless and truly secure experience—your keys,
-              your funds—catering to all categories of DeFi users, all through
-              Telegram's intuitive and user-friendly platform.
+              VersaX leverages AI to deliver sophisticated trading strategies
+              directly within Telegram and on our web app. From analyzing market
+              data to predicting trends, VersaX ensures you stay ahead of the
+              curve with powerful AI-driven tools, whether you prefer trading on
+              Telegram or via our web interface.
             </CallToAction1>
           </Text1>
           <CallToActionButtonContaine>
@@ -292,9 +300,9 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
                 JOIN via telegram
               </JoinVersabotV>
             </Button>
-            {/* <Button>
+            <Button>
               <JoinVersabotV1>Launch the web app</JoinVersabotV1>
-            </Button> */}
+            </Button>
           </CallToActionButtonContaine>
         </Content>
         <WrapperEllipse>

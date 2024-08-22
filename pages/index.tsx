@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Header from "../components/header";
-import Content from "../components/hero";
+import Content, { Button, JoinVersabotV } from "../components/hero";
 import styled from "styled-components";
 import FrameComponent3 from "../components/frame-component3";
 import FeatureList from "../components/feature-list";
@@ -278,6 +278,8 @@ const VersaBotDesktopOPT7: NextPage = () => {
       >
         <ImgCoin />
         <FrameComponent3 className="animate-on-scroll" />
+        <VideoShowCaseComponent className="animate-on-scroll" />
+        <CallToAction />
         <div
           style={{
             position: "relative",
@@ -303,26 +305,26 @@ const VersaBotDesktopOPT7: NextPage = () => {
                 }
               }
             >
-              <H>
-                <ElevateYour>{`Elevate your `}</ElevateYour>
-                <DefiExperience>DeFi experience</DefiExperience>
-                <ElevateYour>{`  through `}</ElevateYour>
-                <DefiExperience>Telegram</DefiExperience>
+              <H
+                style={{
+                  maxWidth: "650px",
+                  margin: "auto",
+                }}
+              >
+                <ElevateYour>{`Your `}</ElevateYour>
+                <DefiExperience>DeFi</DefiExperience>
+                <ElevateYour>{` hub on `}</ElevateYour>
+                <DefiExperience>Telegram and Web</DefiExperience>
               </H>
 
               <InfoDescription style={{}}>
                 <Subtext
-                  style={
-                    {
-                      // border: "1px solid red",
-                    }
-                  }
+                  style={{
+                    textAlign: "center",
+                    // border: "1px solid red",
+                  }}
                 >
-                  Connect your DeFi wallet with just a single click,
-                  effortlessly buy crypto with fiat, swap assets with AI, and
-                  unlock advanced features. Bridge assets, trade perpetuals,
-                  lend, borrow, engage with P2P, use on-chain orderbooks, get
-                  real-time notifications, and more—all with VersaBot.
+                  KEY FUNCTIONALITIES
                 </Subtext>
               </InfoDescription>
             </InfoContent>
@@ -345,12 +347,76 @@ const VersaBotDesktopOPT7: NextPage = () => {
             />
           </div>
         </div>
+
         <FeatureList />
-        <CallToAction />
+
         <ShadowIcon1 alt="" src="/shadow1.svg" />
-        <VideoShowCaseComponent className="animate-on-scroll" />
+
         <FrameComponent1 className="animate-on-scroll" />
         <FormComponent className="animate-on-scroll" />
+        <Info
+          className="animate-on-scroll"
+          style={{
+            // border: "1px solid purple",
+            marginBottom: "200px",
+            zIndex: 2,
+          }}
+        >
+          <InfoContent
+            style={{
+              height: "500px",
+              // border: "1px solid red",
+            }}
+          >
+            <H
+              style={{
+                maxWidth: "750px",
+                margin: "0 auto",
+                textAlign: "center",
+              }}
+            >
+              <DefiExperience>Take control </DefiExperience>
+              <ElevateYour>{`of Your DeFi Journey with `}</ElevateYour>
+              <DefiExperience>VersaX</DefiExperience>
+            </H>
+
+            <InfoDescription style={{}}>
+              <Subtext
+                style={{
+                  textAlign: "center",
+                  // border: "1px solid red",
+                  maxWidth: "740px",
+                  width: "100%",
+                }}
+              >
+                Whether you're looking to optimize your trading strategies with
+                AI or simply seeking a secure, user-friendly platform, VersaX is
+                here to support your DeFi ambitions. Join our growing community
+                of traders and experience the future of decentralized finance
+                today, with the convenience of Telegram and the power of a
+                dedicated web app.
+              </Subtext>
+            </InfoDescription>
+            <JoinVersabotV
+              style={{
+                margin: "auto !important",
+                display: "flex",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+              href="https://t.me/OfficialVersaBot"
+              target="_blank"
+            >
+              <Button
+                style={{
+                  margin: "auto",
+                }}
+              >
+                START TRADING WITH VERSAX
+              </Button>
+            </JoinVersabotV>
+          </InfoContent>
+        </Info>
 
         <Footer />
         <ScrollToTop />

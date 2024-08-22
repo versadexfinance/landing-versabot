@@ -264,27 +264,45 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
   const features = [
     {
       iconSrc: "/timeline@2x.png",
-      title: "Connect wallet",
+      title: "AI-Powered Telegram Bot",
       description:
-        "Connect your DeFi wallet with just a single click. VersaBot seamlessly supports Trust Wallet, MetaMask, and more.",
+        "Execute trades, manage your portfolio, and receive real-time insights—all through simple commands in Telegram.",
       video:
         "https://res.cloudinary.com/versadex/video/upload/v1718891554/connect-wallet.mov",
     },
     {
       iconSrc: "/timeline@2x.png",
-      title: "Buy Crypto with FIAT",
+      title: "Swaps and Token Discovery",
       video:
         "https://res.cloudinary.com/versadex/video/upload/v1718891417/buy-fiat.mov",
       description:
-        "Easily purchase cryptocurrencies within VersaBot using your credit card or bank transfer.",
+        "Explore new tokens and execute swaps with AI-driven recommendations and insights. VersaX could potentially integrate data from sources like Token Sniffer, Dextools, Dexscreener, and major blockchain explorers, offering users relevant and timely information about tokens.",
     },
     {
       iconSrc: "/timeline@2x.png",
-      title: "Swap tokens with VersaAI",
+      title: "Natural Language Processing",
       video:
         "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
       description:
-        "Swap with AI support effortlessly by typing or voicing a straightforward instructions in your preferred language.",
+        "Get sentiment analysis from news and social media directly in your Telegram chat, helping you gauge market moods and make informed decisions.",
+    },
+
+    {
+      iconSrc: "/timeline@2x.png",
+      title: "Natural Language Processing",
+      video:
+        "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
+      description:
+        "Get sentiment analysis from news and social media directly in your Telegram chat, helping you gauge market moods and make informed decisions.",
+    },
+
+    {
+      iconSrc: "/timeline@2x.png",
+      title: "Deep Learning Networks",
+      video:
+        "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
+      description: `Advanced pattern recognition for smarter trading decisions.* 
+        *Note: Deep learning features are under development and will be available soon.`,
     },
   ];
 
@@ -329,6 +347,13 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
 
         <VideoFeatureIcon loop ref={videoRef} playsInline={true} muted />
       </Section06Features>
+      <h2
+        style={{
+          color: "#e1e1e1",
+        }}
+      >
+        WHAT VERSAX AI OFFERS
+      </h2>
     </Section06FeaturesWrapperRoot>
   );
 };

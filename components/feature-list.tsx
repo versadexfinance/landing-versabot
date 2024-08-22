@@ -302,8 +302,6 @@ const Feature3 = styled.div`
   padding: 36px 20px 36px 36px;
   gap: 16px;
   @media screen and (max-width: 450px) {
-  
-  
   }
 `;
 
@@ -525,7 +523,6 @@ const FeatureRow = styled.div`
   }
   @media screen and (max-width: 600px) {
     gap: 0px;
-  
   }
 `;
 
@@ -562,9 +559,9 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
         <FeatureItems>
           <FeatureContainer>
             <Feature1>
-              <H>DeFi wallet connection</H>
+              <H>Seamless Wallet Integration</H>
               <FeatureDescription>
-                Connect a DeFi wallet with a single click
+                Connect a DeFi wallet instantly
               </FeatureDescription>
             </Feature1>
             <DIcon className="animate-on-scroll">
@@ -580,8 +577,11 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
             </DIcon>
           </FeatureContainer>
           <Feature1>
-            <H>DeFi Strategies</H>
-            <FeatureDescription>Coming soon</FeatureDescription>
+            <H>Telegram Bot and Web App</H>
+            <FeatureDescription>
+              Trade on the go with our Telegram bot or use full-featured web
+              app.
+            </FeatureDescription>
             <DIcon1
               className="animate-on-scroll"
               loading="lazy"
@@ -594,9 +594,9 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
           <FeatureContainer1>
             <FeatureContainer>
               <Feature2>
-                <H>VersaAI</H>
+                <H>AI-Powered Asset Swaps</H>
                 <FeatureDescription1>
-                  Swap, trade, and more by typing or voicing instructions
+                  Trade and swap assets with AI assistance
                 </FeatureDescription1>
                 <VAsset />
               </Feature2>
@@ -617,12 +617,16 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
                 </IconBackground1>
               </DIcon>
             </FeatureContainer>
-            <FeatureContainer style={{
-              marginBottom: "0px",
-            }}>
+            <FeatureContainer
+              style={{
+                marginBottom: "0px",
+              }}
+            >
               <Feature3>
-                <H>Perps</H>
-                <FeatureDescription>Coming soon</FeatureDescription>
+                <H>Advanced DeFi tools</H>
+                <FeatureDescription>
+                  Explore lending, borrowing, perpetual trading, and more.
+                </FeatureDescription>
               </Feature3>
               <DIcon className="animate-on-scroll">
                 <NewPerpCoin2Parent>
@@ -643,10 +647,10 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
             <Feature1>
               <H>
                 <BuyCrypto>{`Buy crypto `}</BuyCrypto>
-                <BuyCrypto>with FIAT</BuyCrypto>
+                <BuyCrypto>FIAT Onboarding</BuyCrypto>
               </H>
               <FeatureDescription1>
-                Buy crypto with FIAT with credit card, or bank transfer
+                Purchase crypto usign cred cards or bank transfers.
               </FeatureDescription1>
             </Feature1>
             <DIcon className="animate-on-scroll">
@@ -659,8 +663,10 @@ const FeatureList: NextPage<FeatureListType> = ({ className = "" }) => {
           </FeatureContainer>
           <FeatureContainer className="last">
             <Feature1>
-              <H>DeFi Bridge</H>
-              <FeatureDescription>Coming soon</FeatureDescription>
+              <H>Cross-Chain Compatibility</H>
+              <FeatureDescription>
+                Swap and trade assets seamlessly across multiple blockchains.
+              </FeatureDescription>
               <DIcon
                 className="animate-on-scroll"
                 style={{

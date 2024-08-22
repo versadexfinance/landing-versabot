@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
+import { GradientText, MainPicture } from "./hero";
 
 export type FrameComponent3Type = {
   className?: string;
@@ -60,12 +61,12 @@ const BannerSubtitleItems1 = styled.div`
 `;
 const BannerSubtitles = styled.div`
   // border: 1px solid green;
-  width: 559px;
+  // width: 559px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     align-items: center;
   }
   gap: 16px;
@@ -79,7 +80,7 @@ const BannerContent = styled.div`
   }
   width: 672px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 32px;
@@ -100,10 +101,10 @@ const Banner = styled.div`
   border: 2px solid #303030;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: 40px;
+  // gap: 40px;
   padding: 53px 88px 61px;
   position: relative;
   max-width: 100%;
@@ -150,9 +151,15 @@ const BannerWrapperRoot = styled.section`
 const RobotContainer = styled.section`
   max-width: 600px;
   max-height: 600px;
+  flex: 1;
   width: 100%;
   position: relative;
   @media screen and (max-width: 800px) {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 1200px) {
+    // border: 1px solid green;
+    display: none !important;
     margin-top: 20px;
   }
 `;
@@ -175,7 +182,7 @@ const RobotIcon = styled.img`
   }
 `;
 
-const RobotIconMobile = styled.img`
+const RobotIconMobile = styled.div`
   width: 100%;
   height: 100%;
   // border: 1px solid blue;
@@ -204,42 +211,406 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
       className={className}
     >
       <Banner>
-        <BannerContent>
-          <H>
-            <Making>{`Making `}</Making>
-            <DefiTrulyAccessible>DeFi truly accessible</DefiTrulyAccessible>
-            <Making>{` to everyone with `}</Making>
-            <DefiTrulyAccessible>VersaAI</DefiTrulyAccessible>
-          </H>
-          <BannerSubtitles>
-            <BannerSubtitleItems>
-              VersaAI empowers users to perform transactions with VersaBot in
-              their preferred language. By simply typing  straightforward
-              instructions, you can effortlessly initiate trades in just a few
-              clicks.
-            </BannerSubtitleItems>
+        <BannerContent
+          style={{
+            width: "100%",
+            // border: "1px solid green",
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              // border: "1px solid blue",
+            }}
+          >
+            <H
+              style={{
+                marginBottom: "40px",
+              }}
+            >
+              <Making>{`Revolutionizing `}</Making>
+              <DefiTrulyAccessible>DeFi</DefiTrulyAccessible>
+              <Making>{`  with `}</Making>
+              <DefiTrulyAccessible>AI and Telegram</DefiTrulyAccessible>
+            </H>
+            <BannerSubtitles>
+              <BannerSubtitleItems>
+                VersaX combines the power of Artificial Intelligence with the
+                security convenience of a non-custodial Telegram bot and a web
+                app. Our platform offers traders a simple, intuitive interface
+                to manage digital assets, execute trades, and access advanced
+                DeFi tools—all within the familiar environment of Telegram or
+                through our web app.
+              </BannerSubtitleItems>
 
-            <RobotIconMobile
+              {/* <RobotIconMobile
               alt=""
               src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
-            />
+            /> */}
+              <RobotIconMobile>
+                <MainPicture>
+                  <img
+                    loading="lazy"
+                    className="coin"
+                    style={{
+                      bottom: "7%",
+                      zIndex: "21",
+                      right: "8%",
+                      width: "130px !important",
+                    }}
+                    src="./new-hero-coin-1 2.png"
+                    alt="Coin 1"
+                  />
+                  <img
+                    loading="lazy"
+                    className="coin"
+                    style={{
+                      top: "5%",
+                      zIndex: "-1",
 
-            <BannerSubtitleItems>
-              VersaAI will soon support voice commands, manage advanced DeFi
-              strategies, and offer more innovative features, providing seamless
-              interactions and advanced investment tools.
-            </BannerSubtitleItems>
-          </BannerSubtitles>
+                      width: "85px",
+                      left: "1%",
+                    }}
+                    src="./new-hero-coin-2 1.png"
+                    alt="Coin 2"
+                  />
+                  <img
+                    id="home"
+                    loading="lazy"
+                    style={{
+                      zIndex: "11",
+                    }}
+                    src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+                    className="phone"
+                    alt="Phone"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
+                    style={{ zIndex: "10", margin: "auto", width: "100%" }}
+                    alt="V Asset"
+                  />
+                </MainPicture>
+              </RobotIconMobile>
+            </BannerSubtitles>
+          </div>
+
+          <RobotContainer
+            style={{
+              // border: "1px solid red",
+              minWidth: "50%",
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <MainPicture>
+              <img
+                loading="lazy"
+                className="coin"
+                style={{
+                  bottom: "7%",
+                  zIndex: "21",
+                  right: "8%",
+                  width: "130px !important",
+                }}
+                src="./new-hero-coin-1 2.png"
+                alt="Coin 1"
+              />
+              <img
+                loading="lazy"
+                className="coin"
+                style={{
+                  top: "5%",
+                  zIndex: "-1",
+
+                  width: "85px",
+                  left: "1%",
+                }}
+                src="./new-hero-coin-2 1.png"
+                alt="Coin 2"
+              />
+              <img
+                id="home"
+                loading="lazy"
+                style={{
+                  zIndex: "11",
+                }}
+                src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+                className="phone"
+                alt="Phone"
+              />
+              <img
+                loading="lazy"
+                src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
+                style={{ zIndex: "10", margin: "auto", width: "100%" }}
+                alt="V Asset"
+              />
+            </MainPicture>
+          </RobotContainer>
         </BannerContent>
 
-        <RobotContainer>
-          <RobotIcon
-            alt=""
-            src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
-          />
-        </RobotContainer>
+        <div
+          style={{
+            // border: "1px solid yellow",
+            width: "100%",
+            marginTop: "-100px",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "24px",
+              textTransform: "uppercase",
+              color: "#e1e1e1",
+            }}
+          >
+            Key Features
+          </h2>
+          <div
+            style={{
+              marginTop: "50px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                maxWidth: "500px",
+                gap: "40px",
+              }}
+            >
+              <img
+                src="/1.svg"
+                alt=""
+                style={{
+                  width: "80px",
+                  height: "80px",
+                }}
+              />
+              <span
+                style={{
+                  margin: "0",
+                  lineHeight: "40px",
+                  fontSize: "28px",
+                }}
+              >
+                <GradientText>Trade on</GradientText>
+                Your Mobile
+                <GradientText> or Browser with </GradientText>
+                VersaX
+              </span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "40px",
+              }}
+            >
+              <img
+                src="/2.svg"
+                alt=""
+                style={{
+                  width: "80px",
+                  height: "80px",
+                }}
+              />
+              <span
+                style={{
+                  margin: "0",
+                  lineHeight: "40px",
+                  fontSize: "28px",
+                  maxWidth: "650px",
+                }}
+              >
+                <GradientText>Complete </GradientText> Non-Custodial Wallet
+                <GradientText> Access for</GradientText> Full Security
+              </span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "40px",
+              }}
+            >
+              <img
+                src="/3.svg"
+                alt=""
+                style={{
+                  width: "80px",
+                  height: "80px",
+                }}
+              />
+              <span
+                style={{
+                  margin: "0",
+                  lineHeight: "40px",
+                  fontSize: "28px",
+                  maxWidth: "700px",
+                }}
+              >
+                <GradientText>Experience the </GradientText>
+                New DeFi
+                <GradientText> with </GradientText>AI-Powered Interactions
+              </span>
+            </div>
+          </div>
+        </div>
       </Banner>
     </BannerWrapperRoot>
+
+    // <BannerWrapperRoot>
+    //   <div className="grid-container">
+    //     <div className="grid-TEXT">
+    //       <H>
+    //         <Making>{`Making `}</Making>
+    //         <DefiTrulyAccessible>DeFi truly accessible</DefiTrulyAccessible>
+    //         <Making>{` to everyone with `}</Making>
+    //         <DefiTrulyAccessible>VersaAI</DefiTrulyAccessible>
+    //       </H>
+    //       <BannerSubtitles>
+    //         <BannerSubtitleItems>
+    //           VersaX combines the power of Artificial Intelligence with the
+    //           security convenience of a non-custodial Telegram bot and a web
+    //           app. Our platform offers traders a simple, intuitive interface to
+    //           manage digital assets, execute trades, and access advanced DeFi
+    //           tools—all within the familiar environment of Telegram or through
+    //           our web app.
+    //         </BannerSubtitleItems>
+    //       </BannerSubtitles>
+    //     </div>
+    //     <div className="grid-FUNCTIONALITIES">
+    //       <div>
+    //         <h2>Key Features</h2>
+    //         <div
+    //           style={{
+    //             display: "flex",
+    //             flexDirection: "column",
+    //           }}
+    //         >
+    //           <div
+    //             style={{
+    //               display: "flex",
+    //             }}
+    //           >
+    //             <img
+    //               src="/1.svg"
+    //               alt=""
+    //               style={{
+    //                 width: "80px",
+    //                 height: "80px",
+    //               }}
+    //             />
+    //             <span
+    //               style={{
+    //                 margin: "0",
+    //                 lineHeight: "40px",
+    //                 fontSize: "28px",
+    //               }}
+    //             >
+    //               Trade on Your Mobile or browser with VersaX
+    //             </span>
+    //           </div>
+    //           <div
+    //             style={{
+    //               display: "flex",
+    //             }}
+    //           >
+    //             <img
+    //               src="/2.svg"
+    //               alt=""
+    //               style={{
+    //                 width: "80px",
+    //                 height: "80px",
+    //               }}
+    //             />
+    //             <span
+    //               style={{
+    //                 margin: "0",
+    //                 lineHeight: "40px",
+    //                 fontSize: "28px",
+    //               }}
+    //             >
+    //               Complete Non-Custodial Wallet Access for Full Security
+    //             </span>
+    //           </div>
+    //           <div
+    //             style={{
+    //               display: "flex",
+    //             }}
+    //           >
+    //             <img
+    //               src="/3.svg"
+    //               alt=""
+    //               style={{
+    //                 width: "80px",
+    //                 height: "80px",
+    //               }}
+    //             />
+    //             <span
+    //               style={{
+    //                 margin: "0",
+    //                 lineHeight: "40px",
+    //                 fontSize: "28px",
+    //               }}
+    //             >
+    //               Experience the New DeFi with AI-Powered Interactions
+    //             </span>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className="grid-PICTURE">
+    //       <RobotContainer>
+    //         <MainPicture>
+    //           <img
+    //             loading="lazy"
+    //             className="coin"
+    //             style={{
+    //               bottom: "7%",
+    //               zIndex: "21",
+    //               right: "8%",
+    //               width: "130px !important",
+    //             }}
+    //             src="./new-hero-coin-1 2.png"
+    //             alt="Coin 1"
+    //           />
+    //           <img
+    //             loading="lazy"
+    //             className="coin"
+    //             style={{
+    //               top: "5%",
+    //               zIndex: "-1",
+
+    //               width: "85px",
+    //               left: "1%",
+    //             }}
+    //             src="./new-hero-coin-2 1.png"
+    //             alt="Coin 2"
+    //           />
+    //           <img
+    //             id="home"
+    //             loading="lazy"
+    //             style={{
+    //               zIndex: "11",
+    //             }}
+    //             src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+    //             className="phone"
+    //             alt="Phone"
+    //           />
+    //           <img
+    //             loading="lazy"
+    //             src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
+    //             style={{ zIndex: "10", margin: "auto", width: "100%" }}
+    //             alt="V Asset"
+    //           />
+    //         </MainPicture>
+    //       </RobotContainer>
+    //     </div>
+    //   </div>
+    // </BannerWrapperRoot>
   );
 };
 

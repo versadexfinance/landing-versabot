@@ -89,4 +89,21 @@ img{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.grid-container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 1.1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "TEXT PICTURE ."
+    "FUNCTIONALITIES FUNCTIONALITIES ."
+    ". . .";
+}
+
+.grid-TEXT { grid-area: TEXT; }
+
+.grid-FUNCTIONALITIES { grid-area: FUNCTIONALITIES; }
+
+.grid-PICTURE { grid-area: PICTURE; }
+
 `;

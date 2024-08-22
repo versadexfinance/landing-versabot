@@ -23,7 +23,7 @@ const popAnimation = `
   }
 `;
 
-const JoinVersabotV = styled.a`
+export const JoinVersabotV = styled.a`
   width: 174px;
   font-weight: 600;
   text-decoration: none;
@@ -79,7 +79,7 @@ const coinVariants = {
   },
 };
 
-const GradientText = styled.span`
+export const GradientText = styled.span`
   background: linear-gradient(180deg, #fff, #cecece);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -91,6 +91,7 @@ const Heading = styled.h1`
   position: relative;
   font-size: inherit;
   line-height: 72px;
+  font-size: 55px;
   font-weight: 700;
   font-family: inherit;
   @media screen and (max-width: 1300px) {
@@ -130,7 +131,7 @@ const Paragraph = styled.p`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   cursor: pointer;
   border: none;
   font-weight: 600;
@@ -180,9 +181,10 @@ const TextBlock = styled.div`
   }
 `;
 
-const MainPicture = styled.div`
+export const MainPicture = styled.div`
   flex: 4;
-  max-width: 75%;
+  margin-top: 30px;
+  max-width: 80%;
   // padding:  20px;
   position: relative;
   display: flex;
@@ -264,7 +266,7 @@ const Arrow = styled.div`
   display: flex;
   // align-items: center;
   // justify-content: center;
-  margin-top: 0px;
+  margin-top: 30px;
   cursor: pointer;
   img {
     animation: bounce 5s ease-in-out infinite;
@@ -328,35 +330,40 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
               src="./new-hero-coin-2 1.png"
               alt="Coin 2"
             />
-            <img
+            {/* <img
               id="home"
               loading="lazy"
               style={{
                 zIndex: "11",
               }}
-              src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+              src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
               className="phone"
               alt="Phone"
-            />
+            /> */}
             <img
               loading="lazy"
-              src="https://res.cloudinary.com/versadex/image/upload/v1718976348/v-asset%201.png.png"
-              style={{ zIndex: "10", margin: "auto", width: "100%" }}
+              src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
+              style={{ zIndex: "10", margin: "auto", width: "110%" }}
               alt="V Asset"
             />
           </MainPicture>
           <TextBlock>
             <div>
               <Heading>
-                <GradientText>Introducing a </GradientText>
-                <span>Fully Non-custodial</span>
-                <GradientText> Web3 trading experience</GradientText>
+                <span>VersaX: </span>
+                <GradientText>The AI-Powered,</GradientText>
+                <GradientText> Non-Custodial Trading Experience</GradientText>
               </Heading>
               <div>
                 <Paragraph>
-                  VersaBot is the world’s first non-custodial, cross-chain EVM
+                  {/* VersaBot is the world’s first non-custodial, cross-chain EVM
                   Telegram Bot enhanced by VersaAI. Experience seamless
-                  onboarding, advanced DeFi features, and top-notch security.
+                  onboarding, advanced DeFi features, and top-notch security. */}
+                  Experience seamless, non-custodial DeFi trading with VersaX—an
+                  AI-enhanced platform integrated into Telegram and supported by
+                  a powerful web app. Leverage AI to manage your assets, execute
+                  intelligent trades, and explore advanced DeFi features with
+                  ease and security.
                 </Paragraph>
                 {/* <Paragraph>
                 Connect your DeFi wallet in one click, effortlessly buy crypto
@@ -372,7 +379,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
                 href="https://t.me/OfficialVersaBot"
                 target="_blank"
               >
-                <Button>JOIN VERSABOT V1</Button>
+                <Button>START TRADING WITH VERSAX</Button>
               </JoinVersabotV>
             </div>
           </TextBlock>

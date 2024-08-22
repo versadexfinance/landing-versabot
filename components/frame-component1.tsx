@@ -327,27 +327,71 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
           <Content>
             <Text2>
               <H>
-                <EmpowerYour>{`Empower your  Community, Increase Retention & Revenue  with `}</EmpowerYour>
-                <VersabotsWhiteLabel>
-                  VersaBot’s White Label solution
-                </VersabotsWhiteLabel>
+                <EmpowerYour>{`Empower Your Community  `}</EmpowerYour>
+                <VersabotsWhiteLabel>VersaX on Telegram</VersabotsWhiteLabel>
               </H>
               <Text1>
                 <CommunityBannerSubtitles>
-                  Integrate a fully-customized version of VersaBot directly into
-                  your Telegram channel to elevate your community experience.
-                  VersaBot's advanced features, tailored to your brand, serve
-                  all your members' trading needs, fostering active
-                  participation and interaction.
+                  VersaX offers a white-label solution to integrate a fully
+                  customized version of our platform directly into your Telegram
+                  channels. Enhance community engagement, provide real-time
+                  trading signals, and create new revenue streams by offering
+                  VersaX’s advanced features to your members—all within the
+                  Telegram ecosystem.
                 </CommunityBannerSubtitles>
-                <CommunityBannerSubtitles>
+                {/* <CommunityBannerSubtitles>
                   Provide members instant access to signals, strategies, and
                   more, all executable with a few clicks in your Telegram
                   channels, and create a new revenue stream by collecting
                   trading fees.
-                </CommunityBannerSubtitles>
+                </CommunityBannerSubtitles> */}
               </Text1>
             </Text2>
+            <h4
+              style={{
+                color: "#e1e1e1",
+                fontSize: "24px",
+              }}
+            >
+              BENEFITS FOR YOUR COMMUNITY
+            </h4>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                fontSize: "24px",
+                gap: "40px",
+              }}
+            >
+              <H
+                style={{
+                  lineHeight: "32px",
+                }}
+              >
+                <VersabotsWhiteLabel>
+                  Branded Telegram Bot:{" "}
+                </VersabotsWhiteLabel>
+                <EmpowerYour>{`Tailor the bot’s interface and features to match your brand.`}</EmpowerYour>
+              </H>
+              <H
+                style={{
+                  lineHeight: "32px",
+                }}
+              >
+                <VersabotsWhiteLabel>
+                  Increased Engagement:{" "}
+                </VersabotsWhiteLabel>
+                <EmpowerYour>{`Keep members active with real-time trading and insights.`}</EmpowerYour>
+              </H>
+              <H
+                style={{
+                  lineHeight: "32px",
+                }}
+              >
+                <VersabotsWhiteLabel>Revenue Generation: </VersabotsWhiteLabel>
+                <EmpowerYour>{`Earn from trading fees collected within your community.`}</EmpowerYour>
+              </H>
+            </div>
             <Button>
               <JoinVersabotV href="#contact-us">Apply now</JoinVersabotV>
             </Button>

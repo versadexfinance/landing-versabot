@@ -276,8 +276,10 @@ const SectionContactUsWrapperRoot = styled.section`
   font-size: 48px;
   color: #e1e1e1;
   font-family: Syne;
+  margin-top:240px;
   @media screen and (max-width: 800px) {
-    margin-top: 180px;
+    margin-top: 500px;
+    
     margin-
     // border: 1px solid red;
   }

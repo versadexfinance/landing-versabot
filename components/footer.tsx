@@ -266,7 +266,7 @@ const NavOptions = styled.div`
   justify-content: space-between;
   max-width: 100%;
   gap: 10px;
-  font-size: 16px;
+  font-size: 12px;
   @media screen and (max-width: 800px) {
     flex-wrap: wrap;
   }
@@ -279,8 +279,9 @@ const Menu = styled.div`
   justify-content: center;
   gap: 36px;
   max-width: 100%;
+  font-size: 10px !important;
   @media screen and (min-width: 800px) {
-    font-size: 12x !important;
+    font-size: 11px !important;
     gap: 10px;
     bg-color: blue !important;
   }
@@ -414,11 +415,35 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
         </WrapperEllipse>
         <Subscription>
           <Text1>
-            <H>Referral program</H>
+            <H>Stay Connected with VersaX</H>
             <SubscriptionDescription>
-              Coming soon! Drop your e-mail to join the program
+              Follow us on social media and stay updated on the latest features
+              and news. Experience seamless trading directly in Telegram or via
+              our web app.
             </SubscriptionDescription>
+            <SocialIconsContainer>
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  height: "24px",
+                  width: "24px",
+                  opacity: 0.5,
+                }}
+                href="https://t.me/versadex"
+                target="_blank"
+              >
+                <FaTelegramPlane color="white" size={24} />
+              </a>
+              <a href="https://discord.gg/rnnKEn4Tc2" target="_blank">
+                <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />
+              </a>
+              <a href="https://x.com/versadex" target="_blank">
+                <SocialIcons alt="" src="/social-icons-1.svg" />
+              </a>
+            </SocialIconsContainer>
           </Text1>
+
           <Form>
             <Input>
               <SubscriptionPlaceholderButto
@@ -435,10 +460,11 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <Line />
           <Menu1>
             <WebLogo>
-              <LogoIcon alt="" src="/logo-icon-1@2x.png" />
+              <img src="/versax-logo.svg" alt="" />
+              {/* <LogoIcon alt="" src="/versax-logo.svg" />
               <LogoText>
                 <BrandContainerIcon alt="" src="/frame-255-1@2x.png" />
-              </LogoText>
+              </LogoText> */}
             </WebLogo>
             <Menu>
               <Docs>Docs</Docs>
@@ -461,8 +487,18 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               </NavOptions>
             </Menu>
           </Menu1>
-          <CopyrightSocials>
-            <VersadexCopyright>
+          <CopyrightSocials
+            style={{
+              // border: "1px solid red",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <VersadexCopyright
+              style={{
+                width: "100%",
+              }}
+            >
               VersaDex Copyright 2024. All Rights Reserved.
               <div
                 style={{
@@ -471,6 +507,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   fontStyle: "none !important",
                   textDecoration: "none !important",
                   // background: "red",
+                  justifyContent: "center",
                   width: "100%",
                   fontSize: "10px",
                 }}
@@ -503,27 +540,6 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 </Link>
               </div>
             </VersadexCopyright>
-            <SocialIconsContainer>
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                  height: "24px",
-                  width: "24px",
-                  opacity: 0.5,
-                }}
-                href="https://t.me/versadex"
-                target="_blank"
-              >
-                <FaTelegramPlane color="white" size={24} />
-              </a>
-              <a href="https://discord.gg/rnnKEn4Tc2" target="_blank">
-                <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />
-              </a>
-              <a href="https://x.com/versadex" target="_blank">
-                <SocialIcons alt="" src="/social-icons-1.svg" />
-              </a>
-            </SocialIconsContainer>
           </CopyrightSocials>
         </LineParent>
       </Footer1>

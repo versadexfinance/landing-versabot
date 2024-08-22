@@ -280,7 +280,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                     style={{
                       zIndex: "11",
                     }}
-                    src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+                    src="/main-phone 1.png"
                     className="phone"
                     alt="Phone"
                   />
@@ -337,7 +337,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                 style={{
                   zIndex: "11",
                 }}
-                src="https://res.cloudinary.com/versadex/image/upload/v1718976335/ip5gkqiii64ku39zyrhy.png"
+                src="/main-phone 1.png"
                 className="phone"
                 alt="Phone"
               />

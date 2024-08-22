@@ -241,8 +241,8 @@ const Test1Parent = styled.div`
   position: absolute;
   top: -25px;
   left: 2px;
-  width: 446px;
-  height: 733px;
+  width: 401px;
+  height: 659px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;

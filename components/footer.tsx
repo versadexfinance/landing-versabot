@@ -314,12 +314,13 @@ const VersadexCopyright = styled.div`
 `;
 
 const SocialIcons = styled.img`
-  height: 24px;
-  width: 24px;
+  height: 40px;
+  width: 40px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   min-height: 24px;
+  color: #43ff64d9;
 `;
 const SocialIconsContainer = styled.div`
   display: flex;
@@ -426,14 +427,14 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 style={{
                   textDecoration: "none",
                   color: "inherit",
-                  height: "24px",
-                  width: "24px",
-                  opacity: 0.5,
+                  // height: "50px",
+                  // width: "50px",
+                  // opacity: 0.5,
                 }}
                 href="https://t.me/versadex"
                 target="_blank"
               >
-                <FaTelegramPlane color="white" size={24} />
+                <SocialIcons loading="lazy" alt="" src="/:social-icons-2.svg" />
               </a>
               <a href="https://discord.gg/rnnKEn4Tc2" target="_blank">
                 <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />

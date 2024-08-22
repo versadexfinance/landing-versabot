@@ -301,7 +301,12 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
               </JoinVersabotV>
             </Button>
             <Button>
-              <JoinVersabotV1>Launch the web app</JoinVersabotV1>
+              <JoinVersabotV
+                target="_blank"
+                href="https://app.versadex.finance"
+              >
+                Launch the web app
+              </JoinVersabotV>
             </Button>
           </CallToActionButtonContaine>
         </Content>

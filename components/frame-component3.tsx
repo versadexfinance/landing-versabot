@@ -194,6 +194,22 @@ const RobotIconMobile = styled.div`
     margin-top: 20px;
   }
 `;
+const NumberPoint = styled.img`
+  width: "80px";
+  height: "80px";
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    width: 60px;
+  }
+`;
+
+const TextPoint = styled.span`
+  font-size: 28px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+`;
 
 const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
   return (
@@ -355,7 +371,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
           style={{
             // border: "1px solid yellow",
             width: "100%",
-            marginTop: "-100px",
+            marginTop: "-80px",
           }}
         >
           <h2
@@ -382,26 +398,18 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                 gap: "40px",
               }}
             >
-              <img
-                src="/1.svg"
-                alt=""
-                style={{
-                  width: "80px",
-                  height: "80px",
-                }}
-              />
-              <span
+              <NumberPoint src="/1.svg" alt="" />
+              <TextPoint
                 style={{
                   margin: "0",
                   lineHeight: "40px",
-                  fontSize: "28px",
                 }}
               >
-                <GradientText>Trade on</GradientText>
+                <GradientText>Trade on </GradientText>
                 Your Mobile
                 <GradientText> or Browser with </GradientText>
                 VersaX
-              </span>
+              </TextPoint>
             </div>
             <div
               style={{
@@ -409,25 +417,17 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                 gap: "40px",
               }}
             >
-              <img
-                src="/2.svg"
-                alt=""
-                style={{
-                  width: "80px",
-                  height: "80px",
-                }}
-              />
-              <span
+              <NumberPoint src="/2.svg" alt="" />
+              <TextPoint
                 style={{
                   margin: "0",
                   lineHeight: "40px",
-                  fontSize: "28px",
                   maxWidth: "650px",
                 }}
               >
                 <GradientText>Complete </GradientText> Non-Custodial Wallet
                 <GradientText> Access for</GradientText> Full Security
-              </span>
+              </TextPoint>
             </div>
             <div
               style={{
@@ -435,26 +435,18 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
                 gap: "40px",
               }}
             >
-              <img
-                src="/3.svg"
-                alt=""
-                style={{
-                  width: "80px",
-                  height: "80px",
-                }}
-              />
-              <span
+              <NumberPoint src="/3.svg" alt="" />
+              <TextPoint
                 style={{
                   margin: "0",
                   lineHeight: "40px",
-                  fontSize: "28px",
                   maxWidth: "700px",
                 }}
               >
                 <GradientText>Experience the </GradientText>
                 New DeFi
                 <GradientText> with </GradientText>AI-Powered Interactions
-              </span>
+              </TextPoint>
             </div>
           </div>
         </div>

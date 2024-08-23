@@ -289,15 +289,6 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
 
     {
       iconSrc: "/timeline@2x.png",
-      title: "Natural Language Processing",
-      video:
-        "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
-      description:
-        "Get sentiment analysis from news and social media directly in your Telegram chat, helping you gauge market moods and make informed decisions.",
-    },
-
-    {
-      iconSrc: "/timeline@2x.png",
       title: "Deep Learning Networks",
       video:
         "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",

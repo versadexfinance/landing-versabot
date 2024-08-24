@@ -49,16 +49,19 @@ const LogoIcon = styled.div`
 `;
 const NavPlaceholderIcon = styled.img`
   align-self: stretch;
-  // height: 25px;
+  height: 30%;
+  padding: 10px;
   position: relative;
   max-width: 100%;
-  marginBott
-  overflow: hidden;
+  // marginBott
+  // overflow: hidden;
   flex-shrink: 0;
-  object-fit: cover;
+  // object-fit: cover;
+  padding-bottom: 20px;
   @media (max-width: 800px) {
     height: 30px;
     width: 120px;
+    padding-bottom: 10px;
   }
 `;
 const Navigation1 = styled.div`
@@ -149,7 +152,7 @@ const Menu = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 8px 0px 0px;
+  // padding: 8px 0px 0px;
   box-sizing: border-box;
   max-width: 100%;
   @media screen and (max-width: 1125px) {
@@ -322,7 +325,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         }}
       >
         <HeaderContent>
-          <LogoIcon />
+          {/* <LogoIcon /> */}
           <Navigation1>
             <NavPlaceholderIcon alt="" src="/versax-logo.svg" />
           </Navigation1>

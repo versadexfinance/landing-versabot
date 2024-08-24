@@ -156,9 +156,10 @@ const CallToActionButtonContaine = styled.div`
   max-width: 100%;
   // box-shadow: 0px 2px 8px rgba(235, 254, 100, 0.4) !important;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 615px) {
     // flex-wrap: wrap;
     flex-direction: column;
+
     gap: 20px;
   }
   ,
@@ -304,6 +305,9 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
               <JoinVersabotV
                 target="_blank"
                 href="https://app.versadex.finance"
+                style={{
+                  width: "auto",
+                }}
               >
                 Launch the web app
               </JoinVersabotV>

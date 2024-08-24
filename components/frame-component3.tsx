@@ -195,8 +195,8 @@ const RobotIconMobile = styled.div`
   }
 `;
 const NumberPoint = styled.img`
-  width: "80px";
-  height: "80px";
+  width: 60px;
+  height: 60px;
 
   @media screen and (max-width: 800px) {
     height: 60px;
@@ -206,6 +206,8 @@ const NumberPoint = styled.img`
 
 const TextPoint = styled.span`
   font-size: 28px;
+  // font-family: mabry !important;
+  font-weight: bold;
   @media screen and (max-width: 800px) {
     font-size: 20px;
   }
@@ -395,10 +397,18 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
               style={{
                 display: "flex",
                 maxWidth: "500px",
-                gap: "40px",
+                alignItems: "center",
+                gap: "30px",
               }}
             >
-              <NumberPoint src="/1.svg" alt="" />
+              <NumberPoint
+                style={{
+                  height: "64px",
+                  width: "64px",
+                }}
+                src="/1.svg"
+                alt=""
+              />
               <TextPoint
                 style={{
                   margin: "0",
@@ -414,7 +424,8 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             <div
               style={{
                 display: "flex",
-                gap: "40px",
+                alignItems: "center",
+                gap: "30px",
               }}
             >
               <NumberPoint src="/2.svg" alt="" />
@@ -432,7 +443,8 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             <div
               style={{
                 display: "flex",
-                gap: "40px",
+                gap: "30px",
+                alignItems: "center",
               }}
             >
               <NumberPoint src="/3.svg" alt="" />

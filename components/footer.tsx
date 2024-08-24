@@ -434,7 +434,15 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                 href="https://t.me/versadex"
                 target="_blank"
               >
-                <SocialIcons loading="lazy" alt="" src="/:social-icons-2.svg" />
+                <SocialIcons
+                  style={{
+                    scale: "1.09",
+                    marginTop: "8px",
+                  }}
+                  loading="lazy"
+                  alt=""
+                  src="/:social-icons-2.svg"
+                />
               </a>
               <a href="https://discord.gg/rnnKEn4Tc2" target="_blank">
                 <SocialIcons loading="lazy" alt="" src="/social-icons.svg" />

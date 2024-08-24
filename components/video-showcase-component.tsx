@@ -7,7 +7,7 @@ export type VideoShowCaseComponentType = {
 };
 
 const TimelineIcon = styled.img`
-  height: 126px;
+  height: 1256px;
   width: 4px;
   position: relative;
   object-fit: contain;
@@ -58,7 +58,7 @@ const Feature = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
+  // gap: 20px;
   max-width: 100%;
   font-size: 36px;
   opacity: 0.5;
@@ -292,8 +292,7 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
       title: "Deep Learning Networks",
       video:
         "https://res.cloudinary.com/versadex/video/upload/v1718891567/swap.mov",
-      description: `Advanced pattern recognition for smarter trading decisions.* 
-        *Note: Deep learning features are under development and will be available soon.`,
+      description: `Advanced pattern recognition for smarter trading decisions.*`,
     },
   ];
 
@@ -313,7 +312,7 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
               }}
               onClick={() => handleFeatureClick(index)}
             >
-              {selected === index ? (
+              {/* {selected === index ? (
                 <TimelineIcon loading="lazy" alt="" src={feature.iconSrc} />
               ) : (
                 <div
@@ -321,15 +320,35 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
                     width: "4px",
                   }}
                 ></div>
-              )}
+              )} */}
               <Content
                 style={{
+                  borderLeft: `4px solid ${
+                    selected === index ? "#c1ec6dd9" : "transparent"
+                  }`,
+                  paddingLeft: "20px",
+
                   paddingRight: "28px",
                 }}
               >
                 <Subtext>{feature.title}</Subtext>
                 <SecondFeatureDescription>
                   {feature.description}
+                  {feature.title == "Deep Learning Networks" && (
+                    <>
+                      <br />
+                      <br />
+                      <span
+                        style={{
+                          fontStyle: "italic",
+                          fontSize: ".9em",
+                        }}
+                      >
+                        Note: Deep learning features are under development and
+                        will be available soon
+                      </span>
+                    </>
+                  )}
                 </SecondFeatureDescription>
               </Content>
             </Feature>

@@ -327,7 +327,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
           <Content>
             <Text2>
               <H>
-                <EmpowerYour>{`Empower Your Community  `}</EmpowerYour>
+                <EmpowerYour>{`Empower Your Community `}</EmpowerYour>
                 <VersabotsWhiteLabel>VersaX on Telegram</VersabotsWhiteLabel>
               </H>
               <Text1>

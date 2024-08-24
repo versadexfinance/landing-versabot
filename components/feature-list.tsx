@@ -459,7 +459,8 @@ const IconBackground2 = styled.div`
 
 const BridgeColor2Icon = styled.img`
   position: absolute;
-  top: 57px;
+  top: 30px;
+
   left: 0px;
   width: 257px;
   height: 203px;
@@ -490,7 +491,7 @@ const NewHeroCoin21Icon = styled.img`
 `;
 
 const BridgeColor2Parent = styled.div`
-  height: 260px;
+  height: 240px;
   flex: 1;
   position: relative;
 `;

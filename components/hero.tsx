@@ -202,7 +202,7 @@ export const MainPicture = styled.div`
     top: 0;
     transform: translateX(-50%);
   }
-
+  animation: bounce 5s ease infinite;
   .coin {
     animation: bounce 2s ease-in-out infinite;
     position: absolute;

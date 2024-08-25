@@ -479,13 +479,10 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
               <Docs>Docs</Docs>
               <NavOptions>
                 <Home href="#home">Home</Home>
-                <Docs1
-                  href="https://docs.versadex.finance/versabot"
-                  target="_blank"
-                >
+                <Docs1 href="https://docs.versax.io/versabot" target="_blank">
                   Docs
                 </Docs1>
-                <Docs1 href="https://docs.versadex.finance/versabot/faq-and-troubleshooting">
+                <Docs1 href="https://docs.versax.io/versabot/faq-and-troubleshooting">
                   FAQ
                 </Docs1>
                 <ContactUs href="#contact-us">Contact us</ContactUs>

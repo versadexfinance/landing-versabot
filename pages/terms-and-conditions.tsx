@@ -30,7 +30,7 @@ const TermsAndConditions: NextPage = () => {
         </p>
         <p>
           By accessing and/or using this website located at
-          https://www.versadex.finance/ (&ldquo;Interface&rdquo;,
+          https://www.versax.io/ (&ldquo;Interface&rdquo;,
           &ldquo;VersaDex&rdquo; or &ldquo;Website&rdquo;), using and/or
           accessing the tools and information made available via the Interface,
           and using and/or accessing the Protocols available through it, the

@@ -18,42 +18,36 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
 
-        <title>VersaBot | The First Non-Custodial Telegram Trading Bot</title>
+        <title>VersaX | The AI-Powered, Non-Custodial Trading Experience</title>
         <meta
           name="description"
-          content="VersaBot, the world's first non-custodial, cross-chain EVM TG Bot enhanced by VersaAI, offers smooth onboarding, advanced DeFi features, and top-tier security."
+          content="VersaX, the first AI-powered, non-custodial, cross-chain platform on TG and Web, leverages advanced features to offer a secure and smart trading experience."
         />
 
-        <meta property="og:url" content="https://versadex.finance" />
+        <meta property="og:url" content="https://versax.io" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="VersaBot | The First Non-Custodial Telegram Trading Bot"
+          content="VersaX | The AI-Powered, Non-Custodial Trading Experience"
         />
         <meta
           property="og:description"
-          content="VersaBot, the world's first non-custodial, cross-chain EVM TG Bot enhanced by VersaAI, offers smooth onboarding, advanced DeFi features, and top-tier security."
+          content="VersaX, the first AI-powered, non-custodial, cross-chain platform on TG and Web, leverages advanced features to offer a secure and smart trading experience."
         />
-        <meta
-          property="og:image"
-          content="https://versadex.finance/og-banner.jpg"
-        />
+        <meta property="og:image" content="https://versax.io/og-banner.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="versadex.finance" />
-        <meta property="twitter:url" content="https://versadex.finance" />
+        <meta property="twitter:domain" content="versax.io" />
+        <meta property="twitter:url" content="https://versax.io" />
         <meta
           name="twitter:title"
-          content="VersaBot | The First Non-Custodial Telegram Trading Bot"
+          content="VersaX | The First Non-Custodial Telegram Trading Bot"
         />
         <meta
           name="twitter:description"
-          content="VersaBot, the world's first non-custodial, cross-chain EVM TG Bot enhanced by VersaAI, offers smooth onboarding, advanced DeFi features, and top-tier security."
+          content="VersaX, the first AI-powered, non-custodial, cross-chain platform on TG and Web, leverages advanced features to offer a secure and smart trading experience."
         />
-        <meta
-          name="twitter:image"
-          content="https://versadex.finance/og-banner.jpg"
-        />
+        <meta name="twitter:image" content="https://versax.io/og-banner.jpg" />
 
         <style
           dangerouslySetInnerHTML={{

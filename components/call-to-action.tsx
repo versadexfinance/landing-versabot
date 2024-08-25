@@ -304,7 +304,7 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
             <Button>
               <JoinVersabotV
                 target="_blank"
-                href="https://app.versadex.finance"
+                href="https://app.versax.io"
                 style={{
                   width: "auto",
                 }}

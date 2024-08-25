@@ -333,7 +333,10 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         <Menu>
           <NavLinks onClick={() => setMenuOpen(false)}>
             <Home href="#home">Home</Home>
-            <Docs href="https://docs.versax.io/versabot" target="_blank">
+            <Docs
+              href="https://docs.versax.io/1.-introduction-to-versax/1.1-what-is-versax"
+              target="_blank"
+            >
               Docs
             </Docs>
             <ContactUs href="#contact-us">Contact us</ContactUs>
@@ -359,7 +362,10 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
       </HamburguerCntainer>
       <MobileMenu open={menuOpen}>
         <Home href="#home">Home</Home>
-        <Docs href="https://docs.versax.io/versabot" target="_blank">
+        <Docs
+          href="https://docs.versax.io/1.-introduction-to-versax/1.1-what-is-versax"
+          target="_blank"
+        >
           Docs
         </Docs>
         <ContactUs href="#contact-us">Contact us</ContactUs>

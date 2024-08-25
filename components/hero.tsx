@@ -305,7 +305,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
       <ContentWrapper className={className}>
         <HeroSection>
           <MainPicture>
-            <img
+            {/* <img
               loading="lazy"
               className="coin"
               style={{
@@ -316,8 +316,8 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
               }}
               src="./new-hero-coin-1 2.png"
               alt="Coin 1"
-            />
-            <img
+            /> */}
+            {/* <img
               loading="lazy"
               className="coin"
               style={{
@@ -329,7 +329,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
               }}
               src="./new-hero-coin-2 1.png"
               alt="Coin 2"
-            />
+            /> */}
             {/* <img
               id="home"
               loading="lazy"

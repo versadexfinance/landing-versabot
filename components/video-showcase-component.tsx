@@ -267,8 +267,7 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
       title: "AI-Powered Telegram Bot",
       description:
         "Execute trades, manage your portfolio, and receive real-time insights—all through simple commands in Telegram.",
-      video:
-        "https://res.cloudinary.com/versadex/video/upload/v1718891554/connect-wallet.mov",
+      video: "/versax_demo.mp4",
     },
     {
       iconSrc: "/timeline@2x.png",
@@ -308,9 +307,9 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
             <Feature
               key={index}
               style={{
-                opacity: selected === index ? 1 : 0.5,
+                opacity: selected === index ? 1 : 1,
               }}
-              onClick={() => handleFeatureClick(index)}
+              // onClick={() => handleFeatureClick(index)}
             >
               {/* {selected === index ? (
                 <TimelineIcon loading="lazy" alt="" src={feature.iconSrc} />
@@ -323,10 +322,10 @@ const VideoShowCaseComponent: NextPage<VideoShowCaseComponentType> = ({
               )} */}
               <Content
                 style={{
-                  borderLeft: `4px solid ${
-                    selected === index ? "#c1ec6dd9" : "transparent"
-                  }`,
-                  paddingLeft: "20px",
+                  // borderLeft: `4px solid ${
+                  //   // selected === index ? "#c1ec6dd9" : "transparent"
+                  // }`,
+                  paddingLeft: "10px",
 
                   paddingRight: "28px",
                 }}

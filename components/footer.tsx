@@ -431,7 +431,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
                   // width: "50px",
                   // opacity: 0.5,
                 }}
-                href="https://t.me/versadex"
+                href="https://t.me/versax_official"
                 target="_blank"
               >
                 <SocialIcons

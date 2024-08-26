@@ -296,7 +296,7 @@ const CallToAction: NextPage<CallToActionType> = ({ className = "" }) => {
             <Button>
               <JoinVersabotV
                 target="_blank"
-                href="https://t.me/OfficialVersaBot"
+                href="https://t.me/Versaxofficial_bot"
               >
                 JOIN via telegram
               </JoinVersabotV>

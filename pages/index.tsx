@@ -404,7 +404,7 @@ const VersaBotDesktopOPT7: NextPage = () => {
                 justifyContent: "center",
                 textAlign: "center",
               }}
-              href="https://t.me/OfficialVersaBot"
+              href="https://t.me/Versaxofficial_bot"
               target="_blank"
             >
               <Button

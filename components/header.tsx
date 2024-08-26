@@ -349,7 +349,10 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
               display: "flex",
             }}
           >
-            <JoinVersabotV href="https://t.me/OfficialVersaBot" target="_blank">
+            <JoinVersabotV
+              href="https://t.me/Versaxofficial_bot"
+              target="_blank"
+            >
               JOIN VERSAX
             </JoinVersabotV>
           </div>
@@ -371,7 +374,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         <ContactUs href="#contact-us">Contact us</ContactUs>
         <ForCommunities href="#white-label">For Communities</ForCommunities>
         <NavBtnMenu>
-          <JoinVersabotV href="https://t.me/versadex" target="_blank">
+          <JoinVersabotV href="https://t.me/versax_official" target="_blank">
             JOIN VERSAX
           </JoinVersabotV>
         </NavBtnMenu>

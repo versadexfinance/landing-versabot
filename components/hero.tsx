@@ -342,6 +342,11 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
             /> */}
             <img
               loading="lazy"
+              style={
+                {
+                  boxShadow:
+                }
+              }
               src="https://res.cloudinary.com/versadex/image/upload/v1718976331/i0m6flhscjoiop8nbify.png"
               style={{ zIndex: "10", margin: "auto", width: "110%" }}
               alt="V Asset"
@@ -376,7 +381,7 @@ const HeroContent: NextPage<ContentType> = ({ className = "" }) => {
             </div>
             <div>
               <JoinVersabotV
-                href="https://t.me/OfficialVersaBot"
+                href="https://t.me/Versaxofficial_bot"
                 target="_blank"
               >
                 <Button>START TRADING WITH VERSAX</Button>

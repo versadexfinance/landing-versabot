@@ -250,6 +250,13 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/mantle.svg",
     "/bybit-new.svg",
     "/paraswap.svg",
+    "/avalanche.svg",
+    "/aspis.svg",
+    "/kvants.svg",
+    "/polygon.svg",
+    "/onramp.svg",
+    "/dyor.svg",
+    "/hacken.svg",
   ];
 
   const partnerImages2 = [
@@ -309,6 +316,7 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "./castrum.svg",
     "./lavender.svg",
     "./chaitech.svg",
+    "/novaclub.svg",
   ];
 
   const duration1 = partnerImages1.length * 8; // Adjust multiplier for speed

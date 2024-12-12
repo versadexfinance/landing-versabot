@@ -7,21 +7,12 @@ export type PartnersCarouselProps = {
 
 const scrollLeft = keyframes`
   0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
-`;
-
-const scrollRight = keyframes`
-  0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 `;
 
-const BannerWrapperRoot = styled.section`
-  display: flex;
-  flex-direction: column;
-  background: red;
-  overflow: hidden;
-  align-items: center;
-  width: 100%;
+const scrollRight = keyframes`
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 `;
 
 const PartnersColumn = styled.section`
@@ -60,11 +51,8 @@ const ScrollingLogos = styled.div<{
   @media (max-width: 600px) {
     gap: 16px;
   }
-`;
-
-const PartnersIcon = styled.img`
-  max-width: 80%;
-  overflow: auto;
+  will-change: transform;
+  transform: translateZ(0);
 `;
 
 const LogoWrapper = styled.div`
@@ -107,6 +95,15 @@ const Logo = styled.div`
   }
 `;
 
+const PartnersIcon = styled.img`
+  max-width: 80%;
+  overflow: auto;
+  height: auto;
+  object-fit: contain;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+`;
+
 const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
   const partnerImages1 = [
     "/bybit-new.svg",
@@ -122,133 +119,6 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/arbitrum.svg",
     "/bnbchain.svg",
     "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
-    "/paraswap.svg",
-    "/parners-3.svg",
-    "/parners-4.svg",
-    "/aerodrome.svg",
-    "/optimism.svg",
-    "/velodrome.svg",
-    "/parners-5.svg",
-    "/lynex.svg",
-    "/core.svg",
-    "/corex.svg",
-    "/arbitrum.svg",
-    "/bnbchain.svg",
-    "/mantle.svg",
-    "/bybit-new.svg",
     "/paraswap.svg",
     "/avalanche.svg",
     "/aspis.svg",
@@ -256,106 +126,76 @@ const PartnersCarousel: FC<PartnersCarouselProps> = ({ className = "" }) => {
     "/polygon.svg",
     "/onramp.svg",
     "/dyor.svg",
-    "/hacken.svg",
+    "/hacken.svg"
   ];
 
   const partnerImages2 = [
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "./decubate.svg",
-    "./castrum.svg",
-    "./lavender.svg",
-    "./chaitech.svg",
-    "/novaclub.svg",
+    "/decubate.svg",
+    "/castrum.svg",
+    "/lavender.svg",
+    "/chaitech.svg",
+    "/novaclub.svg"
   ];
 
-  const duration1 = partnerImages1.length * 8; // Adjust multiplier for speed
-  const duration2 = partnerImages2.length * 8;
+  // Adjusted speed and duration calculation
+  const baseSpeed = 70; // Increased for smoother animation
+  const duration1 = Math.max(baseSpeed, baseSpeed * (partnerImages1.length / 10));
+  const duration2 = Math.max(baseSpeed, baseSpeed * (partnerImages2.length / 10));
 
+  const createDisplayArray = (images: string[], minRepetitions: number = 4) => {
+    // Calculate number of logos needed to fill viewport plus buffer
+    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const logoWidth = screenWidth > 1300 ? 308 : screenWidth > 600 ? 204 : 154;
+    const gapWidth = 32;
+    const viewportLogos = Math.ceil(screenWidth / (logoWidth + gapWidth));
+    // Ensure we have enough logos to create a smooth infinite scroll
+    const repetitionsNeeded = Math.max(minRepetitions, Math.ceil((viewportLogos * 2) / images.length));
+    
+    // Create array with exact number of repetitions needed
+    return Array(repetitionsNeeded).fill(images).flat();
+  };
+  
   return (
     <PartnersColumn className={className}>
-      <ScrollingLogos direction="left" duration={duration1}>
-        {partnerImages1.concat(partnerImages1).map((src, index) => (
-          <LogoWrapper key={index}>
-            <Logo>
-              <PartnersIcon
-                loading="lazy"
-                alt={`Partner logo ${index + 1}`}
-                src={src}
-                style={{
-                  marginBottom: src == "./bybit-new.svg" ? "15px" : "0px",
-                }}
-              />
-            </Logo>
-          </LogoWrapper>
-        ))}
-      </ScrollingLogos>
-      <ScrollingLogos direction="right" duration={duration2}>
-        {partnerImages2.concat(partnerImages2).map((src, index) => (
-          <LogoWrapper key={index}>
-            <Logo>
-              <PartnersIcon
-                loading="lazy"
-                alt={`Partner logo ${index + 1}`}
-                src={src}
-                style={{
-                  marginBottom: src == "./bybit-new.svg" ? "15px" : "0px",
-                }}
-              />
-            </Logo>
-          </LogoWrapper>
-        ))}
-      </ScrollingLogos>
+      <div style={{ position: 'relative', width: '100%', overflow: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
+        <ScrollingLogos direction="left" duration={duration1}>
+          {createDisplayArray(partnerImages1).map((src, index) => (
+            <LogoWrapper key={`row1-${src}-${index}`}>
+              <Logo>
+                <PartnersIcon
+                  loading="lazy"
+                  alt={`Partner logo ${index + 1}`}
+                  src={src}
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${src}`);
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+              </Logo>
+            </LogoWrapper>
+          ))}
+        </ScrollingLogos>
+      </div>
+      
+      <div style={{ position: 'relative', width: '100%', overflow: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
+        <ScrollingLogos direction="right" duration={duration2}>
+          {createDisplayArray(partnerImages2).map((src, index) => (
+            <LogoWrapper key={`row2-${src}-${index}`}>
+              <Logo>
+                <PartnersIcon
+                  loading="lazy"
+                  alt={`Partner logo ${index + 1}`}
+                  src={src}
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${src}`);
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+              </Logo>
+            </LogoWrapper>
+          ))}
+        </ScrollingLogos>
+      </div>
     </PartnersColumn>
   );
 };
